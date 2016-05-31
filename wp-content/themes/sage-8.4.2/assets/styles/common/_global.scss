@@ -1,0 +1,156 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	color:$default-text-color;
+}
+.main {
+	padding:60px 0 0 0 !important;
+	width:100% !important;
+	float:none !important;
+	background-color:white;
+}
+.background-primary {background-color:$primary;}
+.background-primary-light {background-color:$primary-light;}
+.background-primary-dark {background-color:$primary-dark;}
+.background-primary-alt-1 {background-color:$primary-alt-1;}
+.background-primary-alt-1-light {background-color:$primary-alt-1-light;}
+.background-primary-alt-1-dark {background-color:$primary-alt-1-dark;}
+.background-primary-alt-2 {background-color:$primary-alt-2;}
+.background-primary-alt-2-light {background-color:$primary-alt-2-light;}
+.background-primary-alt-2-dark {background-color:$primary-alt-2-dark;}
+.background-primary-alt-3 {background-color:$primary-alt-3;}
+.background-primary-alt-3-light {background-color:$primary-alt-3-light;}
+.background-primary-alt-3-dark {background-color:$primary-alt-3-dark;}
+.background-secondary {background-color:$secondary;}
+.background-secondary-light {background-color:$secondary-light;}
+.background-secondary-dark {background-color:$secondary-dark;}
+.background-warning {background-color:$warning;}
+.background-warning-light {background-color:$warning-light;}
+.background-warning-dark {background-color:$warning-dark;}
+.background-error {background-color:$error;}
+.background-error-light {background-color:$error-light;}
+.background-error-dark {background-color:$error-dark;}
+.background-success {background-color:$success;}
+.background-success-light {background-color:$success-light;}
+.background-success-dark {background-color:$success-dark;}
+.background-light-grey-4 {background-color:$light-grey-4;}
+.background-light-grey-5 {background-color:$light-grey-5;}
+.background-white {background-color:white;}
+
+.color-primary {color:$primary;}
+.color-primary-light {color:$primary-light;}
+.color-primary-dark {color:$primary-dark;}
+.color-primary-alt-1 {color:$primary-alt-1;}
+.color-primary-alt-1-light {color:$primary-alt-1-light;}
+.color-primary-alt-1-dark {color:$primary-alt-1-dark;}
+.color-primary-alt-2 {color:$primary-alt-2;}
+.color-primary-alt-2-light {color:$primary-alt-2-light;}
+.color-primary-alt-2-dark {color:$primary-alt-2-dark;}
+.color-primary-alt-3 {color:$primary-alt-3;}
+.color-primary-alt-3-light {color:$primary-alt-3-light;}
+.color-primary-alt-3-dark {color:$primary-alt-3-dark;}
+.color-secondary {color:$secondary;}
+.color-secondary-light {color:$secondary-light;}
+.color-secondary-dark {color:$secondary-dark;}
+.color-warning {color:$warning;}
+.color-warning-light {color:$warning-light;}
+.color-warning-dark {color:$warning-dark;}
+.color-error {color:$error;}
+.color-error-light {color:$error-light;}
+.color-error-dark {color:$error-dark;}
+.color-success {color:$success;}
+.color-success-light {color:$success-light;}
+.color-success-dark {color:$success-dark;}
+.color-black {color:$black;}
+
+.overlay:before {content:'';position:absolute;top:0;left:0;height:100%;width:100%;z-index:1;}
+.overlay-primary:before {background-color: rgba($primary, 0.8);}
+.overlay-primary-dark:before {background-color: rgba($primary-dark, 0.8);}
+.overlay-primary-alt-1:before {background-color: rgba($primary-alt-1, 0.8);}
+.overlay-primary-alt-1-dark:before {background-color: rgba($primary-alt-1-dark, 0.8);}
+.overlay-primary-alt-2:before {background-color: rgba($primary-alt-2, 0.8);}
+.overlay-primary-alt-2-light:before {background-color: rgba($primary-alt-2-light, 0.8);}
+.overlay-primary-alt-2-dark:before {background-color: rgba($primary-alt-2-dark, 0.8);}
+.overlay-primary-alt-3:before {background-color: rgba($primary-alt-3, 0.8);}
+.overlay-primary-alt-3-dark:before {background-color: rgba($primary-alt-3-dark, 0.8);}
+.overlay-secondary:before {background-color: rgba($secondary, 0.8);}
+.overlay-secondary-dark:before {background-color: rgba($secondary-dark, 0.8);}
+
+.overlay {
+	position: relative;
+	.outer {
+		position: absolute;
+		top:0;
+		left:0;
+		z-index: 2;
+		height:100%;
+		width:100%;
+		display: table;
+	}	
+	.inner {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+// Padding
+.section-padding {
+	padding:80px 0;
+}
+.padding-15 {
+	padding:15px;
+}
+.padding-top-15 {
+	padding-top:15px;
+}
+.padding-bottom-15 {
+	padding-bottom:15px;
+}
+.padding-30 {
+	padding:30px;
+}
+.padding-top-30 {
+	padding-top:30px
+}
+.padding-bottom-30 {
+	padding-bottom:30px;
+}
+.padding-60 {
+	padding:60px;
+}
+.padding-top-60 {
+	padding-top:60px;
+}
+.padding-bottom-60 {
+	padding-bottom:60px;
+}
+
+//margins
+.margin-bottom-0 {
+	margin-bottom:0;
+}
+.margin-bottom-15 {
+	margin-bottom:15px;
+}
+.margin-top-15 {
+    margin-top:15px;
+}
+.margin-bottom-30 {
+	margin-bottom:30px;
+}
+.margin-top-30 {
+    margin-top:30px;
+}
+.margin-bottom-60 {
+	margin-bottom:60px;
+}
+.margin-top-60 {
+    margin-top:60px;
+}
+
+@media only screen and (min-width : 320px) {
+
+}
+
+
+
+
