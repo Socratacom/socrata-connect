@@ -1,1 +1,1 @@
-# socrata-connect
+# Socrata Connect
