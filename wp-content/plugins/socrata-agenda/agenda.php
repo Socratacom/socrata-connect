@@ -16,14 +16,14 @@ function create_socrata_agenda() {
       'labels' => array(
         'name' => 'Agenda',
         'singular_name' => 'Agenda',
-        'add_new' => 'Add New Agenda',
-        'add_new_item' => 'Add New Agenda',
-        'edit' => 'Edit Agenda',
-        'edit_item' => 'Edit Agenda',
-        'new_item' => 'New Agenda',
+        'add_new' => 'Add New Item',
+        'add_new_item' => 'Add New Agenda Item',
+        'edit' => 'Edit Agenda Item',
+        'edit_item' => 'Edit Agenda Item',
+        'new_item' => 'New Agenda Item',
         'view' => 'View',
-        'view_item' => 'View Agenda',
-        'search_items' => 'Search Agenda',
+        'view_item' => 'View Agenda Item',
+        'search_items' => 'Search Agenda Items',
         'not_found' => 'Not found',
         'not_found_in_trash' => 'Not found in Trash'
       ),
@@ -48,4 +48,152 @@ function add_socrata_agenda_icon() { ?>
     }
   </style>
   <?php
+}
+
+// TAXONOMIES
+add_action( 'init', 'socrata_agenda_track', 0 );
+function socrata_agenda_track() {
+  register_taxonomy(
+    'socrata_agenda_track',
+    'socrata_agenda',
+    array(
+      'labels' => array(
+        'name' => 'Track',
+        'menu_name' => 'Track',
+        'add_new_item' => 'Add New Track',
+        'new_item_name' => "New Track"
+      ),
+      'show_ui' => true,
+      'show_tagcloud' => false,
+      'hierarchical' => true,
+      'sort' => true,      
+      'args' => array( 'orderby' => 'term_order' ),
+      'show_admin_column' => true,
+      'rewrite' => array('with_front' => false, 'slug' => 'agend-track'),
+    )
+  );
+}
+add_action( 'init', 'socrata_agenda_location', 0 );
+function socrata_agenda_location() {
+  register_taxonomy(
+    'socrata_agenda_location',
+    'socrata_agenda',
+    array(
+      'labels' => array(
+        'name' => 'Location',
+        'menu_name' => 'Location',
+        'add_new_item' => 'Add New Location',
+        'new_item_name' => "New Location"
+      ),
+      'show_ui' => true,
+      'show_tagcloud' => false,
+      'hierarchical' => true,
+      'sort' => true,      
+      'args' => array( 'orderby' => 'term_order' ),
+      'show_admin_column' => true,
+      'rewrite' => array('with_front' => false, 'slug' => 'agend-location'),
+    )
+  );
+}
+
+// Metabox
+add_filter( 'rwmb_meta_boxes', 'socrata_agenda_register_meta_boxes' );
+function socrata_agenda_register_meta_boxes( $meta_boxes )
+{
+  $prefix = 'agenda_';
+
+  $meta_boxes[] = array(
+    'title'         => 'Date and Time',   
+    'post_types'    => 'socrata_agenda',
+    'context'       => 'normal',
+    'priority'      => 'high',
+    'fields' => array(
+      // DATE
+      array(
+        'name'       => esc_html__( 'Date', 'your-prefix' ),
+        'id'         => "{$prefix}date",
+        'type'       => 'date',
+        // jQuery date picker options. See here http://api.jqueryui.com/datepicker
+        'js_options' => array(
+          'appendText'      => esc_html__( '(yyyy-mm-dd)', 'your-prefix' ),
+          'dateFormat'      => esc_html__( 'yy-mm-dd', 'your-prefix' ),
+          'changeMonth'     => true,
+          'changeYear'      => true,
+          'showButtonPanel' => true,
+        ),
+      ),
+      // TIME
+      array(
+        'name'       => esc_html__( 'Start Time', 'your-prefix' ),
+        'id'         => $prefix . 'starttime',
+        'type'       => 'time',
+        // jQuery datetime picker options.
+        // For date options, see here http://api.jqueryui.com/datepicker
+        // For time options, see here http://trentrichardson.com/examples/timepicker/
+        'js_options' => array(
+          'stepMinute' => 15,
+          'showSecond' => false,
+        ),
+      ),
+      // TIME
+      array(
+        'name'       => esc_html__( 'End Time', 'your-prefix' ),
+        'id'         => $prefix . 'endtime',
+        'type'       => 'time',
+        // jQuery datetime picker options.
+        // For date options, see here http://api.jqueryui.com/datepicker
+        // For time options, see here http://trentrichardson.com/examples/timepicker/
+        'js_options' => array(
+          'stepMinute' => 15,
+          'showSecond' => false,
+        ),
+      ),
+    ),
+  );
+
+  $meta_boxes[] = array(
+    'title'         => 'Content',   
+    'post_types'    => 'socrata_agenda',
+    'context'       => 'normal',
+    'priority'      => 'high',
+    'fields' => array(
+      // WYSIWYG/RICH TEXT EDITOR
+      array(
+        'id'      => "{$prefix}wysiwyg",
+        'type'    => 'wysiwyg',
+        // Set the 'raw' parameter to TRUE to prevent data being passed through wpautop() on save
+        'raw'     => false,
+        // Editor settings, see wp_editor() function: look4wp.com/wp_editor
+        'options' => array(
+          'textarea_rows' => 10,
+          'teeny'         => true,
+          'media_buttons' => false,
+        ),
+      ),
+    ),
+  );
+
+  $meta_boxes[] = array(
+    'title'  => __( 'Speakers' ),
+    'post_types' => 'socrata_agenda',
+    'context'    => 'normal',
+    'priority'   => 'high',
+    'fields' => array(
+
+      // POST
+      array(
+        'id'          => "{$prefix}speakers",
+        'type'        => 'post',
+        // Post type
+        'post_type'   => 'socrata_speakers',
+        // Field type, either 'select' or 'select_advanced' (default)
+        'field_type'  => 'select_advanced',
+        'placeholder' => esc_html__( 'Select a Speaker' ),
+        'clone' => true,
+      ),
+
+    ),
+  );
+
+  return $meta_boxes;
 }

@@ -49,3 +49,4 @@ function add_socrata_speakers_icon() { ?>
   </style>
   <?php
 }
+

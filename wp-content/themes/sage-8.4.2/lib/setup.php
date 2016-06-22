@@ -34,7 +34,8 @@ function setup() {
   // http://codex.wordpress.org/Post_Thumbnails
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
   // http://codex.wordpress.org/Function_Reference/add_image_size
-  add_theme_support('post-thumbnails');
+  add_theme_support('post-thumbnails', array('post'));
+  set_post_thumbnail_size( 200, 200, array( 'center', 'center')  );
 
   // Enable post formats
   // http://codex.wordpress.org/Post_Formats
