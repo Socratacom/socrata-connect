@@ -96,27 +96,32 @@ function socrata_agenda_location() {
   );
 }
 
-// Metabox
+// METABOXES
 add_filter( 'rwmb_meta_boxes', 'socrata_agenda_register_meta_boxes' );
 function socrata_agenda_register_meta_boxes( $meta_boxes )
 {
   $prefix = 'agenda_';
 
   $meta_boxes[] = array(
-    'title'         => 'Date and Time',   
+    'title'         => 'Agenda Item Meta',   
     'post_types'    => 'socrata_agenda',
     'context'       => 'normal',
     'priority'      => 'high',
     'fields' => array(
+      // HEADING
+      array(
+        'type' => 'heading',
+        'name' => esc_html__( 'Date and Time', 'agenda_' ),
+      ),
       // DATE
       array(
-        'name'       => esc_html__( 'Date', 'your-prefix' ),
+        'name'       => esc_html__( 'Date', 'agenda_' ),
         'id'         => "{$prefix}date",
         'type'       => 'date',
         // jQuery date picker options. See here http://api.jqueryui.com/datepicker
         'js_options' => array(
-          'appendText'      => esc_html__( '(yyyy-mm-dd)', 'your-prefix' ),
-          'dateFormat'      => esc_html__( 'yy-mm-dd', 'your-prefix' ),
+          'appendText'      => esc_html__( '(yyyy-mm-dd)', 'agenda_' ),
+          'dateFormat'      => esc_html__( 'yy-mm-dd', 'agenda_' ),
           'changeMonth'     => true,
           'changeYear'      => true,
           'showButtonPanel' => true,
@@ -124,7 +129,7 @@ function socrata_agenda_register_meta_boxes( $meta_boxes )
       ),
       // TIME
       array(
-        'name'       => esc_html__( 'Start Time', 'your-prefix' ),
+        'name'       => esc_html__( 'Start Time', 'agenda_' ),
         'id'         => $prefix . 'starttime',
         'type'       => 'time',
         // jQuery datetime picker options.
@@ -137,7 +142,7 @@ function socrata_agenda_register_meta_boxes( $meta_boxes )
       ),
       // TIME
       array(
-        'name'       => esc_html__( 'End Time', 'your-prefix' ),
+        'name'       => esc_html__( 'End Time', 'agenda_' ),
         'id'         => $prefix . 'endtime',
         'type'       => 'time',
         // jQuery datetime picker options.
@@ -147,6 +152,23 @@ function socrata_agenda_register_meta_boxes( $meta_boxes )
           'stepMinute' => 15,
           'showSecond' => false,
         ),
+      ),
+      // HEADING
+      array(
+        'type' => 'heading',
+        'name' => esc_html__( 'Speakers', 'agenda_' ),
+      ),
+      // POST
+      array(
+        'id'          => "{$prefix}speakers",
+        'type'        => 'post',
+        // Post type
+        'post_type'   => 'socrata_speakers',
+        // Field type, either 'select' or 'select_advanced' (default)
+        'field_type'  => 'select_advanced',
+        'placeholder' => esc_html__( 'Select a Speaker' ),
+        'clone' => true,
+        'sort_clone' => true,
       ),
     ),
   );
@@ -165,33 +187,11 @@ function socrata_agenda_register_meta_boxes( $meta_boxes )
         'raw'     => false,
         // Editor settings, see wp_editor() function: look4wp.com/wp_editor
         'options' => array(
-          'textarea_rows' => 10,
-          'teeny'         => true,
+          'textarea_rows' => 15,
+          'teeny'         => false,
           'media_buttons' => false,
         ),
       ),
-    ),
-  );
-
-  $meta_boxes[] = array(
-    'title'  => __( 'Speakers' ),
-    'post_types' => 'socrata_agenda',
-    'context'    => 'normal',
-    'priority'   => 'high',
-    'fields' => array(
-
-      // POST
-      array(
-        'id'          => "{$prefix}speakers",
-        'type'        => 'post',
-        // Post type
-        'post_type'   => 'socrata_speakers',
-        // Field type, either 'select' or 'select_advanced' (default)
-        'field_type'  => 'select_advanced',
-        'placeholder' => esc_html__( 'Select a Speaker' ),
-        'clone' => true,
-      ),
-
     ),
   );
 
