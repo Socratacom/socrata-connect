@@ -7,9 +7,21 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "bootstrap-sass": "3.3.6"
+    "bootstrap-sass": "3.3.6",
+    "lodash": "^4.14.0",
+    "jquery.countdown": "^2.1.0",
+    "slick-carousel": "^1.6.0"
   },
   "overrides": {
+    "lodash": {
+      "main": "./lodash/dist/lodash.min.js"
+    },
+    "jquery.countdown": {
+      "main": "./dist/jquery.countdown.min.js"
+    },
+    "slick-carousel": {
+      "main": "./slick/slick.min.js"
+    },
     "bootstrap-sass": {
       "main": [
         "./assets/stylesheets/_bootstrap.scss",
