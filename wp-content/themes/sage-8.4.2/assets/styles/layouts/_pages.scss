@@ -124,6 +124,7 @@
 
 .block {
 	position: relative;
+	overflow: hidden;
 	h5 {
 		padding:10px 20px;
 		background-color:rgba($black, .75);
@@ -131,6 +132,27 @@
 		font-weight: $font-semi-bold;
 		display: inline-block;
 	}
+	.image, .text, .link {		
+		position: absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+	}
+	.image {
+		z-index: 1;
+		opacity:.3;
+	}
+	.text {
+		padding:30px;
+		z-index: 2;
+	}
+	.link {
+		z-index: 3;
+	}
+}
+.block:hover .image {
+	opacity: 1;
 }
 
 @media only screen and (min-width : 320px) {

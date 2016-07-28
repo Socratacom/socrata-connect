@@ -87,35 +87,42 @@
 <section class="collage">
 	<div class="row no-gutters">
 		<div class="col-sm-6">
-			<div class="block full-block background-light-grey-4 img-background" style="background-image:url(/wp-content/uploads/kevin-merritt-keynote.jpg);">
-				<div class="padding-30">
+			<div class="block full-block background-success">
+				<div class="text">
 					<h5 class="text-uppercase">Last Year Highlights</h5>
 				</div>
+				<div class="image img-background" style="background-image:url(/wp-content/uploads/kevin-merritt-keynote.jpg);"></div>
+				<a href="#" class="link"></a>
 			</div>
 		</div>
 		<div class="col-sm-6">
 			<div class="row no-gutters">
 				<div class="col-sm-12">
-					<div class="block half-block background-light-grey-3 img-background" style="background-image:url(/wp-content/uploads/tweets.jpg);">
-						<div class="padding-30">
+					<div class="block half-block background-primary">
+						<div class="text">
 							<h5 class="text-uppercase">Last Year Highlights</h5>
 						</div>
+						<div class="image img-background" style="background-image:url(/wp-content/uploads/tweets.jpg);"></div>
 					</div>
 				</div>
 			</div>			
 			<div class="row no-gutters hidden-xs">
 				<div class="col-sm-6">
-					<div class="block quarter-block background-light-grey-2 img-background" style="background-image:url(/wp-content/uploads/ben-wellington.jpg);">
-						<div class="padding-30">
+					<div class="block quarter-block background-warning">
+						<div class="text">
 							<h5 class="text-uppercase">Last Year Highlights</h5>
 						</div>
+						<div class="image img-background" style="background-image:url(/wp-content/uploads/ben-wellington.jpg);"></div>
+						<a href="#" class="link"></a>
 					</div>
 				</div>
 				<div class="col-sm-6">
-					<div class="block quarter-block background-light-grey-1 img-background" style="background-image:url(/wp-content/uploads/tony-yarber.jpg);">
-						<div class="padding-30">
+					<div class="block quarter-block background-error">
+						<div class="text">
 							<h5 class="text-uppercase">Last Year Highlights</h5>
 						</div>
+						<div class="image img-background" style="background-image:url(/wp-content/uploads/tony-yarber.jpg);"></div>
+						<a href="#" class="link"></a>
 					</div>
 				</div>
 			</div>
