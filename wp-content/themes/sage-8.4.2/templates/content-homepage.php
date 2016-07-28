@@ -29,7 +29,7 @@
 				<h2 class="text-center text-uppercase margin-bottom-60">The third annual Socrata event gets a new identity: <i>Socrata Connect</i></h2>
 				<p>We’ll be connecting people, connecting ideas, and connecting technology – with data as the thread that ties it all together. Whether data is the backbone of your government, or you’re just starting to explore this untapped resource, you’ll make inspiring connections at Socrata Connect that will help you build a stronger government and community.</p>
 				<p>Sign up to save your spot on the guest list and we’ll send you a code for an <strong>extra 10% off</strong> your ticket price when you register.</p>
-				<p class="text-center"><a href="#" class="btn btn-lg btn-primary">Sign up now</a></p>
+				<p class="text-center"><a href="#" class="btn btn-lg btn-primary">Save my seat</a></p>
 			</div>
 		</div>
 	</div>
