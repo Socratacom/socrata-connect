@@ -14,7 +14,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="hero-video" style="background-image:url(https://img.youtube.com/vi/i4AgVzqtjzo/0.jpg)"></div>
+	<div id="hero-video" style="background-image:url(https://img.youtube.com/vi/i4AgVzqtjzo/mqdefault.jpg)"></div>
 	<div class="scroll-icon hidden-xs text-center">
 		<small>SCROLL</small>
 		<div class="mouse"><a href="#start"></a></div>
