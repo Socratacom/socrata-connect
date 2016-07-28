@@ -15,6 +15,10 @@
 		</div>
 	</div>
 	<div id="hero-video" style="background-image:url(https://img.youtube.com/vi/i4AgVzqtjzo/0.jpg)"></div>
+	<div class="scroll-icon hidden-xs text-center">
+		<small>SCROLL</small>
+		<div class="mouse"><a href="#start"></a></div>
+	</div>
 </section>
 <div id="video" class="player" data-property="{videoURL:'i4AgVzqtjzo',containment:'#hero-video', showControls:false, autoPlay:true, loop:true, mute:true, startAt:1, opacity:1, addRaster:true, quality:'default'}">My video</div> <!--BsekcY04xvQ-->
 <script>jQuery(function(e){e("#video").YTPlayer()});</script>
@@ -62,14 +66,20 @@
 				</div>
 			</div>
 		</div>
+		<div class="col-sm-12">
+			<p class="text-center text-reverse margin-bottom-0 margin-top-60">As we continue to plan this event, we'd love to hear from you on what topics and speakers you'd like to see. <a href="#">Suggest a speaker or session</a>.</p>
+		</div>
 	</div>
 </section>
-<section class="section-padding">
+<section class="section-padding img-background" style="background-image:url(/wp-content/uploads/gaylord.jpg);">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-4 col-sm-offset-4">
-				<h2 class="text-center text-uppercase">The Venue</h2>
-				
+			<div class="col-sm-8 col-sm-offset-2">
+				<div class="padding-60">
+					<h2 class="text-center text-reverse text-uppercase margin-bottom-60">The Venue</i></h2>
+					<p class="text-center text-reverse font-semi-bold">Socrata Connect will be held at the beautiful Gaylord National Resort &amp; Conference Center, Washington DC</p>
+					<p class="text-center"><a href="#" class="btn btn-default btn-lg color-primary-alt-1">Visit their site</a></p>
+				</div>			
 			</div>
 		</div>
 	</div>
@@ -100,6 +110,24 @@
 						<p>right-half-bottom-half-right</p>
 					</div>
 				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="text-center text-uppercase margin-bottom-60">Our Sponsors</i></h2>				
+			</div>
+			<div class="col-sm-2 col-sm-offset-3">
+				<p class="text-center"><img src="http://placehold.it/150x150"></p>				
+			</div>
+			<div class="col-sm-2">
+				<p class="text-center"><img src="http://placehold.it/150x150"></p>				
+			</div>
+			<div class="col-sm-2">
+				<p class="text-center"><img src="http://placehold.it/150x150"></p>				
 			</div>
 		</div>
 	</div>
