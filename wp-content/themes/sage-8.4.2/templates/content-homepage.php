@@ -37,60 +37,89 @@
 <section class="section-padding background-black">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-12">				
-				<h2 class="text-reverse text-center text-uppercase margin-bottom-60">Keynote Speakers</i></h2>				
+			<div class="col-sm-12">
+				<h2 class="text-reverse text-center text-uppercase margin-bottom-0">Featured Speakers</i></h2>	
 			</div>
-			<div class="col-sm-10 col-sm-offset-1">
-				<div class="row">
-					<div class="col-sm-4">
-						<div class="speaker-card">
-							<p class="text-center"><img src="http://placehold.it/100x100" class="img-circle"></p>
-							<h4 class="text-center text-uppercase color-success margin-bottom-0">John Doe</h4>
-							<p class="text-center text-reverse margin-bottom-0">some title, and company</p>
+		</div>
+	</div>
+	<div id="speakers" class="slider-arrows">
+		<div class="container padding-60">
+			<div id="speakers-slides" class="row speaker-tiles">
+
+				<div class="col-sm-12 slide">
+					<div class="card">
+						<div class="speaker-meta">
+							<div class="headshot" style="background-image:url(http://placehold.it/200x200);"></div>
+							<h3 class="text-center margin-bottom-0 text-uppercase color-success">Betty Sue Johnston</h3>
+							<p class="text-center margin-bottom-0 text-reverse title">Aenean Pellentesque Mattis Commodo Etiam</p>
+							<i class="fa fa-long-arrow-down text-reverse hidden-xs hidden-sm" aria-hidden="true"></i>
+							<i class="fa fa-long-arrow-right text-reverse hidden-md hidden-lg" aria-hidden="true"></i>
 						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="speaker-card">
-							<p class="text-center"><img src="http://placehold.it/100x100" class="img-circle"></p>
-							<h4 class="text-center text-uppercase color-success margin-bottom-0">John Doe</h4>
-							<p class="text-center text-reverse margin-bottom-0">some title, and company</p>
+						<div class="bio">
+							<div class="excerpt dot-ellipsis dot-resize-update dot-height-100 text-reverse">
+								Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+							</div>
 						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="speaker-card">
-							<p class="text-center"><img src="http://placehold.it/100x100" class="img-circle"></p>
-							<h4 class="text-center text-uppercase color-success margin-bottom-0">John Doe</h4>
-							<p class="text-center text-reverse margin-bottom-0">some title, and company</p>
-						</div>
+						<a href="#" class="link"></a>
 					</div>
 				</div>
+				<div class="col-sm-12 slide">
+					<div style="height:350px; border:#fff solid 3px;">
+						<img src="http://placehold.it/560x315" class="img-responsive">
+					</div>
+				</div>
+				<div class="col-sm-12 slide">
+					<div style="height:350px; border:#fff solid 3px;">
+						<img src="http://placehold.it/560x315" class="img-responsive">
+					</div>
+				</div>
+				<div class="col-sm-12 slide">
+					<div style="height:350px; border:#fff solid 3px;">
+						<img src="http://placehold.it/560x315" class="img-responsive">
+					</div>
+				</div>
+				<div class="col-sm-12 slide">
+					<div style="height:350px; border:#fff solid 3px;">
+						<img src="http://placehold.it/560x315" class="img-responsive">
+					</div>
+				</div>
+				<div class="col-sm-12 slide">
+					<div style="height:350px; border:#fff solid 3px;">
+						<img src="http://placehold.it/560x315" class="img-responsive">
+					</div>
+				</div>
+
 			</div>
 		</div>
-		<div class="col-sm-12">
-			<p class="text-center text-reverse margin-bottom-0 margin-top-60">As we continue to plan this event, we'd love to hear from you on what topics and speakers you'd like to see. <a href="#">Suggest a speaker or session</a>.</p>
-		</div>
 	</div>
-</section>
-<section class="section-padding img-background" style="background-image:url(/wp-content/uploads/gaylord.jpg);">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-8 col-sm-offset-2">
-				<div class="padding-60">
-					<h2 class="text-center text-reverse text-uppercase margin-bottom-60">The Venue</i></h2>
-					<p class="text-center text-reverse font-semi-bold">Socrata Connect will be held at the beautiful Gaylord National Resort &amp; Conference Center, Washington DC</p>
-					<p class="text-center"><a href="#" class="btn btn-default btn-lg color-primary-alt-1">Visit their site</a></p>
-				</div>			
+			<div class="col-sm-12">
+				<p class="text-center text-reverse margin-bottom-0">As we continue to plan this event, we'd love to hear from you on what topics and speakers you'd like to see. <a href="#">Suggest a speaker or session</a>.</p>
 			</div>
 		</div>
 	</div>
 </section>
+<script>jQuery(function(a){a("#speakers-slides").slick({arrows:!0,appendArrows:a("#speakers"),prevArrow:'<div class="toggle-left"><i class="fa slick-prev fa-chevron-left"></i></div>',nextArrow:'<div class="toggle-right"><i class="fa slick-next fa-chevron-right"></i></div>',autoplay:!1,autoplaySpeed:8e3,speed:800,slidesToShow:3,slidesToScroll:3,accessibility:!1,dots:!1,responsive:[{breakpoint:768,settings:{slidesToShow:2,slidesToScroll:2}},{breakpoint:480,settings:{slidesToShow:1,slidesToScroll:1}}]}),a("#speakers-slides").show()});</script>
 <section class="collage">
 	<div class="row no-gutters">
+		<div class="col-sm-12">
+			<div class="block full-width-block background-black">
+				<div class="text">
+					<div class="vertical-center fade-in">
+						<h1 class="text-center text-reverse text-uppercase margin-bottom-15">The Venue</h1>
+						<p class="text-center text-reverse font-semi-bold">Socrata Connect will be held at the beautiful Gaylord National Resort &amp; Conference Center, Washington DC</p>
+						<p class="text-center"><a href="#" class="btn btn-default btn-lg">Visit their site</a></p>
+					</div>
+				</div>
+				<div class="image img-background" style="background-image:url(/wp-content/uploads/gaylord.jpg);"></div>
+			</div>			
+		</div>
 		<div class="col-sm-6">
-			<div class="block full-block background-success">
+			<div class="block full-block background-black">
 				<div class="text">
 					<h5 class="text-uppercase">Last Year Highlights</h5>
-					<h1 class="text-reverse text-uppercase">Kevin Merritt Keynote Address</h1>
+					<h1 class="text-reverse text-uppercase fade-in">Kevin Merritt Keynote Address</h1>
 				</div>
 				<div class="image img-background" style="background-image:url(/wp-content/uploads/kevin-merritt-keynote.jpg);"></div>
 				<a href="#" class="link"></a>
@@ -99,7 +128,7 @@
 		<div class="col-sm-6">
 			<div class="row no-gutters hidden-xs">
 				<div class="col-sm-12">
-					<div class="block half-block background-primary">
+					<div class="block half-block background-black">
 						<div class="text">
 							<h5 class="text-uppercase">Last Year Highlights</h5>
 						</div>
@@ -109,20 +138,20 @@
 			</div>			
 			<div class="row no-gutters">
 				<div class="col-sm-6">
-					<div class="block quarter-block background-warning">
+					<div class="block quarter-block background-black">
 						<div class="text">
 							<h5 class="text-uppercase">Last Year Highlights</h5>
-							<h1 class="text-reverse text-uppercase">Stories from Urban Data Science</h1>
+							<h1 class="text-reverse text-uppercase fade-in">Stories from Urban Data Science</h1>
 						</div>
 						<div class="image img-background" style="background-image:url(/wp-content/uploads/ben-wellington.jpg);"></div>
 						<a href="#" class="link"></a>
 					</div>
 				</div>
 				<div class="col-sm-6">
-					<div class="block quarter-block background-error">
+					<div class="block quarter-block background-black">
 						<div class="text">
 							<h5 class="text-uppercase">Last Year Highlights</h5>
-							<h1 class="text-reverse text-uppercase">Put the Data Where Your Mouth Is</h1>
+							<h1 class="text-reverse text-uppercase fade-in">Put the Data Where Your Mouth Is</h1>
 						</div>
 						<div class="image img-background" style="background-image:url(/wp-content/uploads/tony-yarber.jpg);"></div>
 						<a href="#" class="link"></a>
@@ -136,7 +165,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
-				<h2 class="text-center text-uppercase margin-bottom-60">Our Sponsors</i></h2>				
+				<h2 class="text-center text-uppercase margin-bottom-60">Our Partners</i></h2>				
 			</div>
 			<div class="col-sm-2 col-sm-offset-3">
 				<p class="text-center"><img src="http://placehold.it/150x150"></p>				

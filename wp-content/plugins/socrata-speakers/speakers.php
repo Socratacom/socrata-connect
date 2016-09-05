@@ -75,6 +75,14 @@ function socrata_speakers_register_meta_boxes( $meta_boxes )
       ),
     ),
     'fields' => array(
+      // CHECKBOX
+      array(
+        'name' => esc_html__( 'Feature on homepage?', 'speakers_' ),
+        'id'   => "{$prefix}feature",
+        'type' => 'checkbox',
+        // Value can be 0 or 1
+        'std'  => 0,
+      ),
       // TEXT
       array(
         'name'  => esc_html__( 'Title', 'speakers_' ),
