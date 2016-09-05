@@ -43,3 +43,63 @@ function WPTime_add_custom_class_to_all_images($content){
     return $add_class; // display class to image
 }
 add_filter('the_content', __NAMESPACE__ . '\\WPTime_add_custom_class_to_all_images');
+
+/**
+ * Responsive Carousel [responsive-carousel id="" slide_id=""]
+ */
+function carousel_script_responsive( $atts ) {
+  extract( shortcode_atts( array(
+    'id' => '',
+    'slide_id' => '',
+  ), $atts ) );
+  ob_start(); 
+  ?>
+<script>
+  jQuery(function ($){
+    $(<?php echo "'#$slide_id'"; ?>).slick({
+    arrows: true,
+    appendArrows: $(<?php echo "'#$id'"; ?>),
+    prevArrow: '<div class="toggle-left"><i class="fa slick-prev fa-chevron-left"></i></div>',
+    nextArrow: '<div class="toggle-right"><i class="fa slick-next fa-chevron-right"></i></div>',
+    autoplay: false,
+    autoplaySpeed: 8000,
+    speed: 800,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    accessibility:false,
+    dots:false,
+
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+    $(<?php echo "'#$slide_id'"; ?>).show();
+  });
+  </script>
+
+  <?php
+  $content = ob_get_contents();
+  ob_end_clean();
+  return $content;
+}
+add_shortcode('responsive-carousel', __NAMESPACE__ . '\\carousel_script_responsive');
