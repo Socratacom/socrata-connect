@@ -25,11 +25,11 @@
 <section class="section-padding background-white">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-8 col-sm-offset-2">
-				<h2 class="text-center text-uppercase margin-bottom-60">The third annual Socrata event gets a new identity: <i>Socrata Connect</i></h2>
+			<div class="col-sm-10 col-sm-offset-1">
+				<h2 class="text-uppercase margin-bottom-60">The third annual Socrata event gets a new identity: <i>Socrata Connect</i></h2>
 				<p>We’ll be connecting people, connecting ideas, and connecting technology – with data as the thread that ties it all together. Whether data is the backbone of your government, or you’re just starting to explore this untapped resource, you’ll make inspiring connections at Socrata Connect that will help you build a stronger government and community.</p>
 				<p>Sign up to save your spot on the guest list and we’ll send you a code for an <strong>extra 10% off</strong> your ticket price when you register.</p>
-				<p class="text-center"><a href="#" class="btn btn-lg btn-primary">Save my seat</a></p>
+				<p><a href="#" class="btn btn-lg btn-primary">Save my seat</a></p>
 			</div>
 		</div>
 	</div>
@@ -46,48 +46,7 @@
 		<div class="container padding-60">
 			<div id="speakers-slides" class="row speaker-tiles">
 
-				<div class="col-sm-12 slide">
-					<div class="card">
-						<div class="speaker-meta">
-							<div class="headshot" style="background-image:url(http://placehold.it/200x200);"></div>
-							<h3 class="text-center margin-bottom-0 text-uppercase color-success">Betty Sue Johnston</h3>
-							<p class="text-center margin-bottom-0 text-reverse title">Aenean Pellentesque Mattis Commodo Etiam</p>
-							<i class="fa fa-long-arrow-down text-reverse hidden-xs hidden-sm" aria-hidden="true"></i>
-							<i class="fa fa-long-arrow-right text-reverse hidden-md hidden-lg" aria-hidden="true"></i>
-						</div>
-						<div class="bio">
-							<div class="excerpt dot-ellipsis dot-resize-update dot-height-100 text-reverse">
-								Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
-							</div>
-						</div>
-						<a href="#" class="link"></a>
-					</div>
-				</div>
-				<div class="col-sm-12 slide">
-					<div style="height:350px; border:#fff solid 3px;">
-						<img src="http://placehold.it/560x315" class="img-responsive">
-					</div>
-				</div>
-				<div class="col-sm-12 slide">
-					<div style="height:350px; border:#fff solid 3px;">
-						<img src="http://placehold.it/560x315" class="img-responsive">
-					</div>
-				</div>
-				<div class="col-sm-12 slide">
-					<div style="height:350px; border:#fff solid 3px;">
-						<img src="http://placehold.it/560x315" class="img-responsive">
-					</div>
-				</div>
-				<div class="col-sm-12 slide">
-					<div style="height:350px; border:#fff solid 3px;">
-						<img src="http://placehold.it/560x315" class="img-responsive">
-					</div>
-				</div>
-				<div class="col-sm-12 slide">
-					<div style="height:350px; border:#fff solid 3px;">
-						<img src="http://placehold.it/560x315" class="img-responsive">
-					</div>
-				</div>
+				<?php echo do_shortcode('[speaker-tiles]');?>
 
 			</div>
 		</div>

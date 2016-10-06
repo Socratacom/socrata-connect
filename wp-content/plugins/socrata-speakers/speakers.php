@@ -50,6 +50,23 @@ function add_socrata_speakers_icon() { ?>
   <?php
 }
 
+// Template Paths
+add_filter( 'template_include', 'socrata_speakers_single_template', 1 );
+function socrata_speakers_single_template( $template_path ) {
+  if ( get_post_type() == 'socrata_speakers' ) {
+    if ( is_single() ) {
+      // checks if the file exists in the theme first,
+      // otherwise serve the file from the plugin
+      if ( $theme_file = locate_template( array ( 'single-speakers.php' ) ) ) {
+        $template_path = $theme_file;
+      } else {
+        $template_path = plugin_dir_path( __FILE__ ) . 'single-speakers.php';
+      }
+    }
+  }
+  return $template_path;
+}
+
 // METABOXES
 add_filter( 'rwmb_meta_boxes', 'socrata_speakers_register_meta_boxes' );
 function socrata_speakers_register_meta_boxes( $meta_boxes )
@@ -137,3 +154,106 @@ function socrata_speakers_register_meta_boxes( $meta_boxes )
 
   return $meta_boxes;
 }
+
+// Shortcode [speaker-tiles]
+function speaker_tiles($atts, $content = null) {
+  ob_start();
+  ?>
+
+  <?php
+    $args = array(
+    'post_type' => 'socrata_speakers',
+    'meta_query' => array(
+      array(
+        'key' => 'speakers_feature',
+        'value' => '1'
+      )
+    ),
+    'posts_per_page' => 12,
+    'post_status' => 'publish',
+    );
+
+    // The Query
+    $the_query = new WP_Query( $args );
+
+    // The Loop
+    if ( $the_query->have_posts() ) { 
+    while ( $the_query->have_posts() ) {
+    $the_query->the_post();
+    $headshot = rwmb_meta( 'speakers_speaker_headshot', 'size=medium' );
+    $jobtitle = rwmb_meta( 'speakers_title' );
+    $company = rwmb_meta( 'speakers_company' );
+    $bio = rwmb_meta( 'speakers_wysiwyg' );
+    $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'post-image-small' );
+    $url = $thumb['0']; { ?>
+
+      <?php if ( ! empty( $headshot ) ) { ?> 
+
+        <div class="col-sm-12 slide">
+          <div class="tile">
+            <div class="text-center">
+              <span class="headshot" style="background-image:url(<?php foreach ( $headshot as $image ) { echo $image['url']; } ?>);"></span>
+            </div>
+            <div class="speaker-meta dot-ellipsis dot-resize-update dot-height-100">
+              <h4 class="text-center text-uppercase color-success"><?php the_title(); ?></h4>
+              <p class="text-center text-reverse job-title"><em><?php echo $jobtitle;?>, <?php echo $company;?></em></p>
+            </div>
+            <div class="speaker-meta-hover dot-ellipsis dot-resize-update dot-height-200">
+              <h4 class="text-center text-uppercase color-success"><?php the_title(); ?></h4>
+              <p class="text-center text-reverse job-title"><em><?php echo $jobtitle;?>, <?php echo $company;?></em></p>
+              <div class="bio">
+                <?php echo $bio;?>
+              </div>
+            </div>
+            <div class="text-center arrow">
+              <i class="fa fa-long-arrow-down text-reverse" aria-hidden="true"></i>
+            </div>
+            <a href="<?php the_permalink(); ?>" class="link"></a>
+          </div>
+        </div>
+
+      <?php } else { ?> 
+
+        <div class="col-sm-12 slide">
+          <div class="tile">
+            <div class="text-center">
+              <span class="headshot" style="background-image:url(/wp-content/uploads/no-image.png);"></span>
+            </div>
+            <div class="speaker-meta dot-ellipsis dot-resize-update dot-height-100">
+              <h4 class="text-center text-uppercase color-success"><?php the_title(); ?></h4>
+              <p class="text-center text-reverse job-title"><em><?php echo $jobtitle;?></em></p>
+            </div>
+            <div class="speaker-meta-hover dot-ellipsis dot-resize-update dot-height-200">
+              <h4 class="text-center text-uppercase color-success"><?php the_title(); ?></h4>
+              <p class="text-center text-reverse job-title"><em><?php echo $jobtitle;?></em></p>
+              <div class="bio">
+                <?php echo $bio;?>
+              </div>
+            </div>
+            <div class="text-center arrow">
+              <i class="fa fa-long-arrow-down text-reverse" aria-hidden="true"></i>
+            </div>
+            <a href="<?php the_permalink(); ?>" class="link"></a>
+          </div>
+        </div>
+
+      <?php } ?>
+
+    <?php }
+  } ?>
+
+  <?php
+  } 
+  else {
+  // no posts found
+  }
+  /* Restore original Post Data */
+  wp_reset_postdata(); 
+  ?>
+
+  <?php
+  $content = ob_get_contents();
+  ob_end_clean();
+  return $content;
+}
+add_shortcode('speaker-tiles', 'speaker_tiles');

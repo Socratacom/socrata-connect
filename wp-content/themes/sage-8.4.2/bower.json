@@ -12,7 +12,8 @@
     "jquery.countdown": "^2.1.0",
     "slick-carousel": "^1.6.0",
     "font-awesome": "fontawesome#^4.6.3",
-    "jQuery.dotdotdot": "dotdotdot#^1.8.3"
+    "jQuery.dotdotdot": "dotdotdot#^1.8.3",
+    "matchHeight": "^0.7.0"
   },
   "overrides": {
     "lodash": {

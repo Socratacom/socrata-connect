@@ -96,6 +96,23 @@ function socrata_agenda_location() {
   );
 }
 
+// Template Paths
+add_filter( 'template_include', 'socrata_agenda_single_template', 1 );
+function socrata_agenda_single_template( $template_path ) {
+  if ( get_post_type() == 'socrata_agenda' ) {
+    if ( is_single() ) {
+      // checks if the file exists in the theme first,
+      // otherwise serve the file from the plugin
+      if ( $theme_file = locate_template( array ( 'single-agenda.php' ) ) ) {
+        $template_path = $theme_file;
+      } else {
+        $template_path = plugin_dir_path( __FILE__ ) . 'single-agenda.php';
+      }
+    }
+  }
+  return $template_path;
+}
+
 // METABOXES
 add_filter( 'rwmb_meta_boxes', 'socrata_agenda_register_meta_boxes' );
 function socrata_agenda_register_meta_boxes( $meta_boxes )

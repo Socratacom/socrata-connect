@@ -55,12 +55,13 @@ header {
 }
 
 header.scroll {
-	background-color:white;
+	background-color:$light-grey-5;
+	border-bottom:$light-grey-4 solid 1px;
 }
 .scroll .logo {
 	padding: 10px 20px;
 	font-size: 1.5rem;
-	width:200px;
+	width:271px;
 	height:32px;
 }
 .scroll .countdown {
