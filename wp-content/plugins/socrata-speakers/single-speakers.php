@@ -14,47 +14,6 @@
 
 
 
-<?php
-    $test = get_the_ID();
-    $args = array(
-    'post_type' => 'socrata_agenda',
-    'meta_query' => array(
-      'relation' => 'OR',
-      array(
-        'key' => 'agenda_speakers',
-        'value' => $test,
-        'compare' => '='
-
-      )
-    ),
-    'posts_per_page' => 12,
-    'post_status' => 'publish',
-    );
-
-    // The Query
-    $the_query = new WP_Query( $args );
-
-    // The Loop
-    if ( $the_query->have_posts() ) { 
-    while ( $the_query->have_posts() ) {
-    $the_query->the_post(); { ?>
-      <p><?php the_title(); ?></p>
-    <?php
-    }
-  } ?>
-
-  <?php
-  } 
-  else { ?>
-  <p>fuck</p>
-  <?php
-
-  }
-  /* Restore original Post Data */
-  wp_reset_postdata(); 
-  ?>
-
-  <?php echo get_the_ID();?>
 
 
 			</div>

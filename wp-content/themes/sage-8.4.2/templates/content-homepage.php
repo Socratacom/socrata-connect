@@ -52,7 +52,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
-				<p class="text-center text-reverse margin-bottom-0">As we continue to plan this event, we'd love to hear from you on what topics and speakers you'd like to see. <a href="#">Suggest a speaker or session</a>.</p>
+				<p class="text-center text-reverse margin-bottom-0">As we continue to plan this event, we'd love to hear from you on what topics and speakers you'd like to see. <a href="https://docs.google.com/a/socrata.com/forms/d/e/1FAIpQLSdkUBvX7525QyZ3hc4nrNa66wmCCKZ8Wv2LE00EjbS-oDvCPw/viewform" target="_blank">Suggest a speaker or session</a>.</p>
 			</div>
 		</div>
 	</div>
@@ -66,7 +66,7 @@
 					<div class="vertical-center fade-in">
 						<h1 class="text-center text-reverse text-uppercase margin-bottom-15">The Venue</h1>
 						<p class="text-center text-reverse font-semi-bold">Socrata Connect will be held at the beautiful Gaylord National Resort &amp; Conference Center, Washington DC</p>
-						<p class="text-center"><a href="#" class="btn btn-default btn-lg">Visit their site</a></p>
+						<p class="text-center"><a href="http://www.marriott.com/hotels/travel/wasgn-gaylord-national-resort-and-convention-center/" target="_blank" class="btn btn-default btn-lg">Visit their site</a></p>
 					</div>
 				</div>
 				<div class="image img-background" style="background-image:url(/wp-content/uploads/gaylord.jpg);"></div>
