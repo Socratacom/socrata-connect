@@ -156,7 +156,6 @@
 	}
 }
 .block:hover .image {
-	opacity: .7;
 	-ms-transform: scale(1.1, 1.1); /* IE 9 */
     -webkit-transform: scale(1.1, 1.1); /* Safari */
     transform: scale(1.1, 1.1);
@@ -329,6 +328,9 @@
 			}
 		}
 	}
+	.block .image {
+		opacity: .7;
+	}
 }
 
 /* Extra Small Devices, Phones */ 
@@ -390,10 +392,16 @@
 			-webkit-transition: all .5s;
 			transition: all .5s;
 		}
+	}		
+	.block .image {
+		opacity: 1;
 	}
 	.block:hover .fade-in {
 		opacity: 1;
-	}	
+	}
+	.block:hover .image {
+		opacity: .7;
+	}
 	.speaker-tiles {
 		.card {
 			height:350px;
