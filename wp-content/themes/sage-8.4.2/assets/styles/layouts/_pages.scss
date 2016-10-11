@@ -718,6 +718,44 @@
 	}
 }
 
+.speaker-bio {
+	.sidebar {
+		text-align: center;
+		.headshot {
+			height:200px; 
+			width:200px; 
+			background-position:center center; 
+			background-size:cover; 
+			background-repeat:no-repeat;
+			border-radius: 50%;
+			display:inline-block;
+		}
+
+	}
+}
+
+.agenda-card {
+	border:$light-grey-4 solid 1px;
+	background-color:$light-grey-5;
+	.date {
+		padding:30px;
+		text-align: center;
+		background-color:$primary-light;
+		color:$primary-dark;
+		.month, .time {
+			text-transform: uppercase;
+			font-size: 14px;
+		}
+		.day {
+			font-size: 50px;
+			font-weight: $font-bold;
+		}
+	}
+	ul {
+		margin-bottom:0;
+	}
+}
+
 @media only screen and (min-width : 320px) {
 	.tile {
 		.headshot {
@@ -735,6 +773,9 @@
 			transform: rotate(270deg);		
 		}
 	}
+	.speaker-bio h1, .speaker-bio h3 {
+		text-align: center;
+	}
 }
 @media only screen and (min-width : 480px) {
 }
@@ -750,6 +791,9 @@
 				font-size: 16px;
 			}
 		}
+	}
+	.speaker-bio h1, .speaker-bio h3 {
+		text-align: left;
 	}
 }
 @media only screen and (min-width : 992px) {

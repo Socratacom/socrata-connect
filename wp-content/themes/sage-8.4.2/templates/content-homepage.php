@@ -8,7 +8,7 @@
 						<div class="logo margin-bottom-30"></div>
 						<h3 class="text-reverse margin-bottom-15">Connecting people, ideas, and technology with data</h3>
 						<p class="text-reverse  margin-bottom-30 font-normal">Join us March 6-8, 2017 at the Gaylord National Resort &amp; Conference Center, Washington, DC</p>
-						<p class="margin-bottom-0"><a href="#" class="btn btn-primary btn-lg">Register Today</a></p>
+						<p class="margin-bottom-0"><a href="/registration" class="btn btn-primary btn-lg">Register Today</a></p>
 					</div>
 				</div>
 			</div>
@@ -25,11 +25,10 @@
 <section class="section-padding background-white">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-12">
-				<h2 class="text-uppercase margin-bottom-60">The third annual Socrata event gets a new identity: <i>Socrata Connect</i></h2>
-				<p>We’ll be connecting people, connecting ideas, and connecting technology – with data as the thread that ties it all together. Whether data is the backbone of your government, or you’re just starting to explore this untapped resource, you’ll make inspiring connections at Socrata Connect that will help you build a stronger government and community.</p>
-				<p>Sign up to save your spot on the guest list and we’ll send you a code for an <strong>extra 10% off</strong> your ticket price when you register.</p>
-				<p><a href="#" class="btn btn-lg btn-primary">Save my seat</a></p>
+			<div class="col-sm-10 col-sm-offset-1">
+				<h2 class="text-center section-title">The third annual Socrata event gets a new identity: <i>Socrata Connect</i></h2>
+				<p class="lead text-center margin-bottom-60">We’ll be connecting people, connecting ideas, and connecting technology – with data as the thread that ties it all together. Whether data is the backbone of your government, or you’re just starting to explore this untapped resource, you’ll make inspiring connections at Socrata Connect that will help you build a stronger government and community.</p>
+				<p class="text-center"><a href="/registration" class="btn btn-lg btn-primary">Register Today</a></p>
 			</div>
 		</div>
 	</div>
@@ -38,7 +37,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
-				<h2 class="text-reverse text-center text-uppercase margin-bottom-0">Featured Speakers</i></h2>	
+				<h2 class="text-reverse text-center section-title">Featured Speakers</i></h2>	
 			</div>
 		</div>
 	</div>
@@ -70,8 +69,85 @@
 					</div>
 				</div>
 				<div class="image img-background" style="background-image:url(/wp-content/uploads/gaylord.jpg);"></div>
-			</div>			
+			</div>
 		</div>
+	</div>
+</section>
+<section class="section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="text-center section-title">Agenda</h2>
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<div class="agenda-card match-height margin-bottom-30">
+					<div class="date">
+						<div class="month">March</div>
+						<div class="day">5</div>
+						<div class="time">5:00 PM - 7:00 PM</div>
+					</div>
+					<div class="padding-30">
+						<ul>
+							<li>Welcome Reception and Networking Happy Hour</li>
+						</ul>
+					</div>
+				</div>				
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<div class="agenda-card match-height margin-bottom-30">
+					<div class="date">
+						<div class="month">March</div>
+						<div class="day">6</div>
+						<div class="time">8:00 AM - 8:00 PM</div>
+					</div>
+					<div class="padding-30">
+						<ul>
+							<li>Socrata Connect Day 1</li>
+							<li>Customer Appreciation Dinner</li>
+						</ul>
+					</div>
+				</div>				
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<div class="agenda-card match-height margin-bottom-30">
+					<div class="date">
+						<div class="month">March</div>
+						<div class="day">7</div>
+						<div class="time">8:00 AM - 6:00 PM</div>
+					</div>
+					<div class="padding-30">
+						<ul>
+							<li>Networking Breakfast</li>
+							<li>Socrata Connect Day 2</li>
+							<li>Networking Happy Hour</li>
+						</ul>
+					</div>
+				</div>				
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<div class="agenda-card match-height margin-bottom-30">
+					<div class="date">
+						<div class="month">March</div>
+						<div class="day">8</div>
+						<div class="time">8:00 AM - 3:00 PM</div>
+					</div>
+					<div class="padding-30">
+						<ul>
+							<li>Networking Breakfast</li>
+							<li>Data Camp Workshops</li>
+							<li>Socrata Education Certification</li>
+						</ul>
+					</div>
+				</div>				
+			</div>
+			<div class="col-sm-12 margin-top-30">				
+				<p class="text-center"><a href="/registration" class="btn btn-lg btn-primary">Register Today</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="collage">
+	<div class="row no-gutters">
 		<div class="col-sm-6">
 			<div class="block full-block background-black">
 				<div class="text">

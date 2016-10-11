@@ -5,17 +5,13 @@
 	$headshot = rwmb_meta( 'speakers_speaker_headshot', 'size=medium' );
   $dick = rwmb_meta( 'agenda_speakers' ); 
 ?>
-<section class="section-padding">
+<section class="section-padding speaker-bio">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-4">
-				<?php foreach ( $headshot as $image ) { echo $image['url']; } ?>
-
-
-
-
-
-
+			<div class="col-sm-4 sidebar">
+				<?php foreach ( $headshot as $image ) { ?>
+        <div class="headshot" style="background-image:url(<?php echo $image['url']; ?>);"></div>
+        <?php } ?>
 			</div>
 			<div class="col-sm-8">
 				<h1 class="margin-bottom-15"><?php the_title(); ?></h1>
