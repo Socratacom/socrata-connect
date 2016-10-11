@@ -4,28 +4,28 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12">
-						<h4 class="text-reverse text-uppercase">Socrata Presents</h4>
-						<div class="logo"></div>
+						<h4 class="text-reverse text-uppercase margin-bottom-15">Socrata Presents</h4>
+						<div class="logo margin-bottom-30"></div>
 						<h3 class="text-reverse margin-bottom-15">Connecting people, ideas, and technology with data</h3>
-						<p class="text-reverse margin-bottom-0 font-semi-bold">Join us March 6-8, 2017 at the Gaylord National Resort &amp; Conference Center, Washington, DC</p>
-						<p class="margin-bottom-0 margin-top-30 hidden-sm hidden-md hidden-lg"><a href="#" class="btn btn-primary btn-lg btn-block">Sign up early</a></p>
+						<p class="text-reverse  margin-bottom-30 font-normal">Join us March 6-8, 2017 at the Gaylord National Resort &amp; Conference Center, Washington, DC</p>
+						<p class="margin-bottom-0"><a href="#" class="btn btn-primary btn-lg">Register Today</a></p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div id="hero-video" style="background-image:url(https://img.youtube.com/vi/i4AgVzqtjzo/mqdefault.jpg)"></div>
+	<div id="hero-video" style="background-image:url(https://img.youtube.com/vi/5ntXO7Etw2g/maxresdefault.jpg)"></div>
 	<div class="scroll-icon hidden-xs text-center">
 		<small>SCROLL</small>
 		<div class="mouse"><a href="#start"></a></div>
 	</div>
 </section>
-<div id="video" class="player" data-property="{videoURL:'i4AgVzqtjzo',containment:'#hero-video', showControls:false, autoPlay:true, loop:true, mute:true, startAt:1, opacity:1, addRaster:true, quality:'default'}">My video</div> <!--BsekcY04xvQ-->
+<div id="video" class="player" data-property="{videoURL:'5ntXO7Etw2g',containment:'#hero-video', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, addRaster:true, quality:'default'}">My video</div> <!--BsekcY04xvQ-->
 <script>jQuery(function(e){e("#video").YTPlayer()});</script>
 <section class="section-padding background-white">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-10 col-sm-offset-1">
+			<div class="col-sm-12">
 				<h2 class="text-uppercase margin-bottom-60">The third annual Socrata event gets a new identity: <i>Socrata Connect</i></h2>
 				<p>We’ll be connecting people, connecting ideas, and connecting technology – with data as the thread that ties it all together. Whether data is the backbone of your government, or you’re just starting to explore this untapped resource, you’ll make inspiring connections at Socrata Connect that will help you build a stronger government and community.</p>
 				<p>Sign up to save your spot on the guest list and we’ll send you a code for an <strong>extra 10% off</strong> your ticket price when you register.</p>
@@ -45,9 +45,7 @@
 	<div id="speakers" class="slider-arrows">
 		<div class="container padding-60">
 			<div id="speakers-slides" class="row speaker-tiles">
-
 				<?php echo do_shortcode('[speaker-tiles]');?>
-
 			</div>
 		</div>
 	</div>
@@ -78,20 +76,60 @@
 			<div class="block full-block background-black">
 				<div class="text">
 					<h5 class="text-uppercase">Last Year Highlights</h5>
-					<h1 class="text-reverse text-uppercase fade-in">Kevin Merritt Keynote Address</h1>
+					<h1 class="text-reverse text-uppercase fade-in margin-bottom-15">Kevin Merritt Keynote Address</h1>
+					<p class="text-reverse fade-in">Watch Video <i class="fa fa-play-circle-o" aria-hidden="true"></i></p>
 				</div>
 				<div class="image img-background" style="background-image:url(/wp-content/uploads/kevin-merritt-keynote.jpg);"></div>
-				<a href="#" class="link"></a>
+				<a href="https://www.youtube.com/watch?v=XKPJhIxUZ8Q" role="button" class="link"></a>
 			</div>
 		</div>
 		<div class="col-sm-6">
 			<div class="row no-gutters hidden-xs">
 				<div class="col-sm-12">
-					<div class="block half-block background-black">
-						<div class="text">
-							<h5 class="text-uppercase">Last Year Highlights</h5>
+					<div class="block half-block background-primary-light">
+
+						<div class="twitter-slides vertical-center">
+						  <div class="twitter-slide match-height">
+						  	<div class="padding-30 vertical-center">
+							  	<h3>Really great time at <a href="https://twitter.com/hashtag/SCS2015?src=hash" target="_blank">#SCS2015</a> meeting new open data champions and seeing friends I've tweeted with for a while.</h3>
+							  	<p class="margin-bottom-0"><i class="fa fa-twitter" aria-hidden="true"></i></p>
+							  	<p class="margin-bottom-0">Andrew Nebus, <a href="https://twitter.com/AndrewNebus" target="_blank">@AndrewNebus</a></p>
+						  	</div>
+						  </div>
+						  <div class="twitter-slide match-height">
+						  	<div class="padding-30 vertical-center">
+							  	<h3>Thanks for an awesome conference <a href="https://twitter.com/socrata" target="_blank">@socrata</a>! Learned a lot & was reinvigorated to keep pushing for <a href="https://twitter.com/hashtag/opendata?src=hash" target="_blank">#opendata</a>. Couldn't ask for more. <a href="https://twitter.com/hashtag/SCS2015?src=hash" target="_blank">#SCS2015</a></h3>
+							  	<p class="margin-bottom-0"><i class="fa fa-twitter" aria-hidden="true"></i></p>
+							  	<p class="margin-bottom-0">Allison Baker, <a href="https://twitter.com/akbaker17" target="_blank">@akbaker17</a></p>
+						  	</div>
+						  </div>
+						  <div class="twitter-slide match-height">
+						  	<div class="padding-30 vertical-center">
+							  	<h3>I'm freaking out about seeing <a href="https://twitter.com/IQuantNY" target="_blank">@IQuantNY</a> at <a href="https://twitter.com/hashtag/SCS2015?src=hash" target="_blank">#SCS2015</a>!</h3>
+							  	<p class="margin-bottom-0"><i class="fa fa-twitter" aria-hidden="true"></i></p>
+							  	<p class="margin-bottom-0">Stacey Schipper, <a href="https://twitter.com/EffingData" target="_blank">@EffingData</a></p>
+						  	</div>
+						  </div>
+						  <div class="twitter-slide match-height">
+						  	<div class="padding-30 vertical-center">
+							  	<h3>Had a wonderful time at the <a href="https://twitter.com/socrata" target="_blank">@socrata</a> <a href="https://twitter.com/hashtag/SCS2015?src=hash" target="_blank">#SCS2015</a> summit! Thanks again to my fellow panelists <a href="https://twitter.com/chrismetcalf" target="_blank">@chrismetcalf</a> <a href="https://twitter.com/jackmadans" target="_blank">@jackmadans</a> &amp; <a href="https://twitter.com/canadeau" target="_blank">@canadeau</a></h3>
+							  	<p class="margin-bottom-0"><i class="fa fa-twitter" aria-hidden="true"></i></p>
+							  	<p class="margin-bottom-0">Derek Eder, <a href="https://twitter.com/derekeder" target="_blank">@derekeder</a></p>
+						  	</div>
+						  </div>
 						</div>
-						<div class="image img-background" style="background-image:url(/wp-content/uploads/tweets.jpg);"></div>
+						<script>
+						  jQuery(function ($){
+						    $('.twitter-slides').slick({
+								arrows: false,
+								dots:false,
+								autoplay: true,
+								autoplaySpeed: 5000,
+						    });
+						    $('.twitter-slides').show();
+						  });
+						</script>
+						
 					</div>
 				</div>
 			</div>			
@@ -100,41 +138,27 @@
 					<div class="block quarter-block background-black">
 						<div class="text">
 							<h5 class="text-uppercase">Last Year Highlights</h5>
-							<h1 class="text-reverse text-uppercase fade-in">Stories from Urban Data Science</h1>
+							<h1 class="text-reverse text-uppercase fade-in margin-bottom-15">Stories from Urban Data Science</h1>
+							<p class="text-reverse fade-in">Watch Video <i class="fa fa-play-circle-o" aria-hidden="true"></i></p>
 						</div>
 						<div class="image img-background" style="background-image:url(/wp-content/uploads/ben-wellington.jpg);"></div>
-						<a href="#" class="link"></a>
+						<a href="https://www.youtube.com/watch?v=XYRcWfo_DzM" role="button" class="link"></a>
 					</div>
 				</div>
 				<div class="col-sm-6">
 					<div class="block quarter-block background-black">
 						<div class="text">
 							<h5 class="text-uppercase">Last Year Highlights</h5>
-							<h1 class="text-reverse text-uppercase fade-in">Put the Data Where Your Mouth Is</h1>
+							<h1 class="text-reverse text-uppercase fade-in margin-bottom-15">Put the Data Where Your Mouth Is</h1>
+							<p class="text-reverse fade-in">Watch Video <i class="fa fa-play-circle-o" aria-hidden="true"></i></p>
 						</div>
 						<div class="image img-background" style="background-image:url(/wp-content/uploads/tony-yarber.jpg);"></div>
-						<a href="#" class="link"></a>
+						<a href="https://www.youtube.com/watch?v=VQJal_Iz8ng" role="button" class="link"></a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
-<section class="section-padding">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12">
-				<h2 class="text-center text-uppercase margin-bottom-60">Our Partners</i></h2>				
-			</div>
-			<div class="col-sm-2 col-sm-offset-3">
-				<p class="text-center"><img src="http://placehold.it/150x150"></p>				
-			</div>
-			<div class="col-sm-2">
-				<p class="text-center"><img src="http://placehold.it/150x150"></p>				
-			</div>
-			<div class="col-sm-2">
-				<p class="text-center"><img src="http://placehold.it/150x150"></p>				
-			</div>
-		</div>
-	</div>
-</section>
+<?php echo do_shortcode('[match-height]');?>
+<?php echo do_shortcode("[youtube-modal]"); ?>
