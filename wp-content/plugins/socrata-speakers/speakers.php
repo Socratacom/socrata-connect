@@ -257,3 +257,28 @@ function speaker_tiles($atts, $content = null) {
   return $content;
 }
 add_shortcode('speaker-tiles', 'speaker_tiles');
+
+
+
+
+require_once( plugin_dir_path( __FILE__ ) . '/widget.php' );
+class Socrata_Speakers_Widget {
+ 
+  function __construct() {
+      add_action( 'wp_dashboard_setup', array( $this, 'add_speakers_dashboard_widget' ) );
+  }
+
+  function add_speakers_dashboard_widget() {
+    global $custom_speaker_dashboard_widget;
+ 
+    foreach ( $custom_speaker_dashboard_widget as $widget_id => $options ) {
+      wp_add_dashboard_widget(
+          $widget_id,
+          $options['title'],
+          $options['callback']
+      );
+    }
+  } 
+}
+ 
+$wdw = new Socrata_Speakers_Widget();
