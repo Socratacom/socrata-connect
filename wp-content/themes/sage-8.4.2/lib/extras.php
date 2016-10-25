@@ -108,9 +108,12 @@ add_shortcode('responsive-carousel', __NAMESPACE__ . '\\carousel_script_responsi
  * Match Height
  */
 function match_height( $atts ) {
+  extract( shortcode_atts( array(
+    'class' => '',
+  ), $atts ) );
   ob_start(); 
   ?>
-  <script>jQuery(function(a){a(".match-height").matchHeight({byRow:!0})});</script>
+  <script>jQuery(function(a){a(<?php echo " '.$class' "; ?>).matchHeight({byRow:!0})});</script>
   <?php
   $content = ob_get_contents();
   ob_end_clean();

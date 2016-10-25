@@ -236,5 +236,6 @@
 		</div>
 	</div>
 </section>
-<?php echo do_shortcode('[match-height]');?>
+<?php echo do_shortcode('[match-height class="agenda-card"]');?>
+<?php echo do_shortcode('[match-height class="twitter-slide"]');?>
 <?php echo do_shortcode("[youtube-modal]"); ?>
