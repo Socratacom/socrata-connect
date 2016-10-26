@@ -894,12 +894,13 @@ ul.feature {
 		padding:5px 10px 5px 32px;
 		position: relative;
 		border-bottom:$light-grey-4 solid 1px;
+		line-height: normal;
 	}
 	li:before {
 		font-family: fontawesome;
 		content:"\f00c"; 
 		position: absolute;
-		top:5px;
+		top:8px;
 		left:1px;
 		color:$success;
 	}

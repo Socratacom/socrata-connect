@@ -79,7 +79,21 @@
 			<div class="col-sm-12">
 				<h2 class="text-center section-title">Agenda</h2>
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-6 col-md-3">
+				<div class="agenda-card match-height margin-bottom-30 border-primary-light">
+					<div class="date">
+						<div class="month">March</div>
+						<div class="day">5</div>
+						<div class="time">5:30 PM - 7:30 PM</div>
+					</div>
+					<div class="padding-30">
+						<ul class="feature">
+							<li>Welcome Reception</li>
+						</ul>
+					</div>
+				</div>				
+			</div>
+			<div class="col-sm-6 col-md-3">
 				<div class="agenda-card match-height margin-bottom-30 border-primary-light">
 					<div class="date">
 						<div class="month">March</div>
@@ -96,7 +110,7 @@
 					</div>
 				</div>				
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-6 col-md-3">
 				<div class="agenda-card match-height margin-bottom-30">
 					<div class="date">
 						<div class="month">March</div>
@@ -113,7 +127,7 @@
 					</div>
 				</div>				
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-6 col-md-3">
 				<div class="agenda-card match-height margin-bottom-30">
 					<div class="date">
 						<div class="month">March</div>
