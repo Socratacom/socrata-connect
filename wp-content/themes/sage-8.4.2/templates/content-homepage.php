@@ -57,18 +57,18 @@
 	</div>
 </section>
 <script>jQuery(function(a){a("#speakers-slides").slick({arrows:!0,appendArrows:a("#speakers"),prevArrow:'<div class="toggle-left"><i class="fa slick-prev fa-chevron-left"></i></div>',nextArrow:'<div class="toggle-right"><i class="fa slick-next fa-chevron-right"></i></div>',autoplay:!1,autoplaySpeed:8e3,speed:800,slidesToShow:3,slidesToScroll:3,accessibility:!1,dots:!1,responsive:[{breakpoint:768,settings:{slidesToShow:2,slidesToScroll:2}},{breakpoint:480,settings:{slidesToShow:1,slidesToScroll:1}}]}),a("#speakers-slides").show()});</script>
-<section class="collage">
-	<div class="row no-gutters">
-		<div class="col-sm-12">
-			<div class="block full-width-block background-black">
-				<div class="text">
-					<div class="vertical-center fade-in">
-						<h1 class="text-center text-reverse text-uppercase margin-bottom-15">The Venue</h1>
-						<p class="text-center text-reverse font-semi-bold">Socrata Connect will be held at the beautiful Gaylord National Resort &amp; Conference Center, Washington DC</p>
-						<p class="text-center"><a href="http://www.marriott.com/hotels/travel/wasgn-gaylord-national-resort-and-convention-center/" target="_blank" class="btn btn-default btn-lg">Visit their site</a></p>
-					</div>
+<section class="venue" style="background-image:url(/wp-content/uploads/gaylord.jpg);">
+	<div class="wrapper">
+		<div class="vertical-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<h2 class="text-center text-reverse section-title">Socrata Connect Venue</h2>
+						<p class="text-center text-reverse">The iconic Gaylord National Hotel and Conference Center will play host to this year's Socrata Connect. One of the country's most impressive resort hotels, the Gaylord sits right on the Potomac River in the National Harbor area, minutes from downtown Washington, DC.</p>
+						<p class="text-center text-reverse margin-bottom-60"><strong>A conference rate of $239</strong> has been secured for Socrata Connect attendees. Reserve your room now before the block fills up.</p> 
+						<p class="text-center"><a href="http://www.marriott.com/hotels/travel/wasgn-gaylord-national-resort-and-convention-center/" target="_blank" class="btn btn-default btn-lg">Reserve your Room</a></p>
+					</div>			
 				</div>
-				<div class="image img-background" style="background-image:url(/wp-content/uploads/gaylord.jpg);"></div>
 			</div>
 		</div>
 	</div>
@@ -79,36 +79,24 @@
 			<div class="col-sm-12">
 				<h2 class="text-center section-title">Agenda</h2>
 			</div>
-			<div class="col-sm-6 col-md-3">
-				<div class="agenda-card match-height margin-bottom-30">
-					<div class="date">
-						<div class="month">March</div>
-						<div class="day">5</div>
-						<div class="time">5:00 PM - 7:00 PM</div>
-					</div>
-					<div class="padding-30">
-						<ul>
-							<li>Welcome Reception and Networking Happy Hour</li>
-						</ul>
-					</div>
-				</div>				
-			</div>
-			<div class="col-sm-6 col-md-3">
-				<div class="agenda-card match-height margin-bottom-30">
+			<div class="col-sm-4">
+				<div class="agenda-card match-height margin-bottom-30 border-primary-light">
 					<div class="date">
 						<div class="month">March</div>
 						<div class="day">6</div>
 						<div class="time">8:00 AM - 8:00 PM</div>
 					</div>
 					<div class="padding-30">
-						<ul>
+						<ul class="feature">
+							<li>Networking Breakfast</li>
 							<li>Socrata Connect Day 1</li>
-							<li>Customer Appreciation Dinner</li>
+							<li>Education Program Classes</li>
+							<li>Customer Dinner</li>
 						</ul>
 					</div>
 				</div>				
 			</div>
-			<div class="col-sm-6 col-md-3">
+			<div class="col-sm-4">
 				<div class="agenda-card match-height margin-bottom-30">
 					<div class="date">
 						<div class="month">March</div>
@@ -116,15 +104,16 @@
 						<div class="time">8:00 AM - 6:00 PM</div>
 					</div>
 					<div class="padding-30">
-						<ul>
+						<ul class="feature">
 							<li>Networking Breakfast</li>
 							<li>Socrata Connect Day 2</li>
+							<li>Education Program Classes</li>
 							<li>Networking Happy Hour</li>
 						</ul>
 					</div>
 				</div>				
 			</div>
-			<div class="col-sm-6 col-md-3">
+			<div class="col-sm-4">
 				<div class="agenda-card match-height margin-bottom-30">
 					<div class="date">
 						<div class="month">March</div>
@@ -132,15 +121,15 @@
 						<div class="time">8:00 AM - 3:00 PM</div>
 					</div>
 					<div class="padding-30">
-						<ul>
+						<ul class="feature">
 							<li>Networking Breakfast</li>
 							<li>Data Camp Workshops</li>
-							<li>Socrata Education Certification</li>
 						</ul>
 					</div>
 				</div>				
 			</div>
-			<div class="col-sm-12 margin-top-30">				
+			<div class="col-sm-12 margin-top-30">
+				<p class="text-center margin-bottom-30">This year Socrata is excited to offer their Education Program at Connect. If you already have one of Socrata's Eduction Packages, then you (and your teammates) can attend these classes, for free. If you're not yet using our year-long Education offering, you may purchase a pass separately. Find out more about the <a href="/registration/#education">Education Program and the classes</a> being offered at Socrata Connect.
 				<p class="text-center"><a href="/registration" class="btn btn-lg btn-primary">Register Today</a></p>
 			</div>
 		</div>
