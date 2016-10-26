@@ -28,7 +28,6 @@
 		left:0;
 		width:100%;
 		height:100vh;
-		opacity: 1;
 		background-repeat:no-repeat;
 		background-size:cover;
 		background-position:center center;
@@ -41,10 +40,19 @@
 		left:0;
 		width:100%;
 		height:100vh;
-		background-color:rgba($primary,1);
+		background-color:$primary;
 		z-index: 100;
 		mix-blend-mode: multiply;
-
+	}
+	#hero-video::after {
+		content:'';
+		position: absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100vh;
+		background-color:rgba($primary,.5);
+		z-index: 50;
 	}
 }
 
