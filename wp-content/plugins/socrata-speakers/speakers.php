@@ -194,11 +194,11 @@ function speaker_tiles($atts, $content = null) {
             <div class="text-center">
               <span class="headshot" style="background-image:url(<?php foreach ( $headshot as $image ) { echo $image['url']; } ?>);"></span>
             </div>
-            <div class="speaker-meta dot-ellipsis dot-resize-update dot-height-100">
+            <div class="speaker-meta truncate">
               <h4 class="text-center text-uppercase color-success"><?php the_title(); ?></h4>
               <p class="text-center text-reverse job-title"><em><?php echo $jobtitle;?>, <?php echo $company;?></em></p>
             </div>
-            <div class="speaker-meta-hover dot-ellipsis dot-resize-update dot-height-200">
+            <div class="speaker-meta-hover truncate">
               <h4 class="text-center text-uppercase color-success"><?php the_title(); ?></h4>
               <p class="text-center text-reverse job-title"><em><?php echo $jobtitle;?>, <?php echo $company;?></em></p>
               <div class="bio">
@@ -219,11 +219,11 @@ function speaker_tiles($atts, $content = null) {
             <div class="text-center">
               <span class="headshot" style="background-image:url(/wp-content/uploads/no-image.png);"></span>
             </div>
-            <div class="speaker-meta dot-ellipsis dot-resize-update dot-height-100">
+            <div class="speaker-meta truncate">
               <h4 class="text-center text-uppercase color-success"><?php the_title(); ?></h4>
               <p class="text-center text-reverse job-title"><em><?php echo $jobtitle;?></em></p>
             </div>
-            <div class="speaker-meta-hover dot-ellipsis dot-resize-update dot-height-200">
+            <div class="speaker-meta-hover truncate">
               <h4 class="text-center text-uppercase color-success"><?php the_title(); ?></h4>
               <p class="text-center text-reverse job-title"><em><?php echo $jobtitle;?></em></p>
               <div class="bio">
@@ -240,6 +240,7 @@ function speaker_tiles($atts, $content = null) {
       <?php } ?>
 
     <?php }
+
   } ?>
 
   <?php
