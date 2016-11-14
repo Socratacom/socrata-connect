@@ -67,7 +67,7 @@
 						<h2 class="text-center text-reverse section-title">Socrata Connect Venue</h2>
 						<p class="text-center text-reverse">The iconic Gaylord National Hotel and Conference Center will play host to this year's Socrata Connect. One of the country's most impressive resort hotels, the Gaylord sits right on the Potomac River in the National Harbor area, minutes from downtown Washington, DC.</p>
 						<p class="text-center text-reverse margin-bottom-60"><strong>A conference rate of $239</strong> has been secured for Socrata Connect attendees. Reserve your room now before the block fills up.</p> 
-						<p class="text-center"><a href="http://www.marriott.com/hotels/travel/wasgn-gaylord-national-resort-and-convention-center/" target="_blank" class="btn btn-default btn-lg">Reserve your Room</a></p>
+						<p class="text-center"><a href="https://aws.passkey.com/g/66320323" target="_blank" class="btn btn-default btn-lg">Reserve your Room</a></p>
 					</div>			
 				</div>
 			</div>
