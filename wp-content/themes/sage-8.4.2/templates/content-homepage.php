@@ -51,7 +51,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
-				<p class="text-center text-reverse margin-bottom-0">As we continue to plan this event, we'd love to hear from you on what topics and speakers you'd like to see. <a href="https://docs.google.com/a/socrata.com/forms/d/e/1FAIpQLSdkUBvX7525QyZ3hc4nrNa66wmCCKZ8Wv2LE00EjbS-oDvCPw/viewform" target="_blank">Suggest a speaker or session</a>.</p>
+				<p class="text-center text-reverse margin-bottom-0">Are you interested in being a Socrata Connect speaker? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdksWzrZ9p-P-vgdfT-gmb5gSOIC4Gib7KU9wwR8JsGATfShA/viewform" target="_blank">Submit an abstract here</a>, by November 30, 2016.</p>
 			</div>
 		</div>
 	</div>
