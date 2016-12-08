@@ -27,7 +27,8 @@ function setup() {
   // Register wp_nav_menu() menus
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus([
-    'primary_navigation' => __('Primary Navigation', 'sage')
+    'primary_navigation' => __('Primary Navigation', 'sage'),
+    'mobile_navigation' => __('Mobile Navigation', 'sage')
   ]);
 
   // Enable post thumbnails
@@ -100,7 +101,7 @@ function display_sidebar() {
  * Theme assets
  */
 function assets() {
-  wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css'), '', '1.9');
+  wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css'), '', '1.1');
   wp_register_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600', false, null);
   wp_enqueue_style('google-fonts');
 

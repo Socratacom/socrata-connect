@@ -13,7 +13,8 @@
     "slick-carousel": "^1.6.0",
     "font-awesome": "fontawesome#^4.6.3",
     "jQuery.dotdotdot": "dotdotdot#^1.8.3",
-    "matchHeight": "^0.7.0"
+    "matchHeight": "^0.7.0",
+    "classie": "^1.0.1"
   },
   "overrides": {
     "lodash": {
@@ -24,6 +25,12 @@
     },
     "slick-carousel": {
       "main": "./slick/slick.min.js"
+    },
+    "matchHeight": {
+      "main": "./dist/jquery.matchHeight-min.js"
+    },
+    "classie": {
+      "main": "./classie.js"
     },
     "bootstrap-sass": {
       "main": [
