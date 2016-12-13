@@ -24,13 +24,7 @@ function body_class($classes) {
 }
 add_filter('body_class', __NAMESPACE__ . '\\body_class');
 
-/**
- * Clean up the_excerpt()
- */
-function excerpt_more() {
-  return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
-}
-add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
+
 
 /**
  * Adds responisve image class to images
@@ -43,6 +37,7 @@ function WPTime_add_custom_class_to_all_images($content){
     return $add_class; // display class to image
 }
 add_filter('the_content', __NAMESPACE__ . '\\WPTime_add_custom_class_to_all_images');
+
 
 /**
  * Responsive Carousel [responsive-carousel id="" slide_id=""]
@@ -120,6 +115,31 @@ function match_height( $atts ) {
   return $content;
 }
 add_shortcode('match-height', __NAMESPACE__ . '\\match_height');
+
+/**
+ * Addthis Sharing
+ */
+function addthis_sharing ($atts, $content = null) {
+  ob_start();
+  ?>
+  <div class="addthis_inline_share_toolbox"></div>
+  <?php
+  $content = ob_get_contents();
+  ob_end_clean();
+  return $content;
+}
+add_shortcode('addthis', __NAMESPACE__ . '\\addthis_sharing');
+
+
+
+/**
+ * Clean Archive Title
+ */
+function grd_custom_archive_title( $title ) {
+  // Remove any HTML, words, digits, and spaces before the title.
+  return preg_replace( '#^[\w\d\s]+:\s*#', '', strip_tags( $title ) );
+}
+add_filter( 'get_the_archive_title', __NAMESPACE__ . '\\grd_custom_archive_title' );
 
 /**
  * YouTube Modal

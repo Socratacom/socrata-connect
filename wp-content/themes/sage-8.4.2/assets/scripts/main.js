@@ -19,6 +19,18 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+        
+        jQuery(function($) {
+          $(function() {
+            $.fn.matchHeight._throttle = 80;
+              $('.match-height').matchHeight();
+          });
+          $( document ).ajaxComplete(function() {
+            $('.match-height')
+            .matchHeight('remove')
+            .matchHeight();
+          });
+        });
 
         //Smooth Jumplink Scrolling
         var target, scroll;

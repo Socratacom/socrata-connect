@@ -71,7 +71,7 @@ body {
 .color-success-dark {color:$success-dark;}
 .color-black {color:$black;}
 
-.text-reverse {color:white;}
+.text-reverse, .color-white {color:white;}
 .font-normal {font-weight:$font-normal;}
 .font-semi-bold {font-weight:$font-semi-bold;}
 
@@ -256,6 +256,11 @@ body {
 	    border-top: 5px solid $light-grey-4;
 	    margin:30px 0;
 	}
+	.lead-lg {
+        font-weight: $font-light;
+        font-size:18px;
+        color:$primary-alt-1;
+    }
 }
 
 /* Extra Small Devices, Phones */ 
@@ -289,6 +294,9 @@ body {
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
+	.lead-lg {
+        font-size:24px;
+    }
 }
 
 /* Large Devices, Wide Screens */
