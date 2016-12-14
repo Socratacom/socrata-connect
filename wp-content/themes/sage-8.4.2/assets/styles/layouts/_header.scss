@@ -97,6 +97,8 @@ header {
 		.side-panel-menu {
 			display: inline-block;
 			width:100%;
+			margin:0;
+			padding:0;
 			li {
 				display: block;
 				margin:0 !important;
@@ -108,7 +110,7 @@ header {
 			}
 		}
 		
-		button {
+		.hamburger {
 			background:transparent;
 		    background-image: none;
 		    border:0;
@@ -152,7 +154,7 @@ header {
 				}
 			}
 		}
-		button.collapsed {
+		.hamburger.collapsed {
 			.ui-menu__content {
 				.ui-menu__line {
 				    background: $primary;
@@ -164,7 +166,7 @@ header {
 				}
 			}
 		}
-		button.active {
+		.hamburger.active {
 			border:none;
 			.ui-menu__content {
 				.ui-menu__line {
