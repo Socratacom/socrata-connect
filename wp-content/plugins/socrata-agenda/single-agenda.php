@@ -17,6 +17,16 @@ $content = rwmb_meta( 'agenda_wysiwyg' );
 <?php } ?>
 </ul> -->
 
+<?php
+	$terms = get_the_terms($post->ID, 'socrata_agenda_track');
+	if (! empty($terms)) {
+	  foreach ($terms as $term) {
+	    $url = get_term_link($term->slug, 'socrata_agenda_track');
+	    print "<div>FOUND IN: <a href='$url'>{$term->name}</a></div>";
+	  }
+	}
+?>
+
 			</div>
 		</div>
 	</div>

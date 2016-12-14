@@ -14,7 +14,7 @@
 					</ul>
 				</div>
 			</li>
-			<li><a href="#" class="btn btn-default">Speakers</a></li>
+			<!--<li><a href="/speakers" class="btn btn-default">Speakers</a></li>-->
 			<li><a href="/registration" class="btn btn-primary">Register Today</a></li>
 		</ul>  	
   	</nav>

@@ -143,9 +143,8 @@
 					</div>
 				</div>				
 			</div>
-			<div class="col-sm-12 margin-top-30">
-				<p class="text-center margin-bottom-30">This year Socrata is excited to offer their Education Program at Connect. If you already have one of Socrata's Eduction Packages, then you (and your teammates) can attend these classes, for free. If you're not yet using our year-long Education offering, you may purchase a pass separately. Find out more about the <a href="/registration/#education">Education Program and the classes</a> being offered at Socrata Connect.
-				<p class="text-center"><a href="/registration" class="btn btn-lg btn-primary">Register Today</a></p>
+			<div class="col-sm-12">
+				<p class="text-center margin-top-60"><a href="/agenda" class="btn btn-lg btn-primary">Explore Sessions</a></p>
 			</div>
 		</div>
 	</div>

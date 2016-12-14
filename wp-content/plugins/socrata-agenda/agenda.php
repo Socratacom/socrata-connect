@@ -175,7 +175,7 @@ function socrata_agenda_excerpt() {
 }
 
 // PRINT TAXONOMY CATEGORIES
-function socrata_agenda_the_categories() {
+function persona_the_categories() {
     // get all categories for this post
     global $terms;
     $terms = get_the_terms($post->ID , 'socrata_agenda_persona');
@@ -184,6 +184,7 @@ function socrata_agenda_the_categories() {
     // echo the remaining categories, appending separator
     for ($i = 1; $i < count($terms); $i++) {echo ', ' . $terms[$i]->name ;}
 }
+
 
 // METABOXES
 add_filter( 'rwmb_meta_boxes', 'socrata_agenda_register_meta_boxes' );
