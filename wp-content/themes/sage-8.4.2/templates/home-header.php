@@ -3,7 +3,7 @@
 	<nav class="hidden-xs hidden-sm">
   		<a class="logo header-logo" href="<?php echo home_url('/'); ?>"></a>
 		<ul class="header-nav">
-			<li>
+			<!--<li>
 				<div class="dropdown">
 					<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Agenda <span class="caret"></span></button>
 					<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
@@ -14,8 +14,8 @@
 					</ul>
 				</div>
 			</li>
-			<li><a href="#" class="btn btn-default">Speakers</a></li>
-			<li><a href="#" class="btn btn-primary">Register Today</a></li>
+			<li><a href="#" class="btn btn-default">Speakers</a></li>-->
+			<li><a href="/registration" class="btn btn-primary">Register Today</a></li>
 		</ul>  	
   	</nav>
 
