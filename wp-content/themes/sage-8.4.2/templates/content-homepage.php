@@ -6,7 +6,7 @@
 					<div class="col-sm-12">
 						<h4 class="text-reverse text-uppercase margin-bottom-15">Socrata Presents</h4>
 						<div class="logo margin-bottom-30"></div>
-						<h3 class="text-reverse margin-bottom-15">Connecting people, ideas, and technology with data</h3>
+						<h3 class="text-reverse margin-bottom-15">Lead with data</h3>
 						<p class="text-reverse  margin-bottom-30 font-normal">Join us March 6-8, 2017 at the Gaylord National Resort &amp; Conference Center, Washington, DC</p>
 						<p class="margin-bottom-0"><a href="/registration" class="btn btn-primary btn-lg">Register Today</a></p>
 					</div>
