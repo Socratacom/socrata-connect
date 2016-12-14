@@ -20,7 +20,7 @@ elseif ( is_tax('socrata_agenda_track','education') ) { ?>
 	<section class="masthead">
 		<div class="text">
 			<div class="vertical-center padding-30">
-				<h1 class="color-white margin-bottom-0 text-uppercase text-center">Education Track</h1>
+				<h1 class="color-white margin-bottom-0 text-uppercase text-center">Education &amp; Training</h1>
 			</div>
 		</div>
 		<div class="img img-background" style="background-image:url(/wp-content/uploads/education-hero.jpg);"></div>

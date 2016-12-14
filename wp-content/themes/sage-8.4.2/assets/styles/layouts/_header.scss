@@ -21,7 +21,53 @@ header {
 			transition: all .2s;
 		}
 
-		ul {
+		.header-nav {
+			list-style-type: none;
+			padding:0;
+			display: flex;
+			transition: margin .2s;
+			li {
+				display:inline-block;
+			}
+			li:not(:last-child) {
+				margin-right: 5px;
+			}
+			.btn-default {
+				background:transparent;
+				color:white;
+			}
+			.open>.btn-default.dropdown-toggle.focus, .open>.btn-default.dropdown-toggle:focus, .open>.btn-default.dropdown-toggle:hover{
+			color: $black;
+			background-color: white;
+			border-color: $light-grey-4;
+			}
+
+
+
+
+
+
+
+
+			.dropdown-menu {
+				border-radius:1px;
+				border:$light-grey-4 solid 1px;
+				li {
+					font-size: 14px;
+					display: block;
+					margin:0;
+					padding:0;
+					a {
+						display: block;
+					}
+					a:hover {
+						background-color:$primary-light;
+					}
+				}
+			}
+		}
+
+		ul.this {
 			display: flex;			
 			padding: 0;
 			transition: margin .2s;
@@ -69,6 +115,7 @@ header {
 				}
 			}
 		}
+		/*
 		button {
 			background:transparent;
 		    background-image: none;
@@ -147,6 +194,7 @@ header {
 				}
 			}
 		}
+		*/
 		.cbp-spmenu {
 			background: $primary;
 			position: fixed;
@@ -177,8 +225,11 @@ header.scroll {
 .scroll .logo {
 	padding: 10px 20px;
 }
-.scroll .logo, .scroll ul {
+.scroll .logo, .scroll .header-nav {
 	margin: 0;
+}
+.scroll .header-nav .btn-default {
+	color:$primary;
 }
 
 
@@ -193,7 +244,7 @@ header.scroll {
 				width:190px;
 				height:22px;
 			}
-			ul {
+			.header-nav {
 				margin: 0;
 			}
 		}
@@ -215,7 +266,7 @@ header.scroll {
 				width:338px;
 				height:40px;
 			}
-			ul {
+			.header-nav {
 				margin: 50px 50px 0 0;
 			}
 		}
