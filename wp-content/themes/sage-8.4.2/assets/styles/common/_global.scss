@@ -6,7 +6,6 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 .main {
-	padding:60px 0 0 0 !important;
 	width:100% !important;
 	float:none !important;
 	background-color:white;
@@ -72,7 +71,8 @@ body {
 .color-success-dark {color:$success-dark;}
 .color-black {color:$black;}
 
-.text-reverse {color:white;}
+.text-reverse, .color-white {color:white;}
+.font-normal {font-weight:$font-normal;}
 .font-semi-bold {font-weight:$font-semi-bold;}
 
 .overlay:before {content:'';position:absolute;top:0;left:0;height:100%;width:100%;z-index:1;}
@@ -87,6 +87,12 @@ body {
 .overlay-primary-alt-3-dark:before {background-color: rgba($primary-alt-3-dark, 0.8);}
 .overlay-secondary:before {background-color: rgba($secondary, 0.8);}
 .overlay-secondary-dark:before {background-color: rgba($secondary-dark, 0.8);}
+
+.border-primary {border:$primary solid 5px;}
+.border-primary-light {border:$primary-light solid 5px;}
+.border-primary-alt-1 {border:$primary-alt-1 solid 5px;}
+.border-primary-alt-2 {border:$primary-alt-2 solid 5px;}
+.border-primary-alt-3 {border:$primary-alt-3 solid 5px;}
 
 .overlay {
 	position: relative;
@@ -185,26 +191,36 @@ body {
 .vertical-center {
 	@include vertical-align();
 }
+.section-title {
+	margin-bottom:60px;
+	text-transform:uppercase;
+}
 
 @media only screen and (min-width : 320px) {
+	.main {
+		padding:63px 0 0 0 !important;
+	}
 	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	    color: $black;
 	    margin-top:0;
+	    line-height: 1.5em;
 	}
 	h1 {		
 		letter-spacing:-1px;
 		font-size: 36px;		
 		margin-bottom:1em;
-		font-weight: $font-semi-bold;
+		font-weight: $font-light;
 	}
 	h2 {		
 		letter-spacing:-1px;
 		font-size: 30px;		
 		margin-bottom:1em;
+		font-weight: $font-light;
 	}
 	h3 {
 		font-size: 24px;
 		margin-bottom:1.3em;
+		font-weight: $font-light;
 	}
 	h4 {
 		font-size: 18px;
@@ -240,6 +256,11 @@ body {
 	    border-top: 5px solid $light-grey-4;
 	    margin:30px 0;
 	}
+	.lead-lg {
+        font-weight: $font-light;
+        font-size:18px;
+        color:$primary-alt-1;
+    }
 }
 
 /* Extra Small Devices, Phones */ 
@@ -247,7 +268,10 @@ body {
 }
 
 /* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
+@media only screen and (min-width : 768px) {	
+	.main {
+		padding:73px 0 0 0 !important;
+	}
 	h1 {		
 		font-size: 38px;
 	}
@@ -270,6 +294,9 @@ body {
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
+	.lead-lg {
+        font-size:24px;
+    }
 }
 
 /* Large Devices, Wide Screens */
@@ -294,4 +321,69 @@ body {
 	}
 }
 
+/* Reponsive Video iFrame */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    iframe {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 
+}
+.video-modal[style] {
+    padding:0 !important;
+}
+.video-modal {
+    .modal-dialog {
+        margin:0;
+        padding:0;
+        width:100%;
+        height:100vh;
+    }
+    .modal-content {
+        position: relative;
+        width:100%;
+        height:100vh;
+        display: table;
+        box-shadow:none;
+        border:none;
+        background-color:$black;
+        .modal-body {
+            display:table-cell;
+            vertical-align:middle;
+            .frame {
+                border:white solid 10px;
+            }
+        }
+        button {
+            position: absolute;
+            top:30px;
+            right:30px;
+            height:60px;
+            width:60px;
+            z-index: 10;
+            color:white;
+            background-color: $primary;
+            border: none;
+            padding:0;
+            outline:none;
+            cursor:pointer;
+            line-height: normal;
+            i {
+				position: absolute;
+				font-size: 50px;
+				top:4px;
+				left:10px;
+            }
+        }
+    }    
+    .modal-body {
+        padding:0;
+    }
+}

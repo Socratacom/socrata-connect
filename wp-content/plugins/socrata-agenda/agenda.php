@@ -32,8 +32,8 @@ function create_socrata_agenda() {
       'supports' => array( 'title', 'thumbnail' ),
       'taxonomies' => array( '' ),
       'menu_icon' => '',
-      'has_archive' => false,
-      'rewrite' => array('with_front' => false, 'slug' => 'agenda')
+      'has_archive' => true,
+      'rewrite' => array('with_front' => false, 'slug' => 'session')
     )
   );
 }
@@ -58,10 +58,10 @@ function socrata_agenda_track() {
     'socrata_agenda',
     array(
       'labels' => array(
-        'name' => 'Track',
-        'menu_name' => 'Track',
-        'add_new_item' => 'Add New Track',
-        'new_item_name' => "New Track"
+        'name' => 'Sessions',
+        'menu_name' => 'Sessions',
+        'add_new_item' => 'Add New Session',
+        'new_item_name' => "New Session"
       ),
       'show_ui' => true,
       'show_tagcloud' => false,
@@ -69,11 +69,16 @@ function socrata_agenda_track() {
       'sort' => true,      
       'args' => array( 'orderby' => 'term_order' ),
       'show_admin_column' => true,
-      'rewrite' => array('with_front' => false, 'slug' => 'agend-track'),
+      'capabilities'=>array(
+        'manage_terms' => 'manage_options',//or some other capability your clients don't have
+        'edit_terms' => 'manage_options',
+        'delete_terms' => 'manage_options',
+        'assign_terms' =>'edit_posts'),
+      'rewrite' => array('with_front' => false, 'slug' => 'agenda'),
     )
   );
 }
-add_action( 'init', 'socrata_agenda_location', 0 );
+add_action( 'init', 'socrata_agenda_location', 2 );
 function socrata_agenda_location() {
   register_taxonomy(
     'socrata_agenda_location',
@@ -90,11 +95,96 @@ function socrata_agenda_location() {
       'hierarchical' => true,
       'sort' => true,      
       'args' => array( 'orderby' => 'term_order' ),
-      'show_admin_column' => true,
+      'show_admin_column' => false,      
+      'capabilities'=>array(
+        'manage_terms' => 'manage_options',//or some other capability your clients don't have
+        'edit_terms' => 'manage_options',
+        'delete_terms' => 'manage_options',
+        'assign_terms' =>'edit_posts'),
       'rewrite' => array('with_front' => false, 'slug' => 'agend-location'),
     )
   );
 }
+add_action( 'init', 'socrata_agenda_persona', 1 );
+function socrata_agenda_persona() {
+  register_taxonomy(
+    'socrata_agenda_persona',
+    'socrata_agenda',
+    array(
+      'labels' => array(
+        'name' => 'Persona',
+        'menu_name' => 'Persona',
+        'add_new_item' => 'Add New Persona',
+        'new_item_name' => "New Persona"
+      ),
+      'show_ui' => true,
+      'show_tagcloud' => false,
+      'hierarchical' => true,
+      'sort' => true,      
+      'args' => array( 'orderby' => 'term_order' ),
+      'show_admin_column' => false,
+      'capabilities'=>array(
+        'manage_terms' => 'manage_options',//or some other capability your clients don't have
+        'edit_terms' => 'manage_options',
+        'delete_terms' => 'manage_options',
+        'assign_terms' =>'edit_posts'),
+      'rewrite' => array('with_front' => false, 'slug' => 'agend-persona'),
+    )
+  );
+}
+
+// TEMPLATE PATHS
+add_filter( 'template_include', 'socrata_agenda_single_template', 1 );
+function socrata_agenda_single_template( $template_path ) {
+  if ( get_post_type() == 'socrata_agenda' ) {
+    if ( is_single() ) {
+      // checks if the file exists in the theme first,
+      // otherwise serve the file from the plugin
+      if ( $theme_file = locate_template( array ( 'single-agenda.php' ) ) ) {
+        $template_path = $theme_file;
+      } else {
+        $template_path = plugin_dir_path( __FILE__ ) . 'single-agenda.php';
+      }
+    }
+    if ( is_archive() ) {
+      // checks if the file exists in the theme first,
+      // otherwise serve the file from the plugin
+      if ( $theme_file = locate_template( array ( 'archive-agenda.php' ) ) ) {
+        $template_path = $theme_file;
+      } else {
+        $template_path = plugin_dir_path( __FILE__ ) . 'archive-agenda.php';
+      }
+    }
+  }
+  return $template_path;
+}
+
+// CUSTOM EXCERPT
+function socrata_agenda_excerpt() {
+  global $post;
+  $text = rwmb_meta( 'agenda_wysiwyg' );
+  if ( '' != $text ) {
+    $text = strip_shortcodes( $text );
+    $text = apply_filters('the_content', $text);
+    $text = str_replace(']]>', ']]>', $text);
+    $excerpt_length = 20; // 20 words
+    $excerpt_more = apply_filters('excerpt_more', ' ' . ' ...');
+    $text = wp_trim_words( $text, $excerpt_length, $excerpt_more );
+  }
+  return apply_filters('get_the_excerpt', $text);
+}
+
+// PRINT TAXONOMY CATEGORIES
+function persona_the_categories() {
+    // get all categories for this post
+    global $terms;
+    $terms = get_the_terms($post->ID , 'socrata_agenda_persona');
+    // echo the first category
+    echo $terms[0]->name;
+    // echo the remaining categories, appending separator
+    for ($i = 1; $i < count($terms); $i++) {echo ', ' . $terms[$i]->name ;}
+}
+
 
 // METABOXES
 add_filter( 'rwmb_meta_boxes', 'socrata_agenda_register_meta_boxes' );
@@ -103,7 +193,29 @@ function socrata_agenda_register_meta_boxes( $meta_boxes )
   $prefix = 'agenda_';
 
   $meta_boxes[] = array(
-    'title'         => 'Agenda Item Meta',   
+    'title'         => 'Agenda Content',   
+    'post_types'    => 'socrata_agenda',
+    'context'       => 'normal',
+    'priority'      => 'high',
+    'fields' => array(
+      // WYSIWYG/RICH TEXT EDITOR
+      array(
+        'id'      => "{$prefix}wysiwyg",
+        'type'    => 'wysiwyg',
+        // Set the 'raw' parameter to TRUE to prevent data being passed through wpautop() on save
+        'raw'     => false,
+        // Editor settings, see wp_editor() function: look4wp.com/wp_editor
+        'options' => array(
+          'textarea_rows' => 15,
+          'teeny'         => false,
+          'media_buttons' => false,
+        ),
+      ),
+    ),
+  );
+
+  $meta_boxes[] = array(
+    'title'         => 'Agenda Meta',   
     'post_types'    => 'socrata_agenda',
     'context'       => 'normal',
     'priority'      => 'high',
@@ -169,28 +281,6 @@ function socrata_agenda_register_meta_boxes( $meta_boxes )
         'placeholder' => esc_html__( 'Select a Speaker' ),
         'clone' => true,
         'sort_clone' => true,
-      ),
-    ),
-  );
-
-  $meta_boxes[] = array(
-    'title'         => 'Content',   
-    'post_types'    => 'socrata_agenda',
-    'context'       => 'normal',
-    'priority'      => 'high',
-    'fields' => array(
-      // WYSIWYG/RICH TEXT EDITOR
-      array(
-        'id'      => "{$prefix}wysiwyg",
-        'type'    => 'wysiwyg',
-        // Set the 'raw' parameter to TRUE to prevent data being passed through wpautop() on save
-        'raw'     => false,
-        // Editor settings, see wp_editor() function: look4wp.com/wp_editor
-        'options' => array(
-          'textarea_rows' => 15,
-          'teeny'         => false,
-          'media_buttons' => false,
-        ),
       ),
     ),
   );

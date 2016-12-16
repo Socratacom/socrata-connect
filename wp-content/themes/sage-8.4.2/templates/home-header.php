@@ -1,4 +1,4 @@
-<header class="banner scroll">	
+<header class="banner">	
 
 	<nav class="hidden-xs hidden-sm">
   		<a class="logo header-logo" href="<?php echo home_url('/'); ?>"></a>
@@ -14,7 +14,7 @@
 					</ul>
 				</div>
 			</li>
-			<!--<li><a href="/speakers" class="btn btn-default">Speakers</a></li>-->
+			<!--<li><a href="/'speakers" class="btn btn-default">Speakers</a></li>-->
 			<li><a href="/registration" class="btn btn-primary">Register Today</a></li>
 		</ul>  	
   	</nav>

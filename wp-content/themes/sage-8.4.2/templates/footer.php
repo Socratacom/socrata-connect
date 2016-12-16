@@ -9,4 +9,17 @@
   	</div>    
   </div>
 </footer>
-<script type="text/javascript">jQuery(document).ready(function(t){t("#clock").countdown("2017/03/06").on("update.countdown",function(n){var o="%H:%M:%S";n.offset.days>0&&(o="%-d day%!d "+o),n.offset.weeks>0&&(o="%-w week%!w "+o),t(this).html(n.strftime(o))}).on("finish.countdown",function(n){t(this).html("This event has started!").parent().addClass("disabled")})});</script>
+<script>
+    var menuRight = document.getElementById( 'side-panel' ),
+        body = document.body;           
+    showRight.onclick = function() {
+        classie.toggle( this, 'active' );
+        classie.toggle( menuRight, 'cbp-spmenu-open' );
+        disableOther( 'showRight' );
+    };
+    function disableOther( button ) {
+        if( button !== 'showRight' ) {
+            classie.toggle( showRight, 'disabled' );
+        }
+    }
+</script>
