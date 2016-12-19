@@ -71,9 +71,11 @@ header {
 				display: block;
 				margin:0 !important;
 				border-bottom:lighten($primary,10%) solid 1px;
+				padding:5px 0;
 				a {
 					color:white;
 					display: block;
+					text-transform: uppercase;
 				}
 			}
 		}
