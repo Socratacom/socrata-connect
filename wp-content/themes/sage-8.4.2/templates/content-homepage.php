@@ -26,8 +26,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1">
-				<h2 class="text-center section-title">The third annual Socrata event gets a new identity: <i>Socrata Connect</i></h2>
-				<p class="lead text-center margin-bottom-60">We’ll be connecting people, connecting ideas, and connecting technology – with data as the thread that ties it all together. Whether data is the backbone of your government, or you’re just starting to explore this untapped resource, you’ll make inspiring connections at Socrata Connect that will help you build a stronger government and community.</p>
+				<h2 class="text-center section-title">It’s Time to Lead with Data</h2>
+				<p class="lead text-center margin-bottom-60">These are dynamic times that require thoughtful, informed decision-making. As a member of the government, how can you best approach the decisions that face you? Data can provide a foundation that let’s you, your peers, and citizens see the issues more clearly and move forward on them together. It’s time to make great decisions. It’s time to lead with data.</p>
 				<p class="text-center"><a href="/registration" class="btn btn-lg btn-primary">Register Today</a></p>
 			</div>
 		</div>
@@ -45,13 +45,6 @@
 		<div class="container padding-60">
 			<div id="speakers-slides" class="row speaker-tiles">
 				<?php echo do_shortcode('[speaker-tiles]');?>
-			</div>
-		</div>
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12">
-				<p class="text-center text-reverse margin-bottom-0">Are you interested in being a Socrata Connect speaker? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdksWzrZ9p-P-vgdfT-gmb5gSOIC4Gib7KU9wwR8JsGATfShA/viewform" target="_blank">Submit an abstract here</a>, by November 30, 2016.</p>
 			</div>
 		</div>
 	</div>
