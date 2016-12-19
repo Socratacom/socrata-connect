@@ -27,7 +27,7 @@
 		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1">
 				<h2 class="text-center section-title">It’s Time to Lead with Data</h2>
-				<p class="lead text-center margin-bottom-60">These are dynamic times that require thoughtful, informed decision-making. As a member of the government, how can you best approach the decisions that face you? Data can provide a foundation that let’s you, your peers, and citizens see the issues more clearly and move forward on them together. It’s time to make great decisions. It’s time to lead with data.</p>
+				<p class="lead-lg text-center margin-bottom-60">These are dynamic times that require thoughtful, informed decision-making. As a member of the government, how can you best approach the decisions that face you? Data can provide a foundation that let’s you, your peers, and citizens see the issues more clearly and move forward on them together. It’s time to make great decisions. It’s time to lead with data.</p>
 				<p class="text-center"><a href="/registration" class="btn btn-lg btn-primary">Register Today</a></p>
 			</div>
 		</div>
