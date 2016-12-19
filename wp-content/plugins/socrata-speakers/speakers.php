@@ -292,6 +292,8 @@ function speaker_tiles($atts, $content = null) {
     $args = array(
     'post_type' => 'socrata_speakers',
     'posts_per_page' => 100,
+    'orderby' => 'title',
+    'order' => 'ASC',
     'post_status' => 'publish',
     );
 
@@ -305,7 +307,6 @@ function speaker_tiles($atts, $content = null) {
     $headshot = rwmb_meta( 'speakers_speaker_headshot', 'size=medium' );
     $jobtitle = rwmb_meta( 'speakers_title' );
     $company = rwmb_meta( 'speakers_company' );
-    $bio = rwmb_meta( 'speakers_wysiwyg' );
     $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'post-image-small' );
     $url = $thumb['0']; { ?>
 
