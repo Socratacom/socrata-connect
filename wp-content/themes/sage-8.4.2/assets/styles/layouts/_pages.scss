@@ -788,8 +788,8 @@ ul.feature {
 					margin-right:0;
 				}
 				h2 {
-					line-height: normal;
-					margin:0;
+					line-height: 1em;
+					margin:0;					
 				}
 			}
 		}
@@ -813,9 +813,13 @@ ul.feature {
 	.speaker-bio {
 		.meta {
 			display: inline-block;
+			position: relative;
+			height:200px;
+			width:100%;
 			li {
-				display: inline-block;
-				float:left;
+				position:absolute;
+				top:0;
+				left:0;
 				text-align: left;
 				.headshot {
 					height:200px; 
@@ -825,6 +829,9 @@ ul.feature {
 				h2 {
 					@include vertical-align();
 				}
+			}
+			li:last-child {
+				left:220px;
 			}
 		}
 	}
