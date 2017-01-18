@@ -248,7 +248,6 @@ function socrata_agenda_register_meta_boxes( $meta_boxes )
         // For date options, see here http://api.jqueryui.com/datepicker
         // For time options, see here http://trentrichardson.com/examples/timepicker/
         'js_options' => array(
-          'stepMinute' => 15,
           'showSecond' => false,
         ),
       ),
@@ -261,7 +260,6 @@ function socrata_agenda_register_meta_boxes( $meta_boxes )
         // For date options, see here http://api.jqueryui.com/datepicker
         // For time options, see here http://trentrichardson.com/examples/timepicker/
         'js_options' => array(
-          'stepMinute' => 15,
           'showSecond' => false,
         ),
       ),
