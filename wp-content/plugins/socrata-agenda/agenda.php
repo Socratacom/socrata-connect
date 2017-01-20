@@ -285,3 +285,39 @@ function socrata_agenda_register_meta_boxes( $meta_boxes )
 
   return $meta_boxes;
 }
+
+
+
+
+
+
+// Shortcode [agenda-posts]
+function agenda_posts($atts, $content = null) {
+  ob_start();
+  ?>
+
+<div class="filter-bar background-primary-light padding-15 margin-bottom-30">
+  <ul>
+    <li><?php echo facetwp_display( 'facet', 'persona_dropdown' ); ?></li>
+    <li><?php echo facetwp_display( 'facet', 'location_dropdown' ); ?></li>
+    <li><?php echo facetwp_display( 'facet', 'session_dropdown' ); ?></li>
+    <li><button onclick="FWP.reset()" class="btn btn-primary"><i class="fa fa-undo" aria-hidden="true"></i> Reset</button></li>
+  </ul>
+</div>
+
+<?php echo facetwp_display( 'template', 'agenda' ); ?>
+
+
+
+
+
+  <script>!function(n){n(function(){FWP.loading_handler=function(){}})}(jQuery);</script>
+
+
+
+  <?php
+  $content = ob_get_contents();
+  ob_end_clean();
+  return $content;
+}
+add_shortcode('agenda-posts', 'agenda_posts');
