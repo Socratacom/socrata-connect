@@ -315,12 +315,12 @@ function agenda_posts($atts, $content = null) {
   </ul>
 </div>
 -->
-<h3 class="margin-bottom-0">Monday</h3>
+<h3 class="margin-bottom-0">Monday, March 6</h3>
 <?php echo facetwp_display( 'template', 'agenda_monday' ); ?>
-<h3 class="margin-bottom-0">Tuesday</h3>
+<h3 class="margin-bottom-0">Tuesday, March 7</h3>
 <?php echo facetwp_display( 'template', 'agenda_tuesday' ); ?>
-<h3 class="margin-bottom-0">Wednesday</h3>
-<?php echo facetwp_display( 'template', 'agenda_wednesday' ); ?>
+<!--<h3 class="margin-bottom-0">Wednesday, March 8</h3>
+<?php echo facetwp_display( 'template', 'agenda_wednesday' ); ?>-->
 
 
 
