@@ -1,12 +1,12 @@
 <?php
 if ( is_tax('socrata_agenda_track','data-camp') ) { ?>
-	<section class="masthead">
-		<div class="text">
-			<div class="vertical-center padding-30">
+	<section class="masthead background-primary img-background" style="background-image:url(/wp-content/uploads/circle-background.png);">
+		<div class="outer">
+			<div class="inner">
 				<h1 class="color-white margin-bottom-0 text-uppercase text-center">Data Camp</h1>
 			</div>
 		</div>
-		<div class="img img-background" style="background-image:url(/wp-content/uploads/data-camp-hero.jpg);"></div>
+		<div class="gradient-blue"></div>
 	</section>
 	<section class="section-padding">
 		<div class="container">

@@ -218,18 +218,18 @@ function featured_speaker_tiles($atts, $content = null) {
               <span class="headshot" style="background-image:url(<?php foreach ( $headshot as $image ) { echo $image['url']; } ?>);"></span>
             </div>
             <div class="speaker-meta truncate">
-              <h4 class="text-center text-uppercase color-success"><?php the_title(); ?></h4>
-              <p class="text-center text-reverse job-title"><em><?php echo $jobtitle;?>, <?php echo $company;?></em></p>
+              <h4 class="text-center text-uppercase"><?php the_title(); ?></h4>
+              <p class="text-center job-title"><em><?php echo $jobtitle;?>, <?php echo $company;?></em></p>
             </div>
             <div class="speaker-meta-hover truncate">
-              <h4 class="text-center text-uppercase color-success"><?php the_title(); ?></h4>
-              <p class="text-center text-reverse job-title"><em><?php echo $jobtitle;?>, <?php echo $company;?></em></p>
+              <h4 class="text-center text-uppercase"><?php the_title(); ?></h4>
+              <p class="text-center job-title"><em><?php echo $jobtitle;?>, <?php echo $company;?></em></p>
               <div class="bio">
                 <?php echo $bio;?>
               </div>
             </div>
             <div class="text-center arrow">
-              <i class="fa fa-long-arrow-down text-reverse" aria-hidden="true"></i>
+              <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
             </div>
             <a href="<?php the_permalink(); ?>" class="link"></a>
           </div>
@@ -243,18 +243,18 @@ function featured_speaker_tiles($atts, $content = null) {
               <span class="headshot" style="background-image:url(/wp-content/uploads/no-image.png);"></span>
             </div>
             <div class="speaker-meta truncate">
-              <h4 class="text-center text-uppercase color-success"><?php the_title(); ?></h4>
-              <p class="text-center text-reverse job-title"><em><?php echo $jobtitle;?></em></p>
+              <h4 class="text-center text-uppercase"><?php the_title(); ?></h4>
+              <p class="text-center job-title"><em><?php echo $jobtitle;?></em></p>
             </div>
             <div class="speaker-meta-hover truncate">
-              <h4 class="text-center text-uppercase color-success"><?php the_title(); ?></h4>
-              <p class="text-center text-reverse job-title"><em><?php echo $jobtitle;?></em></p>
+              <h4 class="text-center text-uppercase"><?php the_title(); ?></h4>
+              <p class="text-center job-title"><em><?php echo $jobtitle;?></em></p>
               <div class="bio">
                 <?php echo $bio;?>
               </div>
             </div>
             <div class="text-center arrow">
-              <i class="fa fa-long-arrow-down text-reverse" aria-hidden="true"></i>
+              <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
             </div>
             <a href="<?php the_permalink(); ?>" class="link"></a>
           </div>

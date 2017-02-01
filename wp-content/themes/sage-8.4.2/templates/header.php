@@ -1,7 +1,7 @@
 <header class="banner scroll">	
 
-	<nav class="hidden-xs hidden-sm">
-  		<a class="logo header-logo" href="<?php echo home_url('/'); ?>"></a>
+	<nav class="hidden-xs hidden-sm hidden-md">
+  		<a class="logo header-logo-blue" href="<?php echo home_url('/'); ?>"></a>
 		<ul class="header-nav">
 			<li>
 				<div class="dropdown">
@@ -20,8 +20,8 @@
 		</ul>  	
   	</nav>
 
-  	<nav class="hidden-md hidden-lg">
-  		<a class="logo header-logo" href="<?php echo home_url('/'); ?>"></a>
+  	<nav class="hidden-lg">
+  		<a class="logo header-logo-blue" href="<?php echo home_url('/'); ?>"></a>
 	  	<button id="showRight" type="button" class="hamburger collapsed" data-toggle="collapse" aria-expanded="false">
 			<span class="sr-only">Toggle navigation</span>
 			<span class="ui-menu__content">

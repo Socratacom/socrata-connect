@@ -1,28 +1,23 @@
-<section class="section-padding hero-full hero-home">
-	<div class="outer">
-		<div class="inner">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12">
-						<h4 class="text-reverse text-uppercase margin-bottom-15">Socrata Presents</h4>
-						<div class="logo margin-bottom-15"></div>
-						<h2 class="text-reverse text-uppercase margin-bottom-30">Lead with data</h2>
-						<p class="text-reverse  margin-bottom-30 font-normal">Join us March 6-8, 2017 at the Gaylord National Resort &amp; Conference Center, Washington, DC</p>
-						<p class="margin-bottom-0"><a href="/registration" class="btn btn-primary btn-lg">Register Today</a></p>
-					</div>
+<section class="section-padding hero-full hero-home img-background-fixed" style="background-image: url(/wp-content/uploads/connect-hero-home.jpg)">
+	<div class="text">
+		<div class="container vertical-center">
+			<div class="row">
+				<div class="col-sm-12">
+					<h4 class="text-reverse text-center text-uppercase margin-bottom-15">Socrata Presents</h4>
+					<p class="text-center margin-bottom-15"><span class="logo"></span></p>
+					<p class="text-reverse text-center  margin-bottom-30 font-normal">Join us March 6-8, 2017 at the Gaylord National Resort &amp; Conference Center, Washington, DC</p>
+					<p class="margin-bottom-0 text-center"><a href="/registration" class="btn btn-default btn-lg">Register Today</a></p>			
 				</div>
 			</div>
 		</div>
 	</div>
-	<div id="hero-video" style="background-image:url(https://img.youtube.com/vi/5ntXO7Etw2g/maxresdefault.jpg)"></div>
+	<div class="gradient-blue"></div>
 	<div class="scroll-icon hidden-xs text-center">
 		<small>SCROLL</small>
 		<div class="mouse"><a href="#start"></a></div>
 	</div>
 </section>
-<div id="video" class="player" data-property="{videoURL:'5ntXO7Etw2g',containment:'#hero-video', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, addRaster:true, quality:'default'}">My video</div> <!--BsekcY04xvQ-->
-<script>jQuery(function(e){e("#video").YTPlayer()});</script>
-<section class="section-padding background-white">
+<section id="start" class="section-padding background-white">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1">
@@ -33,11 +28,11 @@
 		</div>
 	</div>
 </section>
-<section class="section-padding background-black">
+<section class="section-padding background-primary-light">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
-				<h2 class="text-reverse text-center section-title">Featured Speakers</i></h2>	
+				<h2 class="text-center section-title">Featured Speakers</i></h2>	
 			</div>
 		</div>
 	</div>
@@ -51,21 +46,22 @@
 </section>
 <script>jQuery(function(a){a("#speakers-slides").slick({arrows:!0,appendArrows:a("#speakers"),prevArrow:'<div class="toggle-left"><i class="fa slick-prev fa-chevron-left"></i></div>',nextArrow:'<div class="toggle-right"><i class="fa slick-next fa-chevron-right"></i></div>',autoplay:!0,autoplaySpeed:3e3,speed:800,slidesToShow:3,slidesToScroll:1,accessibility:!1,dots:!1,responsive:[{breakpoint:768,settings:{slidesToShow:2,slidesToScroll:2}},{breakpoint:480,settings:{slidesToShow:1,slidesToScroll:1}}]}),a("#speakers-slides").show()});</script>
 <script>jQuery(function(a){a(document).ready(function(){a(".truncate").dotdotdot()})});</script>
-<section class="venue" style="background-image:url(/wp-content/uploads/gaylord.jpg);">
-	<div class="wrapper">
-		<div class="vertical-center">
+<section class="img-background-fixed overlay" style="background-image:url(/wp-content/uploads/gaylord-inside.jpg); height:100vh;">
+	<div class="outer">
+		<div class="inner">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12">
-						<h2 class="text-center text-reverse section-title">Socrata Connect Venue</h2>
+						<h2 class="text-center text-reverse text-uppercase margin-bottom-30">Socrata Connect Venue</h2>
 						<p class="text-center text-reverse">The iconic Gaylord National Hotel and Conference Center will play host to this year's Socrata Connect. One of the country's most impressive resort hotels, the Gaylord sits right on the Potomac River in the National Harbor area, minutes from downtown Washington, DC.</p>
 						<p class="text-center text-reverse margin-bottom-60"><strong>A conference rate of $239</strong> has been secured for Socrata Connect attendees. Reserve your room now before the block fills up.</p> 
-						<p class="text-center"><a href="https://aws.passkey.com/g/66320323" target="_blank" class="btn btn-default btn-lg">Reserve your Room</a></p>
+						<p class="text-center"><a href="https://aws.passkey.com/g/66320323" target="_blank" class="btn btn-default-outline btn-lg">Reserve your Room</a></p>
 					</div>			
 				</div>
 			</div>
 		</div>
 	</div>
+	<div class="gradient-orange"></div>
 </section>
 <section class="section-padding">
 	<div class="container">
