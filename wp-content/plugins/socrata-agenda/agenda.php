@@ -195,12 +195,39 @@ function location_the_categories() {
     for ($i = 1; $i < count($terms); $i++) {echo ', ' . $terms[$i]->name ;}
 }
 
+function session_the_categories() {
+    // get all categories for this post
+    global $terms;
+    $terms = get_the_terms($post->ID , 'socrata_agenda_track');
+    // echo the first category
+    echo $terms[0]->name;
+    // echo the remaining categories, appending separator
+    for ($i = 1; $i < count($terms); $i++) {echo ', ' . $terms[$i]->name ;}
+}
+
 
 // METABOXES
 add_filter( 'rwmb_meta_boxes', 'socrata_agenda_register_meta_boxes' );
 function socrata_agenda_register_meta_boxes( $meta_boxes )
 {
   $prefix = 'agenda_';
+
+  $meta_boxes[] = array(
+    'title'  => __( 'No Link', 'agenda_' ),
+    'post_types' => 'socrata_agenda',
+    'context'    => 'side',
+    'priority'   => 'high',
+    'fields' => array(
+      // CHECKBOX
+      array(
+        'id'   => "{$prefix}nolink",
+        'desc' => __( 'Don&rsquo;t link to single agenda page', 'agenda_' ),
+        'type' => 'checkbox',
+        // Value can be 0 or 1
+        'std'  => 0,
+      ),
+    )
+  );
 
   $meta_boxes[] = array(
     'title'         => 'Agenda Content',   
@@ -315,11 +342,11 @@ function agenda_posts($atts, $content = null) {
   </ul>
 </div>
 -->
-<h3 class="margin-bottom-0">Monday, March 6</h3>
+<h3 class="margin-bottom-30">Monday, March 6</h3>
 <?php echo facetwp_display( 'template', 'agenda_monday' ); ?>
-<h3 class="margin-bottom-0">Tuesday, March 7</h3>
+<h3 class="margin-bottom-30">Tuesday, March 7</h3>
 <?php echo facetwp_display( 'template', 'agenda_tuesday' ); ?>
-<h3 class="margin-bottom-0">Wednesday, March 8</h3>
+<h3 class="margin-bottom-30">Wednesday, March 8</h3>
 <p>Data Camp will be held on Wednesday. Time and location listings are coming soon.</p>
 <!--<?php echo facetwp_display( 'template', 'agenda_wednesday' ); ?>-->
 
