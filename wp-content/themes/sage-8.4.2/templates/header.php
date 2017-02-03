@@ -3,17 +3,7 @@
 	<nav class="hidden-xs hidden-sm hidden-md">
   		<a class="logo header-logo-blue" href="<?php echo home_url('/'); ?>"></a>
 		<ul class="header-nav">
-			<li>
-				<div class="dropdown">
-					<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Agenda <span class="caret"></span></button>
-					<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
-					<li><a href="/agenda">Agenda Overview</a></li>
-					<li><a href="/agenda/general">General Sessions</a></li>
-					<li><a href="/agenda/data-camp">Data Camp</a></li>
-					<li><a href="/agenda/education">Education &amp; Training</a></li>
-					</ul>
-				</div>
-			</li>
+			<li><a href="/agenda" class="btn btn-default">Agenda</a></li>
 			<li><a href="/speakers" class="btn btn-default">Speakers</a></li>
 			<li><a href="/resources" class="btn btn-default">Resources</a></li>
 			<li><a href="/registration" class="btn btn-primary">Register Today</a></li>
