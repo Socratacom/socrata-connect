@@ -67,6 +67,29 @@ function socrata_speakers_single_template( $template_path ) {
   return $template_path;
 }
 
+// Dashboard Widget
+require_once( plugin_dir_path( __FILE__ ) . '/widget.php' );
+class Socrata_Speakers_Widget {
+ 
+  function __construct() {
+      add_action( 'wp_dashboard_setup', array( $this, 'add_speakers_dashboard_widget' ) );
+  }
+
+  function add_speakers_dashboard_widget() {
+    global $custom_speaker_dashboard_widget;
+ 
+    foreach ( $custom_speaker_dashboard_widget as $widget_id => $options ) {
+      wp_add_dashboard_widget(
+          $widget_id,
+          $options['title'],
+          $options['callback']
+      );
+    }
+  } 
+}
+ 
+$wdw = new Socrata_Speakers_Widget();
+
 // METABOXES
 add_filter( 'rwmb_meta_boxes', 'socrata_speakers_register_meta_boxes' );
 function socrata_speakers_register_meta_boxes( $meta_boxes )
@@ -84,6 +107,9 @@ function socrata_speakers_register_meta_boxes( $meta_boxes )
             'required'  => true,
         ),
         "{$prefix}company" => array(
+            'required'  => true,
+        ),
+        "{$prefix}wysiwyg" => array(
             'required'  => true,
         ),
       ),
@@ -152,8 +178,8 @@ function socrata_speakers_register_meta_boxes( $meta_boxes )
   return $meta_boxes;
 }
 
-// Shortcode [speaker-tiles]
-function speaker_tiles($atts, $content = null) {
+// Shortcode [featured-speaker-tiles]
+function featured_speaker_tiles($atts, $content = null) {
   ob_start();
   ?>
 
@@ -166,7 +192,7 @@ function speaker_tiles($atts, $content = null) {
         'value' => '1'
       )
     ),
-    'posts_per_page' => 12,
+    'posts_per_page' => 100,
     'post_status' => 'publish',
     );
 
@@ -192,18 +218,18 @@ function speaker_tiles($atts, $content = null) {
               <span class="headshot" style="background-image:url(<?php foreach ( $headshot as $image ) { echo $image['url']; } ?>);"></span>
             </div>
             <div class="speaker-meta truncate">
-              <h4 class="text-center text-uppercase color-success"><?php the_title(); ?></h4>
-              <p class="text-center text-reverse job-title"><em><?php echo $jobtitle;?>, <?php echo $company;?></em></p>
+              <h4 class="text-center text-uppercase"><?php the_title(); ?></h4>
+              <p class="text-center job-title"><em><?php echo $jobtitle;?>, <?php echo $company;?></em></p>
             </div>
             <div class="speaker-meta-hover truncate">
-              <h4 class="text-center text-uppercase color-success"><?php the_title(); ?></h4>
-              <p class="text-center text-reverse job-title"><em><?php echo $jobtitle;?>, <?php echo $company;?></em></p>
+              <h4 class="text-center text-uppercase"><?php the_title(); ?></h4>
+              <p class="text-center job-title"><em><?php echo $jobtitle;?>, <?php echo $company;?></em></p>
               <div class="bio">
                 <?php echo $bio;?>
               </div>
             </div>
             <div class="text-center arrow">
-              <i class="fa fa-long-arrow-down text-reverse" aria-hidden="true"></i>
+              <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
             </div>
             <a href="<?php the_permalink(); ?>" class="link"></a>
           </div>
@@ -217,21 +243,95 @@ function speaker_tiles($atts, $content = null) {
               <span class="headshot" style="background-image:url(/wp-content/uploads/no-image.png);"></span>
             </div>
             <div class="speaker-meta truncate">
-              <h4 class="text-center text-uppercase color-success"><?php the_title(); ?></h4>
-              <p class="text-center text-reverse job-title"><em><?php echo $jobtitle;?></em></p>
+              <h4 class="text-center text-uppercase"><?php the_title(); ?></h4>
+              <p class="text-center job-title"><em><?php echo $jobtitle;?></em></p>
             </div>
             <div class="speaker-meta-hover truncate">
-              <h4 class="text-center text-uppercase color-success"><?php the_title(); ?></h4>
-              <p class="text-center text-reverse job-title"><em><?php echo $jobtitle;?></em></p>
+              <h4 class="text-center text-uppercase"><?php the_title(); ?></h4>
+              <p class="text-center job-title"><em><?php echo $jobtitle;?></em></p>
               <div class="bio">
                 <?php echo $bio;?>
               </div>
             </div>
             <div class="text-center arrow">
-              <i class="fa fa-long-arrow-down text-reverse" aria-hidden="true"></i>
+              <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
             </div>
             <a href="<?php the_permalink(); ?>" class="link"></a>
           </div>
+        </div>
+
+      <?php } ?>
+
+    <?php }
+
+  } ?>
+
+  <?php
+  } 
+  else {
+  // no posts found
+  }
+  /* Restore original Post Data */
+  wp_reset_postdata(); 
+  ?>
+
+  <?php
+  $content = ob_get_contents();
+  ob_end_clean();
+  return $content;
+}
+add_shortcode('featured-speaker-tiles', 'featured_speaker_tiles');
+
+
+// Shortcode [speaker-tiles]
+function speaker_tiles($atts, $content = null) {
+  ob_start();
+  ?>
+
+  <?php
+    $args = array(
+    'post_type' => 'socrata_speakers',
+    'posts_per_page' => 100,
+    'orderby' => 'title',
+    'order' => 'ASC',
+    'post_status' => 'publish',
+    );
+
+    // The Query
+    $the_query = new WP_Query( $args );
+
+    // The Loop
+    if ( $the_query->have_posts() ) { 
+    while ( $the_query->have_posts() ) {
+    $the_query->the_post();
+    $headshot = rwmb_meta( 'speakers_speaker_headshot', 'size=medium' );
+    $jobtitle = rwmb_meta( 'speakers_title' );
+    $company = rwmb_meta( 'speakers_company' );
+    $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'post-image-small' );
+    $url = $thumb['0']; { ?>
+
+      <?php if ( ! empty( $headshot ) ) { ?> 
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="speaker-card match-height text-center margin-bottom-30">
+            <div class="headshot" style="background-image:url(<?php foreach ( $headshot as $image ) { echo $image['url']; } ?>);">
+              <a href="<?php the_permalink(); ?>" class="link"></a>
+            </div>
+            <h4 class="margin-bottom-0"><?php the_title(); ?></h4>
+            <?php echo $jobtitle;?>, <?php echo $company;?>
+          </div>         
+        </div>
+
+      <?php } else { ?>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="speaker-card match-height text-center margin-bottom-30">
+            <div class="headshot" style="background-image:url(/wp-content/uploads/no-image.png);">
+              <a href="<?php the_permalink(); ?>" class="link"></a>
+            </div>
+            <h4 class="margin-bottom-0"><?php the_title(); ?></h4>
+            <?php echo $jobtitle;?>, <?php echo $company;?>
+          </div>         
         </div>
 
       <?php } ?>
@@ -259,24 +359,3 @@ add_shortcode('speaker-tiles', 'speaker_tiles');
 
 
 
-require_once( plugin_dir_path( __FILE__ ) . '/widget.php' );
-class Socrata_Speakers_Widget {
- 
-  function __construct() {
-      add_action( 'wp_dashboard_setup', array( $this, 'add_speakers_dashboard_widget' ) );
-  }
-
-  function add_speakers_dashboard_widget() {
-    global $custom_speaker_dashboard_widget;
- 
-    foreach ( $custom_speaker_dashboard_widget as $widget_id => $options ) {
-      wp_add_dashboard_widget(
-          $widget_id,
-          $options['title'],
-          $options['callback']
-      );
-    }
-  } 
-}
- 
-$wdw = new Socrata_Speakers_Widget();

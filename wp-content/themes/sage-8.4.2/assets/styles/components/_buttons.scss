@@ -3,6 +3,14 @@
 	border-radius:1px;
 	border:none;
 }
+.btn-default-outline {
+    border:white solid 2px;
+    color:white;
+}
+.btn-default-outline:hover {
+    background-color:white;
+    color:$primary;
+}
 
 .filter-bar {
 	ul{
