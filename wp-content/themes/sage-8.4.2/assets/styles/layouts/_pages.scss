@@ -779,18 +779,23 @@
 }
 
 .speaker-bio {
-	.sidebar {
-		text-align: center;
-		.headshot {
-			height:200px; 
-			width:200px; 
-			background-position:center center; 
-			background-size:cover; 
-			background-repeat:no-repeat;
-			border-radius: 50%;
-			display:inline-block;
-		}
-
+    .speaker-meta {
+        list-style-type: none;
+        margin:0;
+        padding:0;
+        display: inline-block;
+        li {
+            display: inline-block;
+    		.headshot {
+    			height:200px; 
+    			width:200px; 
+    			background-position:center center; 
+    			background-size:cover; 
+    			background-repeat:no-repeat;
+    			border-radius: 50%;
+    			display:inline-block;
+    		}
+        }
 	}
 }
 

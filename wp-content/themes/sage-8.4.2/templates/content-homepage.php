@@ -56,7 +56,7 @@
 		</div>
 	</div>
 </section>
-<script>jQuery(function(a){a("#speakers-slides").slick({arrows:!0,appendArrows:a("#speakers"),prevArrow:'<div class="toggle-left"><i class="fa slick-prev fa-chevron-left"></i></div>',nextArrow:'<div class="toggle-right"><i class="fa slick-next fa-chevron-right"></i></div>',autoplay:!1,autoplaySpeed:8e3,speed:800,slidesToShow:3,slidesToScroll:3,accessibility:!1,dots:!1,responsive:[{breakpoint:768,settings:{slidesToShow:2,slidesToScroll:2}},{breakpoint:480,settings:{slidesToShow:1,slidesToScroll:1}}]}),a("#speakers-slides").show()});</script>
+<script>jQuery(function(a){a("#speakers-slides").slick({arrows:!0,appendArrows:a("#speakers"),prevArrow:'<div class="toggle-left"><i class="fa slick-prev fa-chevron-left"></i></div>',nextArrow:'<div class="toggle-right"><i class="fa slick-next fa-chevron-right"></i></div>',autoplay:!0,autoplaySpeed:3e3,speed:300,slidesToShow:3,slidesToScroll:3,accessibility:!1,dots:!1,responsive:[{breakpoint:768,settings:{slidesToShow:2,slidesToScroll:2}},{breakpoint:480,settings:{slidesToShow:1,slidesToScroll:1}}]}),a("#speakers-slides").show()});</script>
 <script>jQuery(function(a){a(document).ready(function(){a(".truncate").dotdotdot()})});</script>
 <section class="venue" style="background-image:url(/wp-content/uploads/gaylord.jpg);">
 	<div class="wrapper">

@@ -86,9 +86,6 @@ function socrata_speakers_register_meta_boxes( $meta_boxes )
         "{$prefix}company" => array(
             'required'  => true,
         ),
-        "{$prefix}wysiwyg" => array(
-            'required'  => true,
-        ),
       ),
     ),
     'fields' => array(
