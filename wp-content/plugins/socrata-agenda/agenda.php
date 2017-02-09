@@ -347,8 +347,7 @@ function agenda_posts($atts, $content = null) {
 <h3 class="margin-bottom-30">Tuesday, March 7</h3>
 <?php echo facetwp_display( 'template', 'agenda_tuesday' ); ?>
 <h3 class="margin-bottom-30">Wednesday, March 8</h3>
-<p>Data Camp will be held on Wednesday. Time and location listings are coming soon.</p>
-<!--<?php echo facetwp_display( 'template', 'agenda_wednesday' ); ?>-->
+<?php echo facetwp_display( 'template', 'agenda_wednesday' ); ?>
 
 
 
