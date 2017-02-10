@@ -17,7 +17,7 @@
         <div class="mouse"><a href="#start"></a></div>
     </div>
 </section>
-<section class="section-padding background-primary-light">
+<!--<section class="section-padding background-primary-light">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -26,7 +26,7 @@
             <?php echo do_shortcode('[announcement-posts]');?>
         </div>
     </div>
-</section>
+</section>-->
 <section id="start" class="section-padding background-white">
     <div class="container">
         <div class="row">
