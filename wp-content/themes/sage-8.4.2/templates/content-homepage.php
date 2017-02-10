@@ -17,6 +17,16 @@
         <div class="mouse"><a href="#start"></a></div>
     </div>
 </section>
+<section class="section-padding background-primary-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="text-center section-title">Announcements</h2>
+            </div>
+            <?php echo do_shortcode('[announcement-posts]');?>
+        </div>
+    </div>
+</section>
 <section id="start" class="section-padding background-white">
     <div class="container">
         <div class="row">
@@ -54,7 +64,7 @@
                     <div class="col-sm-12">
                         <h2 class="text-center text-reverse text-uppercase margin-bottom-30">Socrata Connect Venue</h2>
                         <p class="text-center text-reverse">The iconic Gaylord National Hotel and Conference Center will play host to this year's Socrata Connect. One of the country's most impressive resort hotels, the Gaylord sits right on the Potomac River in the National Harbor area, minutes from downtown Washington, DC.</p>
-                        <p class="text-center text-reverse margin-bottom-60">A conference rate of $239 has been secured for Socrata Connect attendees. <strong>Reserve your room by Friday, February 10</strong> for the best rate.</p>
+                        <p class="text-center text-reverse margin-bottom-60">A conference rate of $239 has been secured for Socrata Connect attendees. <strong>Reserve your room by Friday, February 17</strong> for the best rate.</p>
                         <p class="text-center"><a href="https://aws.passkey.com/g/66320323" target="_blank" class="btn btn-default-outline btn-lg">Reserve your Room</a></p>
                     </div>          
                 </div>
