@@ -17,7 +17,7 @@
         <div class="mouse"><a href="#start"></a></div>
     </div>
 </section>
-<!--<section class="section-padding background-primary-light">
+<section class="section-padding background-primary-light">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -26,7 +26,7 @@
             <?php echo do_shortcode('[announcement-posts]');?>
         </div>
     </div>
-</section>-->
+</section>
 <section id="start" class="section-padding background-white">
     <div class="container">
         <div class="row">
@@ -98,7 +98,7 @@
                     <div class="date">
                         <div class="month">March</div>
                         <div class="day">6</div>
-                        <div class="time">8:00 AM - 8:00 PM</div>
+                        <div class="time">7:30 AM - 8:00 PM</div>
                     </div>
                     <div class="padding-30">
                         <ul class="feature">
@@ -106,6 +106,7 @@
                             <li>Socrata Connect Day 1</li>
                             <li>Education Program Classes</li>
                             <li>Customer Dinner</li>
+                            <li>Free Consulting Workshops</li>
                         </ul>
                     </div>
                 </div>              
@@ -115,7 +116,7 @@
                     <div class="date">
                         <div class="month">March</div>
                         <div class="day">7</div>
-                        <div class="time">8:00 AM - 6:00 PM</div>
+                        <div class="time">7:30 AM - 6:00 PM</div>
                     </div>
                     <div class="padding-30">
                         <ul class="feature">
@@ -123,6 +124,7 @@
                             <li>Socrata Connect Day 2</li>
                             <li>Education Program Classes</li>
                             <li>Networking Happy Hour</li>
+                            <li>Free Consulting Workshops</li>
                         </ul>
                     </div>
                 </div>              
@@ -132,12 +134,14 @@
                     <div class="date">
                         <div class="month">March</div>
                         <div class="day">8</div>
-                        <div class="time">8:00 AM - 3:00 PM</div>
+                        <div class="time">8:00 AM - 2:30 PM</div>
                     </div>
                     <div class="padding-30">
                         <ul class="feature">
                             <li>Networking Breakfast</li>
                             <li>Data Camp Workshops</li>
+                            <li>Education Program Classes</li>
+                            <li>Free Consulting Workshops</li>
                         </ul>
                     </div>
                 </div>              
