@@ -30,8 +30,9 @@ $new_date = date('l, F j', $old_date_timestamp);
 
 					<?php  foreach ( $speakers as $speaker ) { ?>
 					<?php 
-						$jobtitle = rwmb_meta( 'speakers_title','',$speaker);
+						$jobtitle = rwmb_meta( 'speakers_title','',$speaker );
 						$headshot = rwmb_meta( 'speakers_speaker_headshot','size=thumbnail',$speaker );
+						$company = rwmb_meta( 'speakers_company','',$speaker );
 					?>
 
 					<div class="col-sm-6 col-md-3">
@@ -40,7 +41,7 @@ $new_date = date('l, F j', $old_date_timestamp);
 								<?php foreach ( $headshot as $image ) { ?> <div style="background-image:url(<?php echo $image['url']; ?>); height:50px; width:50px; background-size:cover; background-position:center center; background-repeat:no-repeat; border-radius:50%; display:inline-block;"></div> <?php } ?>
 							</div>
 							<p class="text-center margin-bottom-0" style="font-size: 14px; font-weight:600;"><?php echo get_the_title($speaker); ?></p>
-							<p class="text-center margin-bottom-0" style="font-size: 14px; font-weight:400; font-style:italic;"><?php echo $jobtitle;?></p>
+							<p class="text-center margin-bottom-0" style="font-size: 14px; font-weight:400; font-style:italic;"><?php echo $jobtitle;?><?php if ( ! empty( $company ) ) { ?>, <?php echo $company;?> <?php };?></p>
 							<a href="<?php echo get_the_permalink($speaker); ?>" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:1;"></a>	
 						</div>
 					</div>
