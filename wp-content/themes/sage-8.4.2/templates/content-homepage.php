@@ -17,16 +17,6 @@
         <div class="mouse"><a href="#start"></a></div>
     </div>
 </section>
-<section class="section-padding background-primary-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <h2 class="text-center section-title">Announcements</h2>
-            </div>
-            <?php echo do_shortcode('[announcement-posts]');?>
-        </div>
-    </div>
-</section>
 <section id="start" class="section-padding background-white">
     <div class="container">
         <div class="row">
@@ -42,7 +32,32 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h2 class="text-center section-title">Featured Speakers</i></h2>    
+                <h2 class="text-center section-title">Announcements</h2>
+            </div>
+            <?php echo do_shortcode('[announcement-posts]');?>
+        </div>
+    </div>
+</section>
+<section class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="text-center section-title">Thank you to our partners</h2>
+            </div>
+            <div class="col-sm-4 col-sm-offset-2">
+                <p><a href="https://aws.amazon.com/" target="_blank"><img src="/wp-content/uploads/aws-logo.png" class="img-responsive"></a></p>
+            </div>
+            <div class="col-sm-4">
+                <p><a href="https://www.grantthornton.com/" target="_blank"><img src="/wp-content/uploads/grant-thornton-logo.png" class="img-responsive"></a></p>
+            </div>            
+        </div>
+    </div>
+</section>
+<section class="section-padding background-primary-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="text-center section-title" style="margin-bottom:0;">Featured Speakers</i></h2>    
             </div>
         </div>
     </div>
