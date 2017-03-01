@@ -32,23 +32,10 @@ $new_date = date('l, F j', $old_date_timestamp);
 			$jobtitle = rwmb_meta( 'speakers_title','',$speaker );
 			$headshot = rwmb_meta( 'speakers_speaker_headshot','size=thumbnail',$speaker );
 			$company = rwmb_meta( 'speakers_company','',$speaker );
-		?>
+		?> <?php } ?>
 
-		<div class="col-sm-6 col-md-3">
-			<div class="match-height padding-30 margin-bottom-30" style="border:#d4e8f3 solid 4px; position:relative;">
-				<div class="text-center margin-bottom-15">
-				<?php foreach ( $headshot as $image ) { ?> <div style="background-image:url(<?php echo $image['url']; ?>); height:50px; width:50px; background-size:cover; background-position:center center; background-repeat:no-repeat; border-radius:50%; display:inline-block;"></div> <?php } ?>
-				</div>
-				<p class="text-center margin-bottom-0" style="font-size: 14px; font-weight:600;"><?php echo get_the_title($speaker); ?></p>
-				<p class="text-center margin-bottom-0" style="font-size: 14px; font-weight:400; font-style:italic; line-height:normal;"><?php echo $jobtitle;?><?php if ( ! empty( $company ) ) { ?>, <?php echo $company;?> <?php };?></p>
-				<a href="<?php echo get_the_permalink($speaker); ?>" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:1;"></a>	
-			</div>
-		</div>
-
+	</div>
 <?php } ?>
-
-</div>
-<? } ?>
 
 
 
