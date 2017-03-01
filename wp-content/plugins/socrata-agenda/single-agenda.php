@@ -11,6 +11,18 @@ $old_date_timestamp = strtotime($old_date);
 $new_date = date('l, F j', $old_date_timestamp);   
 ?>
 
+<section class="section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-10 col-sm-offset-1">
+				<h1 class="margin-bottom-15"><?php the_title();?></h1>
+				<p><?php echo $new_date;?> | <?php echo $start;?> - <?php echo $end;?></p>
+				<div class="margin-bottom-60"><?php echo do_shortcode('[addthis]');?></div>
+				<?php echo $content;?>
+			</div>
+		</div>
+	</div>
+</section>
 <section class="section-padding background-primary-light">
 	<div class="container">
 		<div class="row">
