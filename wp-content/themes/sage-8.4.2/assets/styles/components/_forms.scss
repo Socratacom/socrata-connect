@@ -13,3 +13,19 @@
   @extend .btn;
   @extend .btn-default;
 }
+
+.form-group {
+	input.form-control, textarea.form-control {
+	    color: $black;
+	    border: 2px solid $light-grey-3;
+	    border-radius: 1px;
+	    box-shadow:none;
+	}
+	input.form-control {
+		height:44px;
+	}
+	input.form-control:focus, textarea.form-control:focus {
+	    border-color: $primary;
+	    background-color:$warning-light;
+	}
+}
