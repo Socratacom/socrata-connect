@@ -17,7 +17,7 @@ $new_date = date('l, F j', $old_date_timestamp);
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
-				<div id="video-player" class="embed-responsive embed-responsive-16by9" data-property="{videoURL:'<?php echo $video;?>',containment:'self',showControls:true,mute:false,autoPlay:false,loop:false,showYTLogo:false,gaTrack:true}"></div>
+				<div id="video-player" class="embed-responsive embed-responsive-16by9" data-property="{videoURL:'<?php echo $video;?>',containment:'self',showControls:true,mute:false,autoPlay:true,loop:false,showYTLogo:false,gaTrack:true}"></div>
 			</div>
 		</div>
 	</div>
