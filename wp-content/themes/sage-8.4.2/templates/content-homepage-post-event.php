@@ -6,7 +6,7 @@
                     <h4 class="text-reverse text-center text-uppercase margin-bottom-15">Socrata Presents</h4>
                     <p class="text-center margin-bottom-15"><span class="logo"></span></p>
                     <p class="text-reverse text-center  margin-bottom-30 font-normal">Thank you for attending this years event. Rewatch these inspiring presentations.</p>
-                    <p class="margin-bottom-0 text-center"><a href="/registration" class="btn btn-default btn-lg">Watch Videos</a></p>            
+                    <p class="margin-bottom-0 text-center"><a href="#start" class="btn btn-default btn-lg">Watch Videos</a></p>            
                 </div>
             </div>
         </div>
@@ -18,7 +18,7 @@
     </div>
 </section>
 
-<section class="section-padding">
+<section id="start" class="section-padding">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
