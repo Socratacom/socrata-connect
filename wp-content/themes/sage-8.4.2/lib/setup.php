@@ -101,7 +101,7 @@ function display_sidebar() {
  * Theme assets
  */
 function assets() {
-  wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css'), '', '1.4.4');
+  wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css'), '', '1.4.5');
   wp_register_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600', false, null);
   wp_enqueue_style('google-fonts');
 
@@ -115,6 +115,6 @@ function assets() {
 
   wp_deregister_script('jquery');
   wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), null, true);
-  
+
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
