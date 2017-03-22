@@ -36,6 +36,7 @@ wp-content/plugins/*
 !wp-content/plugins/socrata-agenda
 !wp-content/plugins/socrata-speakers
 !wp-content/plugins/socrata-announcements
+!wp-content/plugins/socrata-videos
 
 # Ignore everything in the "themes" directory, except the themes you specify
 wp-content/themes/*
