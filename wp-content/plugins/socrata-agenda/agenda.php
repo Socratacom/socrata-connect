@@ -320,6 +320,22 @@ function socrata_agenda_register_meta_boxes( $meta_boxes )
     ),
   );
 
+  $meta_boxes[] = array(
+    'title'         => 'Video',   
+    'post_types'    => 'socrata_agenda',
+    'context'       => 'normal',
+    'priority'      => 'high',
+    'fields' => array(
+      // URL
+      array(
+        'name' => esc_html__( 'YouTube Share URL', 'agenda_' ),
+        'id'   => "{$prefix}video",
+        'desc' => esc_html__( 'Example: https://youtu.be/...', 'agenda_' ),
+        'type' => 'url',
+      ),
+    ),
+  );
+
   return $meta_boxes;
 }
 

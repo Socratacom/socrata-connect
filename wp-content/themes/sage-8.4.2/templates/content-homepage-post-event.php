@@ -18,6 +18,16 @@
     </div>
 </section>
 
+<section class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="text-center section-title">Videos</h2>
+            </div>
+            <?php echo facetwp_display( 'template', 'videos' ); ?>
+        </div>
+    </div>
+</section>
 
 <section class="section-padding">
     <div class="container">

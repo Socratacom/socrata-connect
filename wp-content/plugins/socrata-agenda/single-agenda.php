@@ -2,6 +2,7 @@
 $jobtitle = rwmb_meta( 'agenda_speakers','',$speaker );
 $speakers = rwmb_meta( 'agenda_speakers' );
 $content = rwmb_meta( 'agenda_wysiwyg' );
+$video = rwmb_meta( 'agenda_video' );
 $startTime = rwmb_meta( 'agenda_starttime' );
 $start = date('g:i a', strtotime($startTime));
 $endTime = rwmb_meta( 'agenda_endtime' );
@@ -10,6 +11,18 @@ $old_date = rwmb_meta( 'agenda_date' );
 $old_date_timestamp = strtotime($old_date);
 $new_date = date('l, F j', $old_date_timestamp);   
 ?>
+
+<?php if ( ! empty( $video ) ) { ?>
+<section class="background-black">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div id="video-player" class="embed-responsive embed-responsive-16by9" data-property="{videoURL:'<?php echo $video;?>',containment:'self',showControls:true,mute:false,autoPlay:false,loop:false,showYTLogo:false,gaTrack:true}"></div>
+			</div>
+		</div>
+	</div>
+</section>
+<?php } ?>
 
 <section class="section-padding">
 	<div class="container">
@@ -53,14 +66,10 @@ $new_date = date('l, F j', $old_date_timestamp);
 		</div>
 	</div>
 </section>
-<section class="section-padding background-primary-light">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12">
-				<h2 class="text-center margin-bottom-15">Register for Socrata Connect</h2>
-				<p class="text-center">Join us March 6-8, 2017 at the Gaylord National Resort & Conference Center, Washington, DC</p>
-				<div class="text-center margin-top-60"><a href="/registration" class="btn btn-primary btn-lg">Register Today</a></div>
-			</div>
-		</div>
-	</div>
-</section>
+
+
+<script> 
+    jQuery(function(){
+      jQuery("#video-player").YTPlayer();
+    });
+</script>

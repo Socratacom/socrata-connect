@@ -14,7 +14,8 @@
     "font-awesome": "fontawesome#^4.6.3",
     "jQuery.dotdotdot": "dotdotdot#^1.8.3",
     "matchHeight": "^0.7.0",
-    "classie": "^1.0.1"
+    "classie": "^1.0.1",
+    "jquery.mb.ytplayer": "^3.0.12"
   },
   "overrides": {
     "lodash": {
@@ -31,6 +32,9 @@
     },
     "classie": {
       "main": "./classie.js"
+    },
+    "jquery.mb.ytplayer": {
+      "main": "./dist/jquery.mb.YTPlayer.min.js"
     },
     "bootstrap-sass": {
       "main": [
