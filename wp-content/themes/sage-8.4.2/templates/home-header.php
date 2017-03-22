@@ -5,8 +5,6 @@
 		<ul class="header-nav">
 			<li><a href="/agenda" class="btn btn-default">Agenda</a></li>
 			<li><a href="/speakers" class="btn btn-default">Speakers</a></li>
-			<li><a href="/resources" class="btn btn-default">Resources</a></li>
-			<li><a href="/registration" class="btn btn-primary">Register Today</a></li>
 		</ul>  	
   	</nav>
 
