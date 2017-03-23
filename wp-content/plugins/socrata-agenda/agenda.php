@@ -321,7 +321,7 @@ function socrata_agenda_register_meta_boxes( $meta_boxes )
   );
 
   $meta_boxes[] = array(
-    'title'         => 'Video',   
+    'title'         => 'Post Event',   
     'post_types'    => 'socrata_agenda',
     'context'       => 'normal',
     'priority'      => 'high',
@@ -332,6 +332,15 @@ function socrata_agenda_register_meta_boxes( $meta_boxes )
         'id'   => "{$prefix}video",
         'desc' => esc_html__( 'Example: https://youtu.be/...', 'agenda_' ),
         'type' => 'url',
+      ),
+      // FILE ADVANCED (WP 3.5+)
+      array(
+        'name'             => esc_html__( 'Presentation Slides', 'agenda_' ),
+        'id'               => "{$prefix}file",
+        'desc' => esc_html__( 'Must be a PDF', 'agenda_' ),
+        'type'             => 'file_advanced',
+        'max_file_uploads' => 1,
+        'mime_type'        => 'application', // Leave blank for all file types
       ),
     ),
   );
