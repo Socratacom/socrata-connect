@@ -109,9 +109,6 @@ function socrata_speakers_register_meta_boxes( $meta_boxes )
         "{$prefix}company" => array(
             'required'  => true,
         ),
-        "{$prefix}wysiwyg" => array(
-            'required'  => true,
-        ),
       ),
     ),
     'fields' => array(
@@ -231,7 +228,7 @@ function featured_speaker_tiles($atts, $content = null) {
             <div class="text-center arrow">
               <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
             </div>
-            <a href="<?php the_permalink(); ?>" class="link"></a>
+            <?php if ( ! empty( $bio ) ) { ?><a href="<?php the_permalink(); ?>" class="link"></a><?php };?>           
           </div>
         </div>
 
@@ -256,7 +253,7 @@ function featured_speaker_tiles($atts, $content = null) {
             <div class="text-center arrow">
               <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
             </div>
-            <a href="<?php the_permalink(); ?>" class="link"></a>
+            <?php if ( ! empty( $bio ) ) { ?><a href="<?php the_permalink(); ?>" class="link"></a><?php };?>
           </div>
         </div>
 
@@ -307,6 +304,7 @@ function speaker_tiles($atts, $content = null) {
     $headshot = rwmb_meta( 'speakers_speaker_headshot', 'size=medium' );
     $jobtitle = rwmb_meta( 'speakers_title' );
     $company = rwmb_meta( 'speakers_company' );
+    $bio = rwmb_meta( 'speakers_wysiwyg' );
     $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'post-image-small' );
     $url = $thumb['0']; { ?>
 
@@ -315,7 +313,7 @@ function speaker_tiles($atts, $content = null) {
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="speaker-card match-height text-center margin-bottom-30">
             <div class="headshot" style="background-image:url(<?php foreach ( $headshot as $image ) { echo $image['url']; } ?>);">
-              <a href="<?php the_permalink(); ?>" class="link"></a>
+              <?php if ( ! empty( $bio ) ) { ?><a href="<?php the_permalink(); ?>" class="link"></a><?php };?>
             </div>
             <h4 class="margin-bottom-0"><?php the_title(); ?></h4>
             <?php echo $jobtitle;?>, <?php echo $company;?>
@@ -327,7 +325,7 @@ function speaker_tiles($atts, $content = null) {
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="speaker-card match-height text-center margin-bottom-30">
             <div class="headshot" style="background-image:url(/wp-content/uploads/no-image.png);">
-              <a href="<?php the_permalink(); ?>" class="link"></a>
+              <?php if ( ! empty( $bio ) ) { ?><a href="<?php the_permalink(); ?>" class="link"></a><?php };?>
             </div>
             <h4 class="margin-bottom-0"><?php the_title(); ?></h4>
             <?php echo $jobtitle;?>, <?php echo $company;?>
