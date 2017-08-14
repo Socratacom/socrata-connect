@@ -187,7 +187,7 @@ $('a[href^="https://www.youtube.com"]').on('click', function(e){
     var vidHeight = 720; // default
     if ( $(this).attr('data-width') ) { vidWidth = parseInt($(this).attr('data-width')); }
     if ( $(this).attr('data-height') ) { vidHeight =  parseInt($(this).attr('data-height')); }
-    var iFrameCode = '<div class="container"><div class="row"><div class="col-sm-10 col-sm-offset-1"><div class="video-container"><iframe width="' + vidWidth + '" height="'+ vidHeight +'" scrolling="no" allowtransparency="true" allowfullscreen="true" src="https://www.youtube.com/embed/'+  queryVars['v'] +'?rel=0&wmode=transparent&showinfo=0&autoplay=1" frameborder="0"></iframe></div></div></div></div>';
+    var iFrameCode = '<div class="container"><div class="row"><div class="col-sm-10 col-sm-offset-1"><div class="video-container"><iframe width="' + vidWidth + '" height="'+ vidHeight +'" scrolling="no" allowtransparency="true" allowfullscreen="true" src="https://www.youtube.com/embed/'+  queryVars['v'] +'?rel=0&wmode=transparent&showinfo=0&autoplay=0" frameborder="0"></iframe></div></div></div></div>';
  
     // Replace Modal HTML with iFrame Embed
     $('#mediaModal .modal-body').html(iFrameCode);

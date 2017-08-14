@@ -19,7 +19,11 @@ use Roots\Sage\Wrapper;
       </div>
     <![endif]-->
 
-    <?php if (is_page('home')) {
+    <?php if (is_front_page()) {
+     /* do_action('get_header');
+      get_template_part('templates/home', 'header');*/
+    }
+    elseif (is_page('connect-2017')) {      
       do_action('get_header');
       get_template_part('templates/home', 'header');
     }
@@ -31,10 +35,13 @@ use Roots\Sage\Wrapper;
     <main class="main" role="main">
       <?php include Wrapper\template_path(); ?>
     </main>
-    <?php
+
+    <?php if (is_front_page()) { }
+    else {      
       do_action('get_footer');
       get_template_part('templates/footer');
       wp_footer();
-    ?>
+    } ?>
+
   </body>  
 </html>

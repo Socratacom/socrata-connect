@@ -15,7 +15,7 @@
     "jQuery.dotdotdot": "dotdotdot#^1.8.3",
     "matchHeight": "^0.7.0",
     "classie": "^1.0.1",
-    "jquery.mb.ytplayer": "^3.0.12"
+    "jquery.mb.ytplayer": "jquery.mb.YTPlayer#^3.0.20"
   },
   "overrides": {
     "lodash": {

@@ -109,9 +109,29 @@
       }
     },
     // About us page, note the change from about-us to about_us.
-    'about_us': {
+    'connect_2017': {
       init: function() {
         // JavaScript to be fired on the about us page
+
+        (function() {
+          var h = document.querySelector("header"),
+            hHeight;
+          function onScroll() {
+            window.addEventListener("scroll", callbackFunc);
+            function callbackFunc() {
+              var y = window.pageYOffset;
+              if (y > 150) {
+                h.classList.add("scroll");
+              } else {
+                h.classList.remove("scroll");
+              }
+            }
+          }
+          window.onload = function() {
+            onScroll();
+          };
+        })();
+
       }
     }
   };

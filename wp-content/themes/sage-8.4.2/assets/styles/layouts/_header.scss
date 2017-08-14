@@ -181,7 +181,7 @@ header {
 
 
 @media only screen and (min-width : 320px) {
-	.home {
+	.home, .page-template-template-homepage-post-event {
 		header {
 			background-color:$primary;
 			border:none
@@ -241,7 +241,7 @@ header {
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
 
-	.home {
+	.home, .page-template-template-homepage-post-event {
 		header {
 			background-color:rgba($primary,0);
 			border:none;
