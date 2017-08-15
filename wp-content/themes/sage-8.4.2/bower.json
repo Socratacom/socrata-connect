@@ -15,9 +15,13 @@
     "jQuery.dotdotdot": "dotdotdot#^1.8.3",
     "matchHeight": "^0.7.0",
     "classie": "^1.0.1",
-    "jquery.mb.ytplayer": "jquery.mb.YTPlayer#^3.0.20"
+    "jquery.mb.ytplayer": "jquery.mb.YTPlayer#^3.0.20",
+    "iframe-resizer": "^3.5.14"
   },
   "overrides": {
+    "iframe-resizer": {
+      "main": "./js/iframeResizer.min.js"
+    },
     "lodash": {
       "main": "./lodash/dist/lodash.min.js"
     },

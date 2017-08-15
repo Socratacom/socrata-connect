@@ -2,6 +2,13 @@
 	text-transform:uppercase;
 	border-radius:1px;
 	border:none;
+    outline: none !important;
+    -webkit-appearance: none !important; 
+    -moz-appearance: none !important; 
+    appearance: none !important;
+}
+.btn:focus {
+    outline: none !important;
 }
 .btn-default-outline {
     border:white solid 2px;
@@ -86,13 +93,19 @@
         .btn {
             font-size:14px !important;
             font-weight: $font-semi-bold;
+            outline: none !important;
+            -webkit-appearance: none !important; 
+            -moz-appearance: none !important; 
+            appearance: none !important;
         }
         .btn-outline {
             background-color:rgba($white, .25) !important;
             border:$white solid 2px;
+            color:$white;
         }
         .btn-outline:hover {
             background-color:rgba($white, .75) !important;
+            color:$white !important;
         }
     }
 }

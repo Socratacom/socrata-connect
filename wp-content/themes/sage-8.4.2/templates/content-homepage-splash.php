@@ -8,7 +8,7 @@
                         <h2 class="text-center color-white">May 16-18, 2018, Austin Hilton, Austin TX</h2>
                         <p class="lead text-center color-white">Save Your Seat and <strong>save 20%</strong> off your ticket</p>
                         <ul class="cta-buttons">
-                            <li><a href="#" class="btn btn-default btn-outline">Save my Seat</a></li>
+                            <li><button type="button" class="btn btn-default btn-outline" data-toggle="modal" data-target="#myModal">Save my Seat</button></li>
                             <li><a href="https://www.youtube.com/watch?v=pnhQHbe_QHg" class="btn btn-default btn-outline">Watch Video</a></li>
 
                         </ul>
@@ -24,8 +24,24 @@
         </ul>
         <p class="text-center margin-bottom-0"><a href="https://socrata.com" class="footer-logo" target="_blank"></a></p>
     </div>
-    <div id="myvideo" class="image" style="background-image:url(/wp-content/uploads/home-cover.jpg);"></div>
-    <div id="video" class="player" data-property="{videoURL:'pnhQHbe_QHg',containment:'#myvideo', showControls:false, autoPlay:true, loop:true, mute:true, startAt:17, stopAt:26, opacity:1, addRaster:true, quality:'default'}"></div>
-    <script>jQuery(function(e){e("#video").YTPlayer()});</script>
+    <div id="myvideo" class="image" style="background-image:url(/wp-content/uploads/hero-austin.jpg);"></div>
 </section>
 <?php echo do_shortcode("[youtube-modal]"); ?>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="border-radius:0;">
+      <div class="modal-header" style="border:0;">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <div class="padding-30">
+            <h3>Save my seat</h3>
+            <p>Fill out the form below to save your seat at Socrata Connect and get 20% off your ticket when registration opens.</p>        
+            <iframe id="formIframe" style="width: 100%; border: 0;" src="https://go.pardot.com/l/303201/2017-08-15/gfsf" scrolling="no"></iframe>
+            <script>iFrameResize({log:true}, '#formIframe')</script>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
