@@ -22,7 +22,10 @@
             <li><a href="http://www3.hilton.com/en/hotels/texas/hilton-austin-AUSCVHH/index.html" target="_blank">Venue</a></li>
             <li><a href="/connect-2017">Last Year's Event</a></li>
         </ul>
-        <p class="text-center margin-bottom-0"><a href="https://socrata.com" class="footer-logo" target="_blank"></a></p>
+        <ul>
+            <li><a href="https://socrata.com" class="footer-logo" target="_blank" style="height:18px; width:90px; margin-bottom:-3px;"></a></li>
+            <li><small>co-hosted by the <a href="http://www.austintexas.gov/" target="_blank">City of Austin</a></small></li>
+        </ul>
     </div>
     <div id="myvideo" class="image" style="background-image:url(/wp-content/uploads/hero-austin.jpg);"></div>
 </section>
