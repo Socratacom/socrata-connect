@@ -4,14 +4,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-10 col-sm-offset-1">
-                        <div class="logo-connect-2018"></div>
-                        <h2 class="text-center color-white">May 16-18, 2018, Austin Hilton, Austin TX</h2>
-                        <p class="lead text-center color-white">Save Your Seat and <strong>save 20%</strong> off your ticket</p>
-                        <ul class="cta-buttons">
+                        <div class="logo-connect-2018" style="margin-bottom:15px;"></div>
+                        <h2 class="text-center color-white" style="margin-bottom:30px; line-height: 1.2em;">May 16-18, 2018, Hilton, Austin TX<br>Co-hosted by the City of Austin</h2>
+                        <ul class="cta-buttons" style="margin-bottom:15px;">
                             <li><button type="button" class="btn btn-default btn-outline" data-toggle="modal" data-target="#myModal">Save my Seat</button></li>
-                            <li><a href="https://www.youtube.com/watch?v=pnhQHbe_QHg" class="btn btn-default btn-outline">Watch Video</a></li>
-
-                        </ul>
+                            <li><a href="https://www.youtube.com/watch?v=pnhQHbe_QHg" class="btn btn-default btn-outline">Show Me More</a></li>
+                        </ul>                        
+                        <p class="text-center color-white">Save Your Seat and <strong>save 20%</strong> off your ticket</p>
                     </div>
                 </div>
             </div>
@@ -20,11 +19,11 @@
     <div class="footer">
         <ul>
             <li><a href="http://www3.hilton.com/en/hotels/texas/hilton-austin-AUSCVHH/index.html" target="_blank">Venue</a></li>
-            <li><a href="/connect-2017">Last Year's Event</a></li>
+            <li><a href="/connect-2017">Last Year's Event</a></li>            
+            <li><a href="http://www.austintexas.gov/" target="_blank">City of Austin</a></li>
         </ul>
         <ul>
-            <li><a href="https://socrata.com" class="footer-logo" target="_blank" style="height:18px; width:90px; margin-bottom:-3px;"></a></li>
-            <li><small>co-hosted by the <a href="http://www.austintexas.gov/" target="_blank">City of Austin</a></small></li>
+            <li><a href="https://socrata.com" class="footer-logo-white" target="_blank"></a></li>
         </ul>
     </div>
     <div id="myvideo" class="image" style="background-image:url(/wp-content/uploads/hero-austin.jpg);"></div>
