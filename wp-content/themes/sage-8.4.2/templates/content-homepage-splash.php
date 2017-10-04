@@ -9,6 +9,7 @@
                         <ul class="cta-buttons" style="margin-bottom:15px;">
                             <li><button type="button" class="btn btn-default btn-outline" data-toggle="modal" data-target="#myModal">Save my Seat</button></li>
                             <li><a href="https://www.youtube.com/watch?v=pnhQHbe_QHg" class="btn btn-default btn-outline">Show Me More</a></li>
+                            <li><button type="button" class="btn btn-default btn-outline" data-toggle="modal" data-target="#speakerModal">Suggest a Speaker</button></li>
                         </ul>                        
                         <p class="text-center color-white">Save Your Seat and <strong>save 20%</strong> off your ticket</p>
                     </div>
@@ -28,7 +29,6 @@
     </div>
     <div id="myvideo" class="image" style="background-image:url(/wp-content/uploads/hero-austin.jpg);"></div>
 </section>
-<?php echo do_shortcode("[youtube-modal]"); ?>
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
@@ -38,7 +38,7 @@
       </div>
       <div class="modal-body">
         <div class="padding-30">
-            <h3>Save my seat</h3>
+            <h3 class="margin-bottom-15">Save my seat</h3>
             <p>Fill out the form below to save your seat at Socrata Connect and get 20% off your ticket when registration opens.</p>        
             <iframe id="formIframe" style="width: 100%; border: 0;" src="https://go.pardot.com/l/303201/2017-08-15/gfsf" scrolling="no"></iframe>
             <script>iFrameResize({log:true}, '#formIframe')</script>
@@ -47,3 +47,22 @@
     </div>
   </div>
 </div>
+<!-- Modal -->
+<div class="modal fade" id="speakerModal" tabindex="-1" role="dialog" aria-labelledby="speakerModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="border-radius:0;">
+      <div class="modal-header" style="border:0;">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <div class="padding-30">
+            <h3 class="margin-bottom-15">Suggest a Speaker</h3>
+            <p>Who would you like to hear at Socrata Connect?</p>
+            <?php echo do_shortcode('[gravityform id="1" title="false" description="false"]');?>  
+            
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
