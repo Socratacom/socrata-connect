@@ -1,0 +1,28 @@
+{
+  "name": "sage",
+  "homepage": "https://roots.io/sage/",
+  "authors": [
+    "Ben Word <ben@benword.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "git://github.com/twbs/bootstrap.git#v4.0.0-beta",
+    "popper.js": "^1.12.9",
+    "matchHeight": "^0.7.2",
+    "iframe-resizer": "^3.5.15",
+    "slick-carousel": "^1.8.1",
+    "material-design-color-palette": "^1.1.0"
+  },  
+  "overrides": {
+    "iframe-resizer": {
+      "main": "./js/iframeResizer.min.js"
+    },
+    "slick-carousel": {
+      "main": "./slick/slick.min.js"
+    },
+    "matchHeight": {
+      "main": "./dist/jquery.matchHeight-min.js"
+    }
+  }
+}
