@@ -87,6 +87,10 @@ function display_sidebar() {
     // @link https://codex.wordpress.org/Conditional_Tags
     is_404(),
     is_front_page(),
+    is_home(),
+    is_page(),
+    is_archive(),
+    is_single(),
     is_page_template('template-custom.php'),
   ]);
 
@@ -97,7 +101,7 @@ function display_sidebar() {
  * Theme assets
  */
 function assets() {
-  wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css'), '', '1.1.6');
+  wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css'), '', '1.1.7');
 	wp_register_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,900', false, null);
 	wp_enqueue_style('google-fonts');
 
