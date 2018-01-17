@@ -17,7 +17,7 @@
 	</div>
 </nav>
 <header class="banner" role="banner">
-	<a class="logo color-logo" href="<?php echo home_url('/'); ?>"></a>
-	<a class="btn btn-primary btn-lg d-none d-md-inline">Register</a>
+	<a href="<?php echo home_url('/'); ?>" class="logo color-logo"></a>
+	<a href="/registration" class="btn btn-primary btn-lg d-none d-md-inline">Register</a>
 	<a href="javascript:void(0)" class="icon-menu" onclick="openNav()"></a>
 </header>

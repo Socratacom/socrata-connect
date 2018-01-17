@@ -17,6 +17,11 @@ use Roots\Sage\Wrapper;
         <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'sage'); ?>
       </div>
     <![endif]-->
+
+    <div class="frame-left" aria-hidden="true"></div>
+    <div class="frame-right" aria-hidden="true"></div>
+    <div class="frame-top" aria-hidden="true"></div>
+    <div class="frame-bottom" aria-hidden="true"></div>
     
     <?php
       do_action('get_header');
@@ -32,10 +37,6 @@ use Roots\Sage\Wrapper;
       get_template_part('templates/footer');
       wp_footer();
     ?>
-    
-    <div class="frame-left"></div>
-    <div class="frame-right"></div>
-    <div class="frame-top"></div>
-    <div class="frame-bottom"></div>
+
   </body>
 </html>
