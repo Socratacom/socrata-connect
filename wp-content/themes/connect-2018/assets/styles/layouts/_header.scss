@@ -1,0 +1,116 @@
+@include media-breakpoint-up(xs) {
+	.overlay {
+		height: 0%;
+		width: 100%;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: $primary;
+		overflow-y: hidden;
+		transition: 0.5s;
+		.overlay-content {
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+			margin:0;
+			padding:30px;
+			.menu {
+				list-style-type: none;
+				margin:0;
+				padding:0;
+				width:100%;
+			}
+		}/*
+		.nav-item {
+			display: block;
+			text-align: center;
+			padding:10px 0;
+			a {
+				transition: 0.3s;
+				text-decoration: none;
+				font-size: 24px;
+				color: $white;
+				font-weight: $font-normal;
+			}
+		}*/
+		/*.nav-item a:hover, .nav-item a:focus {
+			color: $primary-dark;
+		}*/
+		.icon-close {
+			position: absolute;
+			top: 30px;
+			right: 30px;
+			font-size: 30px;
+			z-index: 100;
+			color:$white;
+		}
+	}
+	.banner {
+		height:130px;
+		position: relative;
+		.logo {
+			height:100px;
+			width:134px;
+			position: absolute;
+			top:15px;
+			left:15px;
+		}
+		.btn {
+			position: absolute;
+		}
+		.icon-menu {
+			position: absolute;
+			right:15px;
+			top:15px;
+			font-size: 30px;
+			color:$secondary;
+		}
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.overlay {
+		/*.nav-item {            
+			padding:20px 0;
+			a {
+				font-size: 36px;
+			}
+		}*/
+		.icon-close {
+			top: 45px;
+			right: 45px;
+			font-size: 50px;
+		}
+	}
+	.banner {
+		height:210px;
+		.logo {
+			height:150px;
+			width:200px;
+			left:30px;
+			top:30px;
+		}
+		.btn {
+			position: absolute;
+			top:30px;
+			right:130px;
+		}
+		.icon-menu {
+			top: 30px;
+			right: 30px;
+			font-size: 50px;
+		}
+	}
+}
+
+@media screen and (max-height: 450px) {
+	.overlay {overflow-y: auto;}
+	.overlay a {font-size: 20px}
+	.overlay .closebtn {
+		font-size: 40px;
+		top: 15px;
+		right: 35px;
+	}
+}

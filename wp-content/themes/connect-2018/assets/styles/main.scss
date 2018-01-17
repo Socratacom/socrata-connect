@@ -3,9 +3,12 @@
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
 @import "../../bower_components/bootstrap/scss/bootstrap.scss";
+@import "../../bower_components/include-media/dist/_include-media.scss";
 // endbower
 
 @import "common/global";
+@import "common/material-design-color-palette";
+@import "common/icons";
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";

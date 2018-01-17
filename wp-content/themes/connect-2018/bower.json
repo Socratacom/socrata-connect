@@ -12,8 +12,9 @@
     "matchHeight": "^0.7.2",
     "iframe-resizer": "^3.5.15",
     "slick-carousel": "^1.8.1",
-    "material-design-color-palette": "^1.1.0"
-  },  
+    "material-design-color-palette": "^1.1.0",
+    "include-media": "^1.4.9"
+  },
   "overrides": {
     "iframe-resizer": {
       "main": "./js/iframeResizer.min.js"
