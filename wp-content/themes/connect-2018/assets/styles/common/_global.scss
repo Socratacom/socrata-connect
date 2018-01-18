@@ -100,29 +100,28 @@ h1, h2 {
 }
 
 
-/* The ribbons */
-
+/* Corner ribbons */
 .corner-ribbon{
   width: 200px;
-  background: #e43;
+  background: $mdc-green-500;
   position: absolute;
   top: 25px;
   left: -50px;
   text-align: center;
-  line-height: 50px;
-  color: #f0f0f0;
+  line-height: 40px;
+  color: $white;
+  font-weight: $font-medium;
+  font-size:14px;
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
 }
-
-/* Custom styles */
 
 .corner-ribbon.sticky{
   position: fixed;
 }
 
 .corner-ribbon.shadow{
-  box-shadow: 0 0 3px rgba(0,0,0,.3);
+  box-shadow: 0 0 10px rgba($black,.3);
 }
 
 /* Different positions */
@@ -135,8 +134,8 @@ h1, h2 {
 }
 
 .corner-ribbon.top-right{
-  top: 25px;
-  right: -50px;
+  top: 20px;
+  right: -60px;
   left: auto;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
@@ -162,6 +161,7 @@ h1, h2 {
 /* Colors */
 
 .corner-ribbon.white{background: #f0f0f0; color: #555;}
+.corner-ribbon.amber{background: $mdc-amber-500; color: $black;}
 .corner-ribbon.black{background: #333;}
 .corner-ribbon.grey{background: #999;}
 .corner-ribbon.blue{background: $mdc-blue-600}
