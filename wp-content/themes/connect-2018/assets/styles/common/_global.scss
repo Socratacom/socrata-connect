@@ -97,7 +97,14 @@ h1, h2 {
 	border-radius:0 !important;
 	overflow:hidden;
 	/*box-shadow: 0 3px 5px rgba($black,.15);*/
+	.card-img-top {
+		border-radius:0;
+	}
+	.card-text, .card-title {
+		font-size:1em;
+	}
 }
+
 
 
 /* Corner ribbons */
