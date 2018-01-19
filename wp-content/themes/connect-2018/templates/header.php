@@ -6,8 +6,8 @@
   			<div class="col col-md-6">
 				  <ul class="menu">
 				    <!--<li class="nav-item mb-3"><a href="/agenda" class="btn btn-lg btn-block btn-outline-light">Agenda</a></li>
-				    <li class="nav-item mb-3"><a href="/speakers" class="btn btn-lg btn-block btn-outline-light">Speakers</a></li>
-				    <li class="nav-item mb-3"><a href="/awards" class="btn btn-lg btn-block btn-outline-light">Snu Awards</a></li>-->
+				    <li class="nav-item mb-3"><a href="/speakers" class="btn btn-lg btn-block btn-outline-light">Speakers</a></li>-->
+				    <li class="nav-item mb-3"><a href="/awards" class="btn btn-lg btn-block btn-outline-light">Snu Awards</a></li>
 				    <li class="nav-item mb-3"><a href="/resources" class="btn btn-lg btn-block btn-outline-light">Resources</a></li>
 				    <li class="nav-item"><a href="/registration" class="btn btn-lg btn-block btn-light">Register</a></li>
 				  </ul>
