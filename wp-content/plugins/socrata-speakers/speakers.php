@@ -29,7 +29,7 @@ function create_socrata_speakers() {
       ),
       'public' => true,
       'menu_position' => 5,
-      'supports' => array( 'title', 'thumbnail' ),
+      'supports' => array( 'title' ),
       'taxonomies' => array( '' ),
       'menu_icon' => '',
       'has_archive' => false,
@@ -310,25 +310,41 @@ function speaker_tiles($atts, $content = null) {
 
       <?php if ( ! empty( $headshot ) ) { ?> 
 
+
+
+
         <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="speaker-card match-height text-center margin-bottom-30">
-            <div class="headshot" style="background-image:url(<?php foreach ( $headshot as $image ) { echo $image['url']; } ?>);">
-              <?php if ( ! empty( $bio ) ) { ?><a href="<?php the_permalink(); ?>" class="link"></a><?php };?>
-            </div>
-            <h4 class="margin-bottom-0"><?php the_title(); ?></h4>
-            <?php echo $jobtitle;?>, <?php echo $company;?>
+          <div class="card w-100 mb-4 match-height">   	
+
+	          <div class="sixteen-nine" style="background-image:url(<?php foreach ( $headshot as $image ) { echo $image['url']; } ?>); background-repeat: no-repeat; background-position: center; background-size:cover;"></div>
+	          <div class="card-body">
+	            <h4 class="text-regular mb-1"><?php the_title(); ?></h4>
+	            <div class="text-regular text-muted"><?php echo $jobtitle;?>, <?php echo $company;?></div>
+						</div>
+						<?php if ( ! empty( $bio ) ) { ?>
+							<div class="card-footer pb-4" style="border:none; background-color:#fff;">
+								<a href="<?php the_permalink(); ?>" class="btn btn-sm btn-primary">Read Bio</a>
+							</div>
+						<?php };?>
+
           </div>         
         </div>
 
       <?php } else { ?>
 
         <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="speaker-card match-height text-center margin-bottom-30">
-            <div class="headshot" style="background-image:url(/wp-content/uploads/no-image.png);">
-              <?php if ( ! empty( $bio ) ) { ?><a href="<?php the_permalink(); ?>" class="link"></a><?php };?>
-            </div>
-            <h4 class="margin-bottom-0"><?php the_title(); ?></h4>
-            <?php echo $jobtitle;?>, <?php echo $company;?>
+          <div class="card w-100 mb-4 match-height">   	
+
+	          <div class="card-body mdc-bg-blue-500">
+	            <h4 class="text-regular mb-1 text-white"><?php the_title(); ?></h4>
+	            <div class="text-regular text-white"><?php echo $jobtitle;?>, <?php echo $company;?></div>
+						</div>
+						<?php if ( ! empty( $bio ) ) { ?>
+							<div class="card-footer pb-4 mdc-bg-blue-500" style="border:none;">
+								<a href="<?php the_permalink(); ?>" class="btn btn-sm btn-light">Read Bio</a>
+							</div>
+						<?php };?>
+
           </div>         
         </div>
 
