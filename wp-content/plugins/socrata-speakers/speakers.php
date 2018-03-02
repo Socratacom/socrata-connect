@@ -301,7 +301,7 @@ function speaker_tiles($atts, $content = null) {
     if ( $the_query->have_posts() ) { 
     while ( $the_query->have_posts() ) {
     $the_query->the_post();
-    $headshot = rwmb_meta( 'speakers_speaker_headshot', 'size=medium' );
+    $headshot = rwmb_meta( 'speakers_speaker_headshot', 'size=four-three' );
     $jobtitle = rwmb_meta( 'speakers_title' );
     $company = rwmb_meta( 'speakers_company' );
     $bio = rwmb_meta( 'speakers_wysiwyg' );
