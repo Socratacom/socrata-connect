@@ -313,10 +313,10 @@ function speaker_tiles($atts, $content = null) {
 
 
 
-        <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
           <div class="card w-100 mb-4 match-height">   	
 
-	          <div class="sixteen-nine" style="background-image:url(<?php foreach ( $headshot as $image ) { echo $image['url']; } ?>); background-repeat: no-repeat; background-position: center; background-size:cover;"></div>
+	          <div class="four-three" style="background-image:url(<?php foreach ( $headshot as $image ) { echo $image['url']; } ?>); background-repeat: no-repeat; background-position: center; background-size:cover;"></div>
 	          <div class="card-body">
 	            <h4 class="text-regular mb-1"><?php the_title(); ?></h4>
 	            <div class="text-regular text-muted"><?php echo $jobtitle;?>, <?php echo $company;?></div>
@@ -332,7 +332,7 @@ function speaker_tiles($atts, $content = null) {
 
       <?php } else { ?>
 
-        <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
           <div class="card w-100 mb-4 match-height">   	
 
 	          <div class="card-body mdc-bg-blue-500">
