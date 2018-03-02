@@ -9,7 +9,7 @@ $headshot = rwmb_meta( 'speakers_speaker_headshot', 'size=square' );
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12 col-md-10 col-lg-8 m-auto">
-				<div class="d-flex flex-row flex-wrap align-items-center mb-5">
+				<div class="d-flex flex-row flex-wrap flex-sm-nowrap align-items-center mb-5">
 					<?php if (!empty($headshot)) { ?> 
 					<div class="pr-3">
 						<?php foreach ( $headshot as $image ) { ?> <div style="background-image:url(<?php echo $image['url']; ?>); background-repeat: no-repeat; background-size: cover; background-position: center; height:200px; width:200px;"></div> <?php } ?>
