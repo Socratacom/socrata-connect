@@ -111,6 +111,11 @@ function socrata_speakers_register_meta_boxes( $meta_boxes )
         ),
       ),
     ),
+    'tabs' => array(
+			'speaker_meta' 			=> 'Speaker Meta',
+			'speaker_bio' 			=> 'Speaker Bio',
+		),
+		'tab_style' => 'box',
     'fields' => array(
       // CHECKBOX
       array(
@@ -119,18 +124,21 @@ function socrata_speakers_register_meta_boxes( $meta_boxes )
         'type' => 'checkbox',
         // Value can be 0 or 1
         'std'  => 0,
+        'tab'  => 'speaker_meta',
       ),
       // TEXT
       array(
         'name'  => esc_html__( 'Title', 'speakers_' ),
         'id'    => "{$prefix}title",
         'type'  => 'text',
+        'tab'  => 'speaker_meta',
       ),
       // TEXT
       array(
         'name'  => esc_html__( 'Company/Organization', 'speakers_' ),
         'id'    => "{$prefix}company",
         'type'  => 'text',
+        'tab'  => 'speaker_meta',
       ),
       // URL
       array(
@@ -138,6 +146,7 @@ function socrata_speakers_register_meta_boxes( $meta_boxes )
         'id'   => "{$prefix}website",
         'desc' => esc_html__( 'Please include the http:// or https://', 'speakers_' ),
         'type' => 'url',
+        'tab'  => 'speaker_meta',
       ),
       // IMAGE ADVANCED (WP 3.5+)
       array(
@@ -146,16 +155,8 @@ function socrata_speakers_register_meta_boxes( $meta_boxes )
         'desc' => __( 'Minimum size 300x300 pixels.', 'socrata-events' ),
         'type'             => 'image_advanced',
         'max_file_uploads' => 1,
+        'tab'  => 'speaker_meta',
       ),
-    ),
-  );
-
-  $meta_boxes[] = array(
-    'title'         => 'Bio',   
-    'post_types'    => 'socrata_speakers',
-    'context'       => 'normal',
-    'priority'      => 'high',
-    'fields' => array(
       // WYSIWYG/RICH TEXT EDITOR
       array(
         'id'      => "{$prefix}wysiwyg",
@@ -164,10 +165,10 @@ function socrata_speakers_register_meta_boxes( $meta_boxes )
         'raw'     => false,
         // Editor settings, see wp_editor() function: look4wp.com/wp_editor
         'options' => array(
-          'textarea_rows' => 15,
-          'teeny'         => false,
+          'teeny'         => true,
           'media_buttons' => false,
         ),
+        'tab'  => 'speaker_bio',
       ),
     ),
   );
