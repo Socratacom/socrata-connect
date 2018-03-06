@@ -56,16 +56,16 @@ function socrata_agenda_register_meta_boxes( $meta_boxes )
 				'clone'  => true,
 				'sort_clone' => true,
 				'collapsible' => true,
-				'group_title' => 'Entry {#}',
+				'group_title' => array( 'field' => 'agenda_title' ),
 				'save_state' => true,
 				// Sub-fields
 				'fields' => array(
 					array(
-						'name' => 'Title',
+						'name' => 'Session Title',
 						'id'   => "{$prefix}title",
 						'type' => 'text',
 						'size'=> 50,
-						'placeholder' => 'Enter event title'
+						'placeholder' => 'Enter session title'
 					),
 					array(
 						'name'       => 'Time',
