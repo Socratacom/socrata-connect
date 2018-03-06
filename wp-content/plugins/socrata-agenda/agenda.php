@@ -44,7 +44,7 @@ function socrata_agenda_register_meta_boxes( $meta_boxes )
   $prefix = 'agenda_';
 
   $meta_boxes[] = array(
-    'title'  => 'AGENDA SCHEDULE',
+    'title'  => 'SESSION SCHEDULE',
     'post_types' => 'socrata_agenda',
     'context'    => 'normal',
     'priority'   => 'high',
@@ -58,6 +58,7 @@ function socrata_agenda_register_meta_boxes( $meta_boxes )
 				'collapsible' => true,
 				'group_title' => array( 'field' => 'agenda_title' ),
 				'save_state' => true,
+				'default_state' => 'collapsed',
 				// Sub-fields
 				'fields' => array(
 					array(
@@ -66,12 +67,37 @@ function socrata_agenda_register_meta_boxes( $meta_boxes )
 						'type' => 'text',
 						'size'=> 50,
 						'placeholder' => 'Enter session title'
+					),			
+					// DATE
+					array(
+						'name'       => 'Date',
+						'id'         => "{$prefix}date",
+						'type'       => 'date',
+						'placeholder' => 'Enter date',
+						'timestamp'  => true,
+						'js_options' => array(
+							'numberOfMonths'  => 1,
+		          'showButtonPanel' => true,
+						),
 					),
 					array(
-						'name'       => 'Time',
-						'id'         => "{$prefix}time",
+						'name'       => 'Start Time',
+						'id'         => "{$prefix}starttime",
 						'type'       => 'time',
 						'placeholder' => 'Enter start time',
+						'js_options' => array(
+							'stepMinute'      => 5,
+							'controlType'     => 'select',
+							'showButtonPanel' => true,
+							'oneLine'         => true,
+						),
+						'inline'     => false,
+					),
+					array(
+						'name'       => 'End Time',
+						'id'         => "{$prefix}endtime",
+						'type'       => 'time',
+						'placeholder' => 'Enter end time',
 						'js_options' => array(
 							'stepMinute'      => 5,
 							'controlType'     => 'select',
