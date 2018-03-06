@@ -165,6 +165,7 @@ function socrata_speakers_register_meta_boxes( $meta_boxes )
         'raw'     => false,
         // Editor settings, see wp_editor() function: look4wp.com/wp_editor
         'options' => array(
+          'textarea_rows' => 30,
           'teeny'         => true,
           'media_buttons' => false,
         ),
