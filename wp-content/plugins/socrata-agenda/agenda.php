@@ -140,3 +140,87 @@ function socrata_agenda_register_meta_boxes( $meta_boxes )
 
   return $meta_boxes;
 }
+
+// Shortcode [agenda-sessions]
+function agenda_sessions($atts, $content = null) {
+  ob_start();
+  
+  
+	$args = array(
+		'post_type' => 'socrata_agenda',
+		'posts_per_page' => 1,
+		'post_status' => 'publish',
+	);
+
+	// The Query
+	$the_query = new WP_Query( $args );
+
+	// The Loop
+	if ( $the_query->have_posts() ) { 
+		while ( $the_query->have_posts() ) {
+			$the_query->the_post();
+			$sessions = rwmb_meta( 'agenda_item' ); { ?>
+
+
+			<?php foreach ( $sessions as $session ) {
+			$title = isset( $session['agenda_title'] ) ? $session['agenda_title'] : '';
+			$description = isset( $session['agenda_description'] ) ? $session['agenda_description'] : '';
+			$speakers = isset( $session['agenda_speakers'] ) ? $session['agenda_speakers'] : '';
+			$id = uniqid();
+			?>
+			<div class="card mb-1 match-height">
+				<div class="card-body">
+					<?php if (!empty($description)) { ?>
+						<div class="d-flex">
+							<div class="mr-auto">
+								<h4 class="mb-0"><a data-toggle="collapse" href="#<?php echo $id;?>" aria-expanded="false" aria-controls="<?php echo $id;?>" class="mdc-text-blue-grey-900"><?php echo $title;?></a></h4>
+							</div>
+							<div class="d-none d-sm-inline-block">
+								<button class="btn btn-sm btn-link" type="button" data-toggle="collapse" data-target="#<?php echo $id;?>" aria-expanded="false" aria-controls="<?php echo $id;?>" style="padding:0 0 0 30px;">View Description</button>
+							</div>
+						</div>
+						<div class="collapse mt-3" id="<?php echo $id;?>">
+							<?php echo $description;?>
+							<?php if ( ! empty( $speakers ) ) { ?>
+			  				<div class="d-flex align-items-baseline flex-wrap mt-3">
+			  					<div class="text-uppercase text-muted pr-2">Speakers:</div>
+									<div class="small text-muted">
+									<?php
+									$result="";
+									foreach($speakers as $speaker) :
+									$result.=get_the_title($speaker).', '; 
+									endforeach;
+									$trimmed=rtrim($result, ', ');
+									echo $trimmed;
+									?>
+									</div>							
+								</div>
+								<?php }
+							?>
+						</div>
+					<?php } else { ?>
+						<h4 class="mb-0"><?php echo $title;?></h4>
+					<?php } ?>		
+					
+				</div>
+			</div>
+
+			<?php } ?>
+
+
+
+
+
+			<?php }
+		} ?>
+	<?php
+	} 
+
+	/* Restore original Post Data */
+	wp_reset_postdata(); 
+    
+  $content = ob_get_contents();
+  ob_end_clean();
+  return $content;
+}
+add_shortcode('agenda-sessions', 'agenda_sessions');

@@ -114,6 +114,6 @@ function assets() {
     wp_enqueue_script('comment-reply');
   }
 
-  wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], '1.0', false);
+  wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], '1.1', false);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);

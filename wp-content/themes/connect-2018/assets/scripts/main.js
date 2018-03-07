@@ -31,9 +31,26 @@
             .matchHeight('remove')
             .matchHeight();
           });
-        });
+        });  
 
-        //Smooth Jumplink Scrolling
+      },
+      finalize: function() {
+        // JavaScript to be fired on all pages, after page specific JS is fired
+      }
+    },
+    // Home page
+    'home': {
+      init: function() {
+        // JavaScript to be fired on the home page
+      },
+      finalize: function() {
+        // JavaScript to be fired on the home page, after the init JS
+      }
+    },
+    // About us page, note the change from about-us to about_us.
+    'registration': {
+      init: function() {
+      	//Smooth Jumplink Scrolling
         var target, scroll;
         $("a[href*=\\#]:not([href=\\#])").on("click", function(e) {
           if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
@@ -70,26 +87,7 @@
             $("html, body").scrollTop(scroll);
             return;
           }
-        });    
-
-      },
-      finalize: function() {
-        // JavaScript to be fired on all pages, after page specific JS is fired
-      }
-    },
-    // Home page
-    'home': {
-      init: function() {
-        // JavaScript to be fired on the home page
-      },
-      finalize: function() {
-        // JavaScript to be fired on the home page, after the init JS
-      }
-    },
-    // About us page, note the change from about-us to about_us.
-    'about_us': {
-      init: function() {
-        // JavaScript to be fired on the about us page
+        });  
       }
     }
   };

@@ -1,13 +1,4 @@
 <?php
-/*
-Plugin Name: Socrata Agenda
-Plugin URI: http://socrata.com/
-Description: This plugin manages agenda items.
-Version: 1.0
-Author: Michael Church
-Author URI: http://socrata.com/
-License: GPLv2
-*/
 
 add_action( 'init', 'create_socrata_agenda' );
 function create_socrata_agenda() {
