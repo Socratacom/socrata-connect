@@ -37,7 +37,7 @@ function setup() {
   add_theme_support('post-thumbnails');
 	set_post_thumbnail_size( 100, 100, array( 'center', 'center')  );
 	add_image_size( 'square', 300, 300, array( 'center', 'center'));
-	add_image_size( 'sixteen-nine', 400, 225, array( 'center', 'center'));
+	add_image_size( 'sixteen-nine', 720, 405, array( 'center', 'center'));
 	add_image_size( 'four-three', 400, 300, array( 'center', 'center'));
 
   // Enable post formats

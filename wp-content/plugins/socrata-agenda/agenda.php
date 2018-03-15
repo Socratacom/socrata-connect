@@ -141,14 +141,17 @@ function socrata_agenda_register_meta_boxes( $meta_boxes )
   return $meta_boxes;
 }
 
-// Shortcode [agenda-sessions]
+// Shortcode [sessions slug="SOME-SLUG-NAME"]
 function agenda_sessions($atts, $content = null) {
+  extract( shortcode_atts( array(
+    'slug' => '',
+  ), $atts ) );
   ob_start();
-  
-  
+
 	$args = array(
+		'name' => $slug,
 		'post_type' => 'socrata_agenda',
-		'posts_per_page' => 1,
+		'numberpost' => 1,
 		'post_status' => 'publish',
 	);
 
@@ -160,7 +163,6 @@ function agenda_sessions($atts, $content = null) {
 		while ( $the_query->have_posts() ) {
 			$the_query->the_post();
 			$sessions = rwmb_meta( 'agenda_item' ); { ?>
-
 
 			<?php foreach ( $sessions as $session ) {
 			$title = isset( $session['agenda_title'] ) ? $session['agenda_title'] : '';
@@ -206,11 +208,6 @@ function agenda_sessions($atts, $content = null) {
 			</div>
 
 			<?php } ?>
-
-
-
-
-
 			<?php }
 		} ?>
 	<?php
@@ -223,4 +220,65 @@ function agenda_sessions($atts, $content = null) {
   ob_end_clean();
   return $content;
 }
-add_shortcode('agenda-sessions', 'agenda_sessions');
+add_shortcode('sessions', 'agenda_sessions');
+
+// Shortcode [schedule slug="SOME-SLUG-NAME"]
+function agenda_schedule($atts, $content = null) {
+  extract( shortcode_atts( array(
+    'slug' => '',
+  ), $atts ) );
+  ob_start();
+
+	$args = array(
+		'name' => $slug,
+		'post_type' => 'socrata_agenda',
+		'numberpost' => 1,
+		'post_status' => 'publish',
+	);
+
+	// The Query
+	$the_query = new WP_Query( $args );
+
+	// The Loop
+	if ( $the_query->have_posts() ) { 
+		while ( $the_query->have_posts() ) {
+			$the_query->the_post();
+			$sessions = rwmb_meta( 'agenda_item' ); { ?>
+
+			<?php foreach ( $sessions as $session ) {
+			$title = isset( $session['agenda_title'] ) ? $session['agenda_title'] : '';
+			$description = isset( $session['agenda_description'] ) ? $session['agenda_description'] : '';
+			$speakers = isset( $session['agenda_speakers'] ) ? $session['agenda_speakers'] : '';
+			$starttime = isset( $session['agenda_starttime'] ) ? $session['agenda_starttime'] : '';
+			$endtime = isset( $session['agenda_endtime'] ) ? $session['agenda_endtime'] : '';
+			$location = isset( $session['agenda_location'] ) ? $session['agenda_location'] : '';
+			$id = uniqid();
+			?>
+			<div class="card mb-1 match-height">
+				<div class="card-body">
+				
+					<div class="d-flex flex-column flex-sm-row">
+						<div class="mdc-text-orange-500 pr-sm-3 text-medium" style="white-space: nowrap;"><?php echo date('g:i a', strtotime($starttime));?> - <?php echo date('g:i a', strtotime($endtime));?></div>
+						<div class="mr-auto">
+							<p class="mb-0 text-regular"><?php echo $title;?></p>
+						</div>
+						<?php if (!empty($location)) echo '<div class="text-muted text-regular pl-sm-3" style="white-space:nowrap;">'.$location.'</div>' ;?>
+					</div>
+						
+				</div>
+			</div>
+
+			<?php } ?>
+			<?php }
+		} ?>
+	<?php
+	} 
+
+	/* Restore original Post Data */
+	wp_reset_postdata(); 
+    
+  $content = ob_get_contents();
+  ob_end_clean();
+  return $content;
+}
+add_shortcode('schedule', 'agenda_schedule');

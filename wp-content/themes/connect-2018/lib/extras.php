@@ -31,3 +31,11 @@ function excerpt_more() {
   return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
+
+//Add Custom Image Sices to Media Uploader
+function my_custom_image_sizes( $sizes ) {
+  return array_merge( $sizes, array(
+      'sixteen-nine' => __( 'Sixteen Nine' ),
+  ) );
+}
+add_filter( 'image_size_names_choose', __NAMESPACE__ . '\\my_custom_image_sizes' );
