@@ -173,38 +173,53 @@ function agenda_sessions($atts, $content = null) {
 			<div class="card mb-1">
 				<div class="card-body">
 				
-					<div class="d-flex flex-column flex-sm-row">
-						
-						<div class="mr-auto align-self-center">
-							<?php if (!empty($description)) { ?> 
-								<h4 class="mb-0 text-regular" style="line-height: 1.5rem;"><a href="#<?php echo $id;?>" data-toggle="collapse" aria-expanded="false" aria-controls="<?php echo $id;?>"><?php echo $title;?></a></h4>
-								<?php } else { ?> 
-								<h4 class="mb-0 text-regular" style="line-height: 1.5rem;"><?php echo $title;?></h4>
-							<?php } ?>
-						</div>
-						<?php if (!empty($location)) echo '<div class="text-muted text-regular pl-sm-3" style="white-space:nowrap;">'.$location.'</div>' ;?>
+					<div class="row">
+
+						<?php if (!empty($location)) { ?> 
+							<div class="col-sm-12 col-md-10">
+								<?php if (!empty($description)) { ?> 
+									<h4 class="mb-0 text-regular" style="line-height: 1.5rem;"><a href="#<?php echo $id;?>" data-toggle="collapse" aria-expanded="false" aria-controls="<?php echo $id;?>"><?php echo $title;?></a></h4>
+									<?php } else { ?> 
+									<h4 class="mb-0 text-regular" style="line-height: 1.5rem;"><?php echo $title;?></h4>
+								<?php } ?>
+							</div>
+							<div class="col-sm-12 col-md-2 text-md-right"><?php echo $location;?></div>
+
+							<?php } else { ?>
+							<div class="col-sm-12">
+								<?php if (!empty($description)) { ?> 
+									<h4 class="mb-0 text-regular" style="line-height: 1.5rem;"><a href="#<?php echo $id;?>" data-toggle="collapse" aria-expanded="false" aria-controls="<?php echo $id;?>"><?php echo $title;?></a></h4>
+									<?php } else { ?> 
+									<h4 class="mb-0 text-regular" style="line-height: 1.5rem;"><?php echo $title;?></h4>
+								<?php } ?>
+							</div>
+
+						<?php } ?> 
+
 					</div>
 
 					<?php if (!empty($description)) { ?>
 
-						<div id="<?php echo $id;?>" class="collapse mt-3 pt-3" style="border-top:#e3e3e3 solid 1px;">
-							<?php echo $description;?>
-							<?php if ( ! empty( $speakers ) ) { ?>
-			  				<div class="d-flex align-items-baseline flex-wrap mt-3">
-			  					<div class="text-uppercase text-muted pr-2">Speakers:</div>
-									<div class="small text-muted">
-									<?php
-									$result="";
-									foreach($speakers as $speaker) :
-									$result.=get_the_title($speaker).', '; 
-									endforeach;
-									$trimmed=rtrim($result, ', ');
-									echo $trimmed;
-									?>
-									</div>							
-								</div>
-								<?php }
-							?>
+						<div id="<?php echo $id;?>" class="collapse mt-3 pt-3 row" style="border-top:#e3e3e3 solid 1px;">
+							<div class="col-sm-12">
+								<?php echo $description;?>
+								<?php if ( ! empty( $speakers ) ) { ?>
+				  				<div class="d-flex align-items-baseline flex-wrap mt-3">
+				  					<div class="text-uppercase text-muted pr-2">Speakers:</div>
+										<div class="small text-muted">
+										<?php
+										$result="";
+										foreach($speakers as $speaker) :
+										$result.=get_the_title($speaker).', '; 
+										endforeach;
+										$trimmed=rtrim($result, ', ');
+										echo $trimmed;
+										?>
+										</div>							
+									</div>
+									<?php }
+								?>
+							</div>
 						</div>
 
 					<?php } ?>
@@ -262,38 +277,56 @@ function agenda_schedule($atts, $content = null) {
 			<div class="card mb-1">
 				<div class="card-body">
 				
-					<div class="d-flex flex-column flex-sm-row">
-						<div class="mdc-text-orange-500 pr-sm-3 text-medium align-self-start" style="white-space: nowrap;"><?php echo date('g:i a', strtotime($starttime));?> - <?php echo date('g:i a', strtotime($endtime));?></div>
-						<div class="mr-auto align-self-center">
-							<?php if (!empty($description)) { ?> 
-								<h4 class="mb-0 text-regular" style="line-height: 1.5rem;"><a href="#<?php echo $id;?>" data-toggle="collapse" aria-expanded="false" aria-controls="<?php echo $id;?>"><?php echo $title;?></a></h4>
-								<?php } else { ?> 
-								<h4 class="mb-0 text-regular" style="line-height: 1.5rem;"><?php echo $title;?></h4>
-							<?php } ?>
+					<div class="row">
+						<div class="mdc-text-orange-500 text-medium col-sm-12 col-md-3" style="white-space: nowrap;">
+							<?php echo date('g:i a', strtotime($starttime));?> - <?php echo date('g:i a', strtotime($endtime));?>
 						</div>
-						<?php if (!empty($location)) echo '<div class="text-muted text-regular pl-sm-3" style="white-space:nowrap;">'.$location.'</div>' ;?>
+
+						<?php if (!empty($location)) { ?> 
+							<div class="col-sm-12 col-md-7">
+								<?php if (!empty($description)) { ?> 
+									<h4 class="mb-0 text-regular" style="line-height: 1.5rem;"><a href="#<?php echo $id;?>" data-toggle="collapse" aria-expanded="false" aria-controls="<?php echo $id;?>"><?php echo $title;?></a></h4>
+									<?php } else { ?> 
+									<h4 class="mb-0 text-regular" style="line-height: 1.5rem;"><?php echo $title;?></h4>
+								<?php } ?>
+							</div>
+							<div class="col-sm-12 col-md-2 text-md-right"><?php echo $location;?></div>
+
+							<?php } else { ?>
+							<div class="col-sm-9">
+								<?php if (!empty($description)) { ?> 
+									<h4 class="mb-0 text-regular" style="line-height: 1.5rem;"><a href="#<?php echo $id;?>" data-toggle="collapse" aria-expanded="false" aria-controls="<?php echo $id;?>"><?php echo $title;?></a></h4>
+									<?php } else { ?> 
+									<h4 class="mb-0 text-regular" style="line-height: 1.5rem;"><?php echo $title;?></h4>
+								<?php } ?>
+							</div>
+
+						<?php } ?> 
+
 					</div>
 
 					<?php if (!empty($description)) { ?>
 
-						<div id="<?php echo $id;?>" class="collapse mt-3 pt-3" style="border-top:#e3e3e3 solid 1px;">
-							<?php echo $description;?>
-							<?php if ( ! empty( $speakers ) ) { ?>
-			  				<div class="d-flex align-items-baseline flex-wrap mt-3">
-			  					<div class="text-uppercase text-muted pr-2">Speakers:</div>
-									<div class="small text-muted">
-									<?php
-									$result="";
-									foreach($speakers as $speaker) :
-									$result.=get_the_title($speaker).', '; 
-									endforeach;
-									$trimmed=rtrim($result, ', ');
-									echo $trimmed;
-									?>
-									</div>							
-								</div>
-								<?php }
-							?>
+						<div id="<?php echo $id;?>" class="collapse mt-3 pt-3 row" style="border-top:#e3e3e3 solid 1px;">
+							<div class="col-sm-12">
+								<?php echo $description;?>
+								<?php if ( ! empty( $speakers ) ) { ?>
+				  				<div class="d-flex align-items-baseline flex-wrap mt-3">
+				  					<div class="text-uppercase text-muted pr-2">Speakers:</div>
+										<div class="small text-muted">
+										<?php
+										$result="";
+										foreach($speakers as $speaker) :
+										$result.=get_the_title($speaker).', '; 
+										endforeach;
+										$trimmed=rtrim($result, ', ');
+										echo $trimmed;
+										?>
+										</div>							
+									</div>
+									<?php }
+								?>
+							</div>
 						</div>
 
 					<?php } ?>
