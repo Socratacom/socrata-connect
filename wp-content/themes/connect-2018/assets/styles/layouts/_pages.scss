@@ -4,3 +4,6 @@
 .four-three {
   @include aspect-ratio(4, 3);
 }
+.one-one {
+  @include aspect-ratio(1, 1);
+}

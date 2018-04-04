@@ -202,64 +202,47 @@ function featured_speaker_tiles($atts, $content = null) {
     if ( $the_query->have_posts() ) { 
     while ( $the_query->have_posts() ) {
     $the_query->the_post();
-    $headshot = rwmb_meta( 'speakers_speaker_headshot', 'size=medium' );
+    $headshot = rwmb_meta( 'speakers_speaker_headshot', 'size=full' );
     $jobtitle = rwmb_meta( 'speakers_title' );
     $company = rwmb_meta( 'speakers_company' );
-    $bio = rwmb_meta( 'speakers_wysiwyg' );
-    $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'post-image-small' );
-    $url = $thumb['0']; { ?>
+    $bio = rwmb_meta( 'speakers_wysiwyg' ); { ?>
 
       <?php if ( ! empty( $headshot ) ) { ?> 
 
-        <div class="col-sm-12 slide">
-          <div class="tile">
-            <div class="text-center">
-              <span class="headshot" style="background-image:url(<?php foreach ( $headshot as $image ) { echo $image['url']; } ?>);"></span>
-            </div>
-            <div class="speaker-meta truncate">
-              <h4 class="text-center text-uppercase"><?php the_title(); ?></h4>
-              <p class="text-center job-title"><em><?php echo $jobtitle;?>, <?php echo $company;?></em></p>
-            </div>
-            <div class="speaker-meta-hover truncate">
-              <h4 class="text-center text-uppercase"><?php the_title(); ?></h4>
-              <p class="text-center job-title"><em><?php echo $jobtitle;?>, <?php echo $company;?></em></p>
-              <div class="bio">
-                <?php echo $bio;?>
-              </div>
-            </div>
-            <div class="text-center arrow">
-              <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
-            </div>
-            <?php if ( ! empty( $bio ) ) { ?><a href="<?php the_permalink(); ?>" class="link"></a><?php };?>           
-          </div>
-        </div>
+			<div class="col-sm-12">
+				<div class="row no-gutters">
+					<div class="col-sm-6 match-height">
+						<h4 class="text-regular mb-1"><?php the_title(); ?></h4>
+						<div class="text-regular text-muted"><?php echo $jobtitle;?>, <?php echo $company;?></div>
+						<?php if ( ! empty( $bio ) ) { ?>
+						<a href="<?php the_permalink(); ?>" class="btn btn-sm btn-primary">Read Bio</a>
+						<?php };?>
+					</div>
+					<div class="col-sm-6 match-height">
+						<div class="sixteen-nine" style="background-image:url(<?php foreach ( $headshot as $image ) { echo $image['url']; } ?>); background-repeat: no-repeat; background-position: center; background-size:cover;"></div>
+					</div>
+				</div>
+			</div>
 
       <?php } else { ?> 
 
-        <div class="col-sm-12 slide">
-          <div class="tile">
-            <div class="text-center">
-              <span class="headshot" style="background-image:url(/wp-content/uploads/no-image.png);"></span>
-            </div>
-            <div class="speaker-meta truncate">
-              <h4 class="text-center text-uppercase"><?php the_title(); ?></h4>
-              <p class="text-center job-title"><em><?php echo $jobtitle;?></em></p>
-            </div>
-            <div class="speaker-meta-hover truncate">
-              <h4 class="text-center text-uppercase"><?php the_title(); ?></h4>
-              <p class="text-center job-title"><em><?php echo $jobtitle;?></em></p>
-              <div class="bio">
-                <?php echo $bio;?>
-              </div>
-            </div>
-            <div class="text-center arrow">
-              <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
-            </div>
-            <?php if ( ! empty( $bio ) ) { ?><a href="<?php the_permalink(); ?>" class="link"></a><?php };?>
-          </div>
-        </div>
+			<div class="col-sm-12">
+				<div class="row no-gutters">
+					<div class="col-sm-6 match-height">
+						<h4 class="text-regular mb-1"><?php the_title(); ?></h4>
+						<div class="text-regular text-muted"><?php echo $jobtitle;?>, <?php echo $company;?></div>
+						<?php if ( ! empty( $bio ) ) { ?>
+						<a href="<?php the_permalink(); ?>" class="btn btn-sm btn-primary">Read Bio</a>
+						<?php };?>
+					</div>
+					<div class="col-sm-6 match-height">
+						<div class="sixteen-nine" style="background-image:url(<?php foreach ( $headshot as $image ) { echo $image['url']; } ?>); background-repeat: no-repeat; background-position: center; background-size:cover;"></div>
+					</div>
+				</div>
+			</div>
 
       <?php } ?>
+
 
     <?php }
 
@@ -273,6 +256,8 @@ function featured_speaker_tiles($atts, $content = null) {
   /* Restore original Post Data */
   wp_reset_postdata(); 
   ?>
+
+  <h1>dick</h1>
 
   <?php
   $content = ob_get_contents();
