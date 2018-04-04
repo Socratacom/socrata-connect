@@ -181,7 +181,9 @@ function socrata_speakers_register_meta_boxes( $meta_boxes )
 function featured_speaker_tiles($atts, $content = null) {
   ob_start();
   ?>
-
+	<section class="section-padding mdc-bg-grey-900 text-center speaker-slider">
+		<h2 class="text-white display-4 mb-5">Featured Speakers</h2>
+		<div class="slider">
   <?php
     $args = array(
     'post_type' => 'socrata_speakers',
@@ -202,42 +204,40 @@ function featured_speaker_tiles($atts, $content = null) {
     if ( $the_query->have_posts() ) { 
     while ( $the_query->have_posts() ) {
     $the_query->the_post();
-    $headshot = rwmb_meta( 'speakers_speaker_headshot', 'size=full' );
+    $headshot = rwmb_meta( 'speakers_speaker_headshot', 'size=square' );
     $jobtitle = rwmb_meta( 'speakers_title' );
     $company = rwmb_meta( 'speakers_company' );
     $bio = rwmb_meta( 'speakers_wysiwyg' ); { ?>
 
       <?php if ( ! empty( $headshot ) ) { ?> 
 
-			<div class="col-sm-12">
-				<div class="row no-gutters">
-					<div class="col-sm-6 match-height">
-						<h4 class="text-regular mb-1"><?php the_title(); ?></h4>
-						<div class="text-regular text-muted"><?php echo $jobtitle;?>, <?php echo $company;?></div>
-						<?php if ( ! empty( $bio ) ) { ?>
-						<a href="<?php the_permalink(); ?>" class="btn btn-sm btn-primary">Read Bio</a>
-						<?php };?>
+			<div class="match-height slide">
+				<div class="p-sm-3 p-md-5">
+					<div class="text-center mb-3">
+						<div class="one-one d-inline-block" style="background-image:url(<?php foreach ( $headshot as $image ) { echo $image['url']; } ?>); background-repeat: no-repeat; background-position: center; background-size:cover; height:100px; width:100px"></div>
 					</div>
-					<div class="col-sm-6 match-height">
-						<div class="sixteen-nine" style="background-image:url(<?php foreach ( $headshot as $image ) { echo $image['url']; } ?>); background-repeat: no-repeat; background-position: center; background-size:cover;"></div>
-					</div>
+					<h4 class="text-regular text-center text-white mb-1"><?php the_title(); ?></h4>
+					<p class="text-regular text-center text-white"><?php echo $jobtitle;?>, <?php echo $company;?></p>
+					<?php if ( ! empty( $bio ) ) { ?>
+					<p class="text-center"><a href="<?php the_permalink(); ?>" class="btn btn-sm btn-outline-light">Read Bio</a></p>
+					<?php };?>
 				</div>
 			</div>
 
       <?php } else { ?> 
 
-			<div class="col-sm-12">
-				<div class="row no-gutters">
-					<div class="col-sm-6 match-height">
-						<h4 class="text-regular mb-1"><?php the_title(); ?></h4>
-						<div class="text-regular text-muted"><?php echo $jobtitle;?>, <?php echo $company;?></div>
-						<?php if ( ! empty( $bio ) ) { ?>
-						<a href="<?php the_permalink(); ?>" class="btn btn-sm btn-primary">Read Bio</a>
-						<?php };?>
+			<div class="match-height slide">
+				<div class="p-sm-3 p-md-5">
+					<div class="text-center mb-4">
+						<div class="d-inline-block border text-center" style="height:100px; width:100px;">
+							<div class="text-white text-center text-uppercase p-2" style="font-size:11px;">No Image</div>
+						</div>
 					</div>
-					<div class="col-sm-6 match-height">
-						<div class="sixteen-nine" style="background-image:url(<?php foreach ( $headshot as $image ) { echo $image['url']; } ?>); background-repeat: no-repeat; background-position: center; background-size:cover;"></div>
-					</div>
+					<h4 class="text-regular text-center text-white mb-1"><?php the_title(); ?></h4>
+					<p class="text-regular text-center text-white"><?php echo $jobtitle;?>, <?php echo $company;?></p>
+					<?php if ( ! empty( $bio ) ) { ?>
+					<p class="text-center"><a href="<?php the_permalink(); ?>" class="btn btn-sm btn-outline-light">Read Bio</a></p>
+					<?php };?>
 				</div>
 			</div>
 
@@ -257,7 +257,52 @@ function featured_speaker_tiles($atts, $content = null) {
   wp_reset_postdata(); 
   ?>
 
-  <h1>dick</h1>
+</div>
+<div class="arrows-container"></div>
+</section>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('.slider').slick({
+      arrows: true,
+      appendArrows: $('.arrows-container'),
+      prevArrow: '<div class="toggle-left"><i class="icon-left-arrow"></i></div>',
+      nextArrow: '<div class="toggle-right"><i class="icon-right-arrow"></i></div>',
+      autoplay: true,
+      autoplaySpeed: 5000,
+      speed: 800,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      accessibility:false,
+      dots:false,
+      responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+    });
+    $('.slider').show();
+  });
+  </script>
+
 
   <?php
   $content = ob_get_contents();

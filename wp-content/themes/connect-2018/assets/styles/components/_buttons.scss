@@ -87,3 +87,35 @@
 .btn-outline-light:hover {
 	background-color:rgba($white,.25);
 }
+.speaker-slider {
+	position:relative;
+	.arrows-container {
+		position:absolute;
+		bottom:0;
+		left:0;
+		width:100%;
+		z-index:100 !important;
+		.toggle-left, .toggle-right {
+			background-color:$white;
+			line-height:normal;
+			padding:.5rem 1rem;
+			cursor:pointer;
+			i {
+				font-size:32px !important;
+				line-height:normal;
+			}
+		}
+		.toggle-left:hover, .toggle-right:hover {
+			background-color:$primary;
+			i {
+				color:$white;
+			}
+		}
+	}
+}
+.slide {
+	display:none;
+}
+
+
+
