@@ -5,7 +5,6 @@
   		<div class="row justify-content-md-center">
   			<div class="col col-md-6">
 				  <ul class="menu">
-				    <li class="nav-item mb-3"><a href="/sessions" class="btn btn-lg btn-block btn-outline-light">Sessions</a></li>
 				    <li class="nav-item mb-3"><a href="/schedule" class="btn btn-lg btn-block btn-outline-light">Schedule</a></li>
 				    <li class="nav-item mb-3"><a href="/speakers" class="btn btn-lg btn-block btn-outline-light">Speakers</a></li>
 				    <li class="nav-item mb-3"><a href="/awards" class="btn btn-lg btn-block btn-outline-light">Snu Awards</a></li>
