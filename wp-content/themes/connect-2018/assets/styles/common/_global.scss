@@ -22,6 +22,10 @@ body.no-scroll {
 header {
 	background-color:$mdc-blue-grey-50;
 }
+iframe {
+	width:100%;
+	border:none;
+}
 .main {
 	padding-left:15px;
 	padding-right:15px;
