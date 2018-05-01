@@ -38,5 +38,6 @@ use Roots\Sage\Wrapper;
       wp_footer();
     ?>
 
+    <script>$(".lockscroll").click(function(){$("body").toggleClass("no-scroll")})</script>
   </body>
 </html>

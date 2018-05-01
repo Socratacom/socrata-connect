@@ -3,7 +3,7 @@
 		height: 0%;
 		width: 100%;
 		position: fixed;
-		z-index: 100;
+		z-index: 9999;
 		top: 0;
 		left: 0;
 		background-color: $primary;
@@ -54,16 +54,16 @@
 			height:100px;
 			width:134px;
 			position: absolute;
-			top:15px;
-			left:15px;
+			top:30px;
+			left:30px;
 		}
 		.btn {
 			position: absolute;
 		}
 		.icon-menu {
 			position: absolute;
-			right:15px;
-			top:15px;
+			right:30px;
+			top:30px;
 			font-size: 30px;
 			color:$secondary;
 		}
@@ -89,17 +89,17 @@
 		.logo {
 			height:150px;
 			width:200px;
-			left:30px;
-			top:30px;
+			left:45px;
+			top:45px;
 		}
 		.btn {
 			position: absolute;
-			top:30px;
-			right:130px;
+			top:45px;
+			right:145px;
 		}
 		.icon-menu {
-			top: 30px;
-			right: 30px;
+			top: 45px;
+			right: 45px;
 			font-size: 50px;
 		}
 	}

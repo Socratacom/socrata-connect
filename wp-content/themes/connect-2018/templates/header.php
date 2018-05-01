@@ -1,5 +1,5 @@
 <nav id="siteNav" class="overlay">
-  <a href="javascript:void(0)" class="icon-close" onclick="closeNav()"></a>
+  <a href="javascript:void(0)" class="icon-close lockscroll" onclick="closeNav()"></a>
   <div class="overlay-content">
   	<div class="container">
   		<div class="row justify-content-md-center">
@@ -19,5 +19,5 @@
 <header class="banner" role="banner">
 	<a href="<?php echo home_url('/'); ?>" class="logo color-logo"></a>
 	<a href="/registration" class="btn btn-primary btn-lg d-none d-md-inline">Register</a>
-	<a href="javascript:void(0)" class="icon-menu" onclick="openNav()"></a>
+	<a href="javascript:void(0)" class="icon-menu lockscroll" onclick="openNav()"></a>
 </header>

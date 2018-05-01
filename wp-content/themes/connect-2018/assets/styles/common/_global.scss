@@ -13,18 +13,23 @@ html, body, [canvas=container], [off-canvas] {
 	height:100%;
 }
 body {
-	padding:15px;
 	background-color:$mdc-blue-grey-500;
+}
+body.no-scroll {
+	overflow:hidden;
+	margin-right:15px;
 }
 header {
 	background-color:$mdc-blue-grey-50;
 }
 .main {
-	padding:0 !important;
+	padding-left:15px;
+	padding-right:15px;
 	width:100% !important;
 	float:none !important;
 	background-color:$mdc-blue-grey-50;
 }
+
 .frame-left {
 	border-left:$white solid 15px; 
 	position: fixed; 
@@ -60,6 +65,9 @@ header {
 	height:15px; 
 	width:100%; 
 	z-index:2;
+}
+.mtsnb {
+	z-index:9000 !important;
 }
 a:hover {
 	text-decoration:none;
